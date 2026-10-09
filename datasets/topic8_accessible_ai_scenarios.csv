@@ -1,0 +1,11 @@
+case_id,scenario,focus_area
+C01,Convert lecture speech to real-time captions for a student with hearing impairment,Communication assistive technology
+C02,Read printed text aloud and describe nearby objects for a student with low vision,Vision assistive technology
+C03,"Present the same lesson as text, audio and simplified summaries based on learner preference",Personalised learning
+C04,Recommend a step-free route between campus buildings using ramp and lift availability,Mobility and accessibility
+C05,Provide voice control for a student who cannot reliably use a mouse or touchscreen,Physical access
+C06,Give structured reminders and task prompts to support cognitive accessibility,Cognitive support
+C07,Offer general well-being check-ins and links to counselling resources while clearly stating limitations,Mental health and emotional well-being
+C08,Automatically diagnose a mental-health disorder and prescribe treatment without a qualified professional,Unsafe / inappropriate use
+C09,Suggest accessible transport alternatives when a lift or route becomes unavailable,Mobility and accessibility
+C10,Adapt practice difficulty based on performance while allowing the teacher and learner to override recommendations,Personalised learning

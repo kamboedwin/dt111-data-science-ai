@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DT111 Topic 5 Review Questions</title><link rel="stylesheet" href="review.css"></head>
+<body><div class="wrap">
+<h1>Topic 5 Review Questions</h1>
+<p class="intro">Use these questions for revision, tutorial discussion and self-study. Attempt each question before opening the suggested answer.</p>
+<div class="toolbar"><button onclick="window.print()">Print / Save as PDF</button><button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Show all suggested answers</button><button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Hide answers</button></div>
+
+<section class="group"><h2>A. Machine Learning foundations</h2>
+<div class="q"><strong>1.</strong> In simple terms, what is Machine Learning?<details><summary>Suggested answer</summary><div class="answer">Machine Learning is an AI approach in which a model learns patterns from data and uses them to make predictions, classifications or groupings.</div></details></div>
+<div class="q"><strong>2.</strong> What is the difference between supervised and unsupervised learning?<details><summary>Suggested answer</summary><div class="answer">Supervised learning uses examples with known targets or labels; unsupervised learning searches for structure without known target labels.</div></details></div>
+<div class="q"><strong>3.</strong> Distinguish regression from classification.<details><summary>Suggested answer</summary><div class="answer">Regression predicts a numerical value, while classification predicts a category or class.</div></details></div>
+<div class="q"><strong>4.</strong> Give one example of an unsupervised learning task.<details><summary>Suggested answer</summary><div class="answer">Grouping customers, students or farms into similar clusters without predefined labels.</div></details></div>
+<div class="q"><strong>5.</strong> Why does data preparation matter before Machine Learning?<details><summary>Suggested answer</summary><div class="answer">Models learn from the data provided. Missing, inconsistent, biased or poorly represented data can produce unreliable patterns and predictions.</div></details></div>
+</section>
+
+<section class="group"><h2>B. Algorithms</h2>
+<div class="q"><strong>6.</strong> How can linear regression be viewed as a Machine Learning algorithm?<details><summary>Suggested answer</summary><div class="answer">It learns a numerical relationship from labelled training examples and uses the fitted relationship to predict a numerical target for new examples.</div></details></div>
+<div class="q"><strong>7.</strong> What is the basic idea of a decision tree?<details><summary>Suggested answer</summary><div class="answer">A decision tree makes a prediction by following a sequence of questions or splits about the input variables.</div></details></div>
+<div class="q"><strong>8.</strong> State two advantages of decision trees.<details><summary>Suggested answer</summary><div class="answer">They are easy to visualise and explain, and they can model non-linear decision boundaries using simple rules.</div></details></div>
+<div class="q"><strong>9.</strong> What problem can occur if a decision tree becomes too deep?<details><summary>Suggested answer</summary><div class="answer">It may overfit by memorising details of the training data and generalising poorly to new data.</div></details></div>
+<div class="q"><strong>10.</strong> What does K represent in K-means clustering?<details><summary>Suggested answer</summary><div class="answer">K is the number of clusters that the algorithm is asked to create.</div></details></div>
+<div class="q"><strong>11.</strong> Why should K-means clusters be interpreted carefully?<details><summary>Suggested answer</summary><div class="answer">The algorithm will create K groups because it was instructed to, but the groups do not automatically correspond to meaningful real-world categories.</div></details></div>
+</section>
+
+<section class="group"><h2>C. Evaluation and validation</h2>
+<div class="q"><strong>12.</strong> Why should a model not be evaluated only on its training data?<details><summary>Suggested answer</summary><div class="answer">A model may memorise training examples. Evaluation on unseen data provides better evidence of generalisation.</div></details></div>
+<div class="q"><strong>13.</strong> What is a train/test split?<details><summary>Suggested answer</summary><div class="answer">It is a division of the available data into one subset used for training and another held back to evaluate performance on unseen examples.</div></details></div>
+<div class="q"><strong>14.</strong> Define overfitting.<details><summary>Suggested answer</summary><div class="answer">Overfitting occurs when a model matches the training data too closely but performs poorly on new data.</div></details></div>
+<div class="q"><strong>15.</strong> Define underfitting.<details><summary>Suggested answer</summary><div class="answer">Underfitting occurs when a model is too simple to capture important patterns even in the training data.</div></details></div>
+<div class="q"><strong>16.</strong> What does generalisation mean?<details><summary>Suggested answer</summary><div class="answer">Generalisation is the ability of a model to perform well on new examples that were not used during training.</div></details></div>
+<div class="q"><strong>17.</strong> What simple metric can be used for a classification problem?<details><summary>Suggested answer</summary><div class="answer">Accuracy, the proportion of predictions that are correct, is a simple introductory classification metric.</div></details></div>
+<div class="q"><strong>18.</strong> What simple metric can be used for a regression problem?<details><summary>Suggested answer</summary><div class="answer">Mean Absolute Error (MAE), which summarises the average absolute difference between predicted and true numerical values.</div></details></div>
+<div class="q"><strong>19.</strong> Why can accuracy be misleading for imbalanced classes?<details><summary>Suggested answer</summary><div class="answer">A model may achieve high accuracy by predicting the majority class most of the time while performing poorly on the minority class.</div></details></div>
+<div class="q"><strong>20.</strong> Summarise the full Machine Learning workflow introduced in this topic.<details><summary>Suggested answer</summary><div class="answer">Define the problem, prepare data, choose features and target when appropriate, split the data, train a model, evaluate it on unseen data, interpret the results and decide whether the model is useful.</div></details></div>
+</section>
+</div></body></html>

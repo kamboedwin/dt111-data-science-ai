@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="560" viewBox="0 0 1300 560">
+<rect width="1300" height="560" rx="32" fill="#f7f9fc"/>
+<text x="650" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#173a75">Simplified Evolution of Data Science and AI</text>
+<line x1="105" y1="275" x2="1195" y2="275" stroke="#92a7c8" stroke-width="7"/>
+<g font-family="Arial, sans-serif">
+  <g transform="translate(170,275)">
+    <circle r="18" fill="#234f9b"/><line y1="-18" y2="-90" stroke="#9fb2ce" stroke-width="3"/>
+    <text y="-118" text-anchor="middle" font-size="26" font-weight="700" fill="#173a75">1940s–60s</text>
+    <text y="-82" text-anchor="middle" font-size="18" fill="#566981">Digital computing</text>
+    <text y="-56" text-anchor="middle" font-size="18" fill="#566981">and early AI</text>
+  </g>
+  <g transform="translate(470,275)">
+    <circle r="18" fill="#547ab9"/><line y1="18" y2="88" stroke="#9fb2ce" stroke-width="3"/>
+    <text y="123" text-anchor="middle" font-size="26" font-weight="700" fill="#173a75">1970s–90s</text>
+    <text y="158" text-anchor="middle" font-size="18" fill="#566981">Databases, expert systems</text>
+    <text y="184" text-anchor="middle" font-size="18" fill="#566981">and statistical learning</text>
+  </g>
+  <g transform="translate(790,275)">
+    <circle r="18" fill="#7d68b5"/><line y1="-18" y2="-90" stroke="#9fb2ce" stroke-width="3"/>
+    <text y="-118" text-anchor="middle" font-size="26" font-weight="700" fill="#4e3e79">2000s–10s</text>
+    <text y="-82" text-anchor="middle" font-size="18" fill="#566981">Web-scale data, faster computing</text>
+    <text y="-56" text-anchor="middle" font-size="18" fill="#566981">machine learning and deep learning</text>
+  </g>
+  <g transform="translate(1090,275)">
+    <circle r="18" fill="#9b5b9e"/><line y1="18" y2="88" stroke="#9fb2ce" stroke-width="3"/>
+    <text y="123" text-anchor="middle" font-size="26" font-weight="700" fill="#6c3b6f">2020s</text>
+    <text y="158" text-anchor="middle" font-size="18" fill="#566981">Generative AI and</text>
+    <text y="184" text-anchor="middle" font-size="18" fill="#566981">foundation models</text>
+  </g>
+</g>
+<rect x="325" y="485" width="650" height="48" rx="24" fill="#eaf2ff"/>
+<text x="650" y="516" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#234f9b">
+More data + more computing power + better algorithms
+</text>
+</svg>

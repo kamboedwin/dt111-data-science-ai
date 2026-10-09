@@ -1,0 +1,24 @@
+DT 111 — Assignment 2
+Data Quality Audit and Cleaning
+
+Purpose
+Apply Topic 2 concepts by inspecting, documenting and cleaning a small dataset.
+
+Files
+- datasets/topic2_messy_student_data.csv
+- datasets/topic2_cleaned_student_data_example.csv (for comparison after attempting the task)
+
+Task
+1. Open the messy dataset in a spreadsheet application.
+2. Identify at least eight data-quality issues.
+3. Create a cleaning log with columns: problem, affected field/row, action taken, reason.
+4. Create your own cleaned version. Do not overwrite the original raw file.
+5. Write 200–300 words explaining two cleaning decisions where more than one reasonable option was possible.
+6. Submit the cleaned dataset and your report/cleaning log.
+
+Submission
+Upload to the DT 111 Google Drive assignment folder configured in LECTURER_EDIT/course_settings.js.
+
+Recommended filenames
+DT111_A2_RegistrationNumber.xlsx (or .csv)
+DT111_A2_RegistrationNumber_Report.pdf

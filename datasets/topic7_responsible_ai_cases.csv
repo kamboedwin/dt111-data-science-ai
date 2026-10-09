@@ -1,0 +1,11 @@
+case_id,scenario,primary_ethics_issue
+E01,A university app asks for religion and political opinions to provide bus arrival times,Privacy / data minimisation
+E02,A loan model was trained mainly on records from one geographic area and performs poorly elsewhere,Sampling bias / fairness
+E03,An AI hiring tool rejects applicants but gives no reason and provides no review process,Transparency / accountability / human oversight
+E04,A hospital model performs well overall but has much lower sensitivity for one patient group,Fairness / subgroup performance
+E05,Student data collected for attendance are later reused for unrelated advertising without notice,Purpose limitation / privacy
+E06,A model remains in use after performance declines because nobody monitors it after deployment,Accountability / monitoring
+E07,A content-generation tool produces false information that users may treat as factual,Information integrity / responsible use
+E08,"A school introduces an automated recommendation system without consulting teachers, students or parents",Stakeholder participation / accountability
+E09,An AI service is inaccessible to students using screen readers,Inclusion / accessibility
+E10,A high-stakes automated decision cannot be overridden by a qualified human reviewer,Human oversight / accountability

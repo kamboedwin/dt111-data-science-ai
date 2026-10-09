@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DT111 Topic 6 Notes</title><link rel="stylesheet" href="notes.css"></head>
+<body><div class="notes-wrap">
+<h1>DT111 Topic 6</h1>
+<p class="intro-note">You can read these notes on screen or use the button below to print or save them as PDF.</p>
+<div class="toolbar"><button onclick="window.print()">Print / Save as PDF</button></div>
+
+<section class="note-section">
+<span class="section-number">6.1</span>
+<h2>Definition and Scope of Artificial Intelligence</h2>
+<p><strong>Artificial Intelligence (AI)</strong> is the field concerned with designing computer systems that perform tasks associated with intelligent behaviour. These tasks may include problem solving, planning, reasoning, learning, perception, language understanding and decision support.</p>
+
+<p>AI is broader than Machine Learning. Machine Learning is one important approach within AI, but AI also includes techniques based on search, explicit rules, logic, planning and knowledge representation.</p>
+
+<figure class="figure"><img src="media/topic6/ai_scope.svg" alt="Scope and approaches of Artificial Intelligence"><figcaption>Figure 1. AI includes search, reasoning, Machine Learning, perception and language technologies.</figcaption></figure>
+
+<h3>AI systems and intelligent behaviour</h3>
+<p>An AI system may receive information about its environment, process that information and choose an action or produce an output. In some applications, this can be described using the idea of an <strong>agent</strong>: something that perceives a situation and acts towards a goal.</p>
+
+<p>Examples include:</p>
+<ul>
+<li>a route planner selecting a path through a road network;</li>
+<li>a rule-based advisory system applying explicit knowledge;</li>
+<li>a Machine Learning model classifying an image;</li>
+<li>a chatbot generating or interpreting language;</li>
+<li>a robot selecting actions in a physical environment.</li>
+</ul>
+
+<div class="callout info"><strong>Key idea:</strong> AI is not one algorithm. Different problems may require different forms of representation, search, reasoning or learning.</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">6.2</span>
+<h2>Search Algorithms</h2>
+<p>Many AI problems can be represented as a search through possible <strong>states</strong>. A state describes a particular situation. An action moves the system from one state to another. The aim is to find a sequence of actions that reaches a goal.</p>
+
+<figure class="figure"><img src="media/topic6/search_algorithms.svg" alt="Search algorithms exploring a state space"><figcaption>Figure 2. Different search strategies may explore the same problem in different orders.</figcaption></figure>
+
+<h3>State space</h3>
+<p>A <strong>state space</strong> is the collection of possible states that can be reached in a problem. For example, in a maze, each position can be considered a state. In route planning, each location can be a state and each road connection can be an action.</p>
+
+<h3>Breadth-First Search (BFS)</h3>
+<p><strong>BFS</strong> explores the search space level by level. It first examines states one step from the start, then states two steps away, and so on. When every step has the same cost, BFS can find a shortest path in terms of the number of steps.</p>
+
+<h3>Depth-First Search (DFS)</h3>
+<p><strong>DFS</strong> follows one branch as deeply as possible before backtracking. It can use less memory in some problems, but it may explore a long or unhelpful branch before finding a goal, and it does not generally guarantee the shortest path.</p>
+
+<h3>Heuristic search and A*</h3>
+<p>A <strong>heuristic</strong> is an estimate of how close a state is to the goal. A* search combines the cost already incurred with a heuristic estimate of the remaining cost. A useful heuristic can guide the search toward promising states rather than exploring blindly.</p>
+
+<table class="compare-table">
+<thead><tr><th>Method</th><th>Main idea</th><th>Useful intuition</th></tr></thead>
+<tbody>
+<tr><td>BFS</td><td>Explore level by level</td><td>Systematic and can find shortest-step paths when step costs are equal</td></tr>
+<tr><td>DFS</td><td>Explore one branch deeply before backtracking</td><td>Simple and sometimes memory efficient, but may take an unhelpful route</td></tr>
+<tr><td>A*</td><td>Use path cost plus heuristic guidance</td><td>Can search efficiently when the heuristic is informative</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="note-section">
+<span class="section-number">6.3</span>
+<h2>Logic and Reasoning</h2>
+<p>Another classical AI approach represents knowledge explicitly using <strong>facts</strong>, <strong>rules</strong> and formal reasoning. Instead of learning every relationship from data, a symbolic system may be given knowledge by human experts.</p>
+
+<figure class="figure"><img src="media/topic6/logic_reasoning.svg" alt="Facts rules and inference"><figcaption>Figure 3. A rule-based reasoning system can infer a conclusion from facts and rules.</figcaption></figure>
+
+<h3>Facts and rules</h3>
+<p>A fact is a statement treated as known within the system. A rule describes how one set of conditions leads to a conclusion. A simple rule may be written as:</p>
+
+<div class="callout info"><strong>IF</strong> soil is dry <strong>AND</strong> rain is not expected <strong>THEN</strong> irrigation is needed.</div>
+
+<p>If the system knows that the soil is dry and rain is not expected, it can infer that irrigation is needed.</p>
+
+<h3>Reasoning and inference</h3>
+<p><strong>Inference</strong> is the process of deriving a conclusion from available knowledge. In rule-based systems, reasoning may proceed by applying rules whose conditions are satisfied.</p>
+
+<p>Symbolic reasoning is valuable because the knowledge and reasoning steps can often be inspected directly. However, the system depends on the quality and completeness of the rules. Real environments may also contain uncertainty, exceptions or conflicting information that simple rules do not capture easily.</p>
+
+<h3>Logic versus learning</h3>
+<p>Logic-based AI and Machine Learning are not necessarily competitors. A practical system may use learned models for perception and explicit rules for safety or decision policy. For example, an image model may detect a crop problem while a rule base controls what advice is permitted under specific conditions.</p>
+</section>
+
+<section class="note-section">
+<span class="section-number">6.4</span>
+<h2>Introduction to Neural Networks</h2>
+<p><strong>Artificial neural networks</strong> are Machine Learning models composed of connected processing units often called neurons or nodes. They are inspired loosely by biological neural systems, but they are mathematical and computational models rather than replicas of the human brain.</p>
+
+<figure class="figure"><img src="media/topic6/neural_network.svg" alt="Simple feed-forward neural network"><figcaption>Figure 4. A basic neural network contains input, hidden and output layers connected by weighted links.</figcaption></figure>
+
+<h3>Inputs, weights and activations</h3>
+<p>Input variables enter the network. Connections between nodes have numerical <strong>weights</strong>. A node combines its incoming values and applies an <strong>activation function</strong> to produce an output. The activation allows networks to represent relationships that are more complex than a simple straight line.</p>
+
+<h3>Layers</h3>
+<ul>
+<li><strong>Input layer:</strong> receives the data.</li>
+<li><strong>Hidden layer(s):</strong> transform information through weighted combinations and activations.</li>
+<li><strong>Output layer:</strong> produces the final prediction or representation.</li>
+</ul>
+
+<h3>Training</h3>
+<p>During training, the network produces outputs for training examples, compares them with the desired targets and adjusts the connection weights to reduce error. Repeating this process over many examples allows the network to learn useful patterns.</p>
+
+<h3>Why neural networks are important</h3>
+<p>Neural networks are widely used for image recognition, speech processing, natural language processing and other complex pattern-recognition tasks. <strong>Deep learning</strong> generally refers to neural networks with multiple representation-learning layers.</p>
+
+<div class="callout warning"><strong>Important:</strong> a neural network can be powerful without being easy to interpret. High predictive performance does not remove the need for careful evaluation, data quality checks and responsible use.</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">6.5</span>
+<h2>Choosing an AI Approach</h2>
+<p>The appropriate AI technique depends on the structure of the problem.</p>
+<table class="compare-table">
+<thead><tr><th>Problem</th><th>Possible approach</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Find a route to a destination</td><td>Search / planning</td><td>The problem involves states, actions and goals</td></tr>
+<tr><td>Apply explicit expert rules</td><td>Logic / rule-based reasoning</td><td>Knowledge can be represented as facts and rules</td></tr>
+<tr><td>Predict a label from examples</td><td>Supervised Machine Learning</td><td>Historical labelled data are available</td></tr>
+<tr><td>Recognise images or speech</td><td>Neural networks / deep learning</td><td>Complex high-dimensional patterns must be learned</td></tr>
+<tr><td>Group unlabeled observations</td><td>Clustering</td><td>The aim is to discover structure without predefined targets</td></tr>
+</tbody>
+</table>
+
+<div class="callout"><strong>Main lesson:</strong> AI is a toolbox. Good problem solving begins by representing the problem clearly and choosing a suitable method, rather than applying the most complex technique by default.</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">6.6</span>
+<h2>Topic 6 Checklist</h2>
+<ul>
+<li>Can you define AI and explain why it is broader than Machine Learning?</li>
+<li>Can you explain a state space, action and goal?</li>
+<li>Can you compare BFS, DFS and heuristic search in simple terms?</li>
+<li>Can you explain facts, rules and inference?</li>
+<li>Can you identify the input, hidden and output layers of a neural network?</li>
+<li>Can you explain why different AI problems require different techniques?</li>
+</ul>
+</section>
+</div></body></html>

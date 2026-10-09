@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DT111 Topic 7 Notes</title><link rel="stylesheet" href="notes.css"></head>
+<body><div class="notes-wrap">
+<h1>DT111 Topic 7</h1>
+<p class="intro-note">You can read these notes on screen or use the button below to print or save them as PDF.</p>
+<div class="toolbar"><button onclick="window.print()">Print / Save as PDF</button></div>
+
+<section class="note-section">
+<span class="section-number">7.1</span>
+<h2>Ethical Issues in Data Science and AI</h2>
+<p>Data Science and Artificial Intelligence can provide major benefits, but technical performance alone does not determine whether a system is appropriate. Ethical questions ask whether data and AI systems are developed and used in ways that respect people, avoid unnecessary harm, distribute benefits and risks fairly, and provide appropriate accountability.</p>
+
+<p>Ethics should not be treated as a final step added after a system has already been designed. Choices made when defining the problem, collecting data, selecting variables, evaluating performance and deploying the system can all create ethical consequences.</p>
+
+<figure class="figure"><img src="media/topic7/ethics_lifecycle.svg" alt="Ethics across the Data Science and AI lifecycle"><figcaption>Figure 1. Ethical considerations arise throughout the system lifecycle.</figcaption></figure>
+
+<h3>Common ethical questions</h3>
+<ul>
+<li>Is the problem worth solving with data or AI?</li>
+<li>Who benefits from the system and who may be harmed?</li>
+<li>Are the data collected and used appropriately?</li>
+<li>Do some groups experience poorer performance or unfair outcomes?</li>
+<li>Can affected people understand how the system is being used?</li>
+<li>Who is responsible when something goes wrong?</li>
+<li>Can a qualified human review or override an important automated decision?</li>
+</ul>
+
+<div class="callout info"><strong>Key idea:</strong> An accurate system can still be ethically problematic if it invades privacy, treats groups unfairly, lacks accountability or is used in an inappropriate context.</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">7.2</span>
+<h2>Privacy and Responsible Data Use</h2>
+<p><strong>Privacy</strong> concerns how personal information is collected, used, shared, retained and protected. Data Science projects often involve information about people, so privacy should be considered from the beginning.</p>
+
+<figure class="figure"><img src="media/topic7/privacy_principles.svg" alt="Privacy and responsible data-use principles"><figcaption>Figure 2. Important questions for responsible handling of personal data.</figcaption></figure>
+
+<h3>Purpose limitation</h3>
+<p>Data should be collected for a clear and legitimate purpose. Reusing personal data for a substantially different purpose may require additional justification, transparency or permission.</p>
+
+<h3>Data minimisation</h3>
+<p>Collect only the information reasonably needed for the intended purpose. Asking for unnecessary sensitive information increases privacy risk without improving the task.</p>
+
+<h3>Transparency</h3>
+<p>People should receive understandable information about what data are collected, why they are used and how important decisions may affect them.</p>
+
+<h3>Security</h3>
+<p>Privacy and security are related but not identical. Security protects information against unauthorised access, loss or misuse. Privacy concerns whether the collection and use of the information are appropriate in the first place.</p>
+
+<h3>Retention and deletion</h3>
+<p>Personal information should not be retained indefinitely without a reason. Projects should consider how long data are needed and when they should be securely deleted or de-identified.</p>
+
+<div class="callout warning"><strong>Important:</strong> Removing a person's name does not always make data completely anonymous. Combinations of other fields may sometimes allow individuals to be re-identified.</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">7.3</span>
+<h2>Bias and Fairness</h2>
+<p><strong>Bias</strong> can arise when data, labels, measurements, modelling choices or deployment conditions systematically favour or disadvantage particular cases or groups. Bias is not limited to the model itself.</p>
+
+<figure class="figure"><img src="media/topic7/bias_sources.svg" alt="Sources of bias in Data Science and AI"><figcaption>Figure 3. Bias can enter at several stages of a data and AI system.</figcaption></figure>
+
+<h3>Historical bias</h3>
+<p>Historical records may reflect previous social, institutional or organisational inequalities. Training a model on those records can reproduce those patterns.</p>
+
+<h3>Sampling bias</h3>
+<p>If the collected sample does not adequately represent the population where the system will be used, performance may differ substantially between groups or locations.</p>
+
+<h3>Measurement bias</h3>
+<p>A variable or sensor may measure some groups more accurately than others. For example, a proxy variable may not represent the same underlying concept equally well for everyone.</p>
+
+<h3>Label bias</h3>
+<p>Training labels can reflect inconsistent or subjective human judgement. If historical labels are unreliable, a model may learn those inconsistencies.</p>
+
+<h3>Deployment bias</h3>
+<p>A model may be used for a purpose or population different from the setting for which it was developed and evaluated.</p>
+
+<h3>Fairness is not one simple number</h3>
+<p>Different fairness goals can conflict. A system may have similar overall accuracy across groups but different false-positive or false-negative rates. Which differences matter most depends on the context and potential harm.</p>
+
+<div class="question-box"><strong>Example:</strong> In a medical screening system, a false negative may be more harmful than a false positive. Fairness analysis should therefore examine the type of errors experienced by different groups, not only overall accuracy.</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">7.4</span>
+<h2>Transparency, Explainability and Accountability</h2>
+<p><strong>Transparency</strong> means providing appropriate information about how a system is developed and used. <strong>Explainability</strong> concerns whether people can understand the reasons or factors behind an output. The amount and type of explanation required depends on the context.</p>
+
+<p><strong>Accountability</strong> means that people or organisations remain responsible for how a system is designed, deployed and monitored. Saying “the algorithm decided” does not remove human responsibility.</p>
+
+<h3>Human oversight</h3>
+<p>For important decisions, human oversight can provide a way to review unusual cases, correct errors, consider context that the model does not capture and offer a route for appeal.</p>
+
+<figure class="figure"><img src="media/topic7/responsible_ai.svg" alt="Responsible AI questions"><figcaption>Figure 4. Responsible AI requires attention to fairness, transparency, accountability and human oversight.</figcaption></figure>
+</section>
+
+<section class="note-section">
+<span class="section-number">7.5</span>
+<h2>Societal Impacts of AI</h2>
+<p>AI systems can influence institutions, employment, education, healthcare, communication, accessibility, public services and the distribution of opportunities. Societal impact includes both benefits and risks.</p>
+
+<h3>Potential benefits</h3>
+<ul>
+<li>supporting faster or more consistent decisions;</li>
+<li>improving access to information and services;</li>
+<li>supporting people with disabilities through assistive technologies;</li>
+<li>automating repetitive tasks;</li>
+<li>improving scientific discovery and decision support.</li>
+</ul>
+
+<h3>Potential risks</h3>
+<ul>
+<li>loss of privacy or excessive surveillance;</li>
+<li>unfair exclusion or discrimination;</li>
+<li>reduced human autonomy in important decisions;</li>
+<li>misinformation and over-reliance on generated content;</li>
+<li>unequal access to AI technologies and digital infrastructure;</li>
+<li>changes to employment and required skills;</li>
+<li>environmental costs from large-scale computation.</li>
+</ul>
+
+<p>A responsible assessment should consider not only the intended user but also other people who may be indirectly affected.</p>
+</section>
+
+<section class="note-section">
+<span class="section-number">7.6</span>
+<h2>Responsible AI</h2>
+<p><strong>Responsible AI</strong> refers to developing and using AI systems in ways that appropriately manage risks and support trustworthy outcomes. Practical responsible-AI work typically includes technical, organisational and human measures rather than relying on one principle alone.</p>
+
+<h3>A simple responsible-AI checklist</h3>
+<ol>
+<li><strong>Define the purpose.</strong> What decision or task is the system supporting?</li>
+<li><strong>Identify stakeholders.</strong> Who uses the system and who is affected?</li>
+<li><strong>Identify possible harms.</strong> What can go wrong and who may be harmed?</li>
+<li><strong>Review data.</strong> Are data necessary, representative, lawful and appropriately protected?</li>
+<li><strong>Evaluate performance.</strong> Look beyond overall accuracy and examine important groups and error types.</li>
+<li><strong>Provide transparency.</strong> Explain the role and limitations of the system.</li>
+<li><strong>Provide oversight.</strong> Decide when human review or appeal is necessary.</li>
+<li><strong>Monitor after deployment.</strong> Performance, users and contexts may change over time.</li>
+</ol>
+
+<div class="callout"><strong>Main lesson:</strong> Responsible AI is not achieved by adding a disclaimer. It requires decisions, safeguards, evaluation and accountability throughout the lifecycle.</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">7.7</span>
+<h2>Topic 7 Checklist</h2>
+<ul>
+<li>Can you explain why ethics is relevant throughout the Data Science and AI lifecycle?</li>
+<li>Can you distinguish privacy from security?</li>
+<li>Can you explain data minimisation and purpose limitation?</li>
+<li>Can you identify different sources of bias?</li>
+<li>Can you explain why fairness cannot always be reduced to one metric?</li>
+<li>Can you distinguish transparency, explainability and accountability?</li>
+<li>Can you identify positive and negative societal impacts of AI?</li>
+<li>Can you propose practical responsible-AI safeguards?</li>
+</ul>
+</section>
+</div></body></html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DT111 Topic 4 Notes</title><link rel="stylesheet" href="notes.css"></head>
+<body><div class="notes-wrap">
+<h1>DT111 Topic 4</h1>
+<p class="intro-note">You can read these notes on screen or use the button below to print or save them as PDF.</p>
+<div class="toolbar"><button onclick="window.print()">Print / Save as PDF</button></div>
+
+<section class="note-section">
+<span class="section-number">4.1</span>
+<h2>Probability Theory and Distributions</h2>
+<p><strong>Probability</strong> provides a language for describing uncertainty. In Data Science, we rarely know everything with complete certainty. Instead, we often ask how likely an event is, how values are distributed, or how much variation we should expect.</p>
+
+<figure class="figure"><img src="media/topic4/probability_distributions.svg" alt="Core ideas of probability and distributions"><figcaption>Figure 1. Introductory probability and distribution concepts.</figcaption></figure>
+
+<p>Probabilities range from <strong>0</strong> to <strong>1</strong>. A probability near 0 describes an event that is very unlikely, a probability near 1 describes an event that is very likely, and a probability of exactly 0 or 1 describes impossibility or certainty in the model being used.</p>
+
+<h3>Events and random variables</h3>
+<p>An <strong>event</strong> is an outcome or condition of interest. For example, “a student passes the test” is an event. A <strong>random variable</strong> is a numerical representation of possible outcomes, such as the number of correct answers or the waiting time before a bus arrives.</p>
+
+<h3>Discrete and continuous distributions</h3>
+<p>A <strong>discrete distribution</strong> describes separated outcomes such as the number of heads obtained when tossing a coin several times. A <strong>continuous distribution</strong> describes measured values such as height, temperature, score or time, where values vary along a continuum.</p>
+
+<h3>Expected value and variation</h3>
+<p>The <strong>expected value</strong> gives a long-run average or central value suggested by the probability model. It does not mean that every individual observation equals that value. The idea of <strong>variation</strong> remains important because outcomes usually differ from one another.</p>
+
+<div class="callout info"><strong>Why it matters:</strong> Probability helps us reason about uncertainty, distributions help us understand how values are spread, and both provide foundations for inference, prediction and modelling.</div>
+
+<h3>Examples of commonly referenced distributions</h3>
+<ul>
+<li><strong>Bernoulli / Binomial:</strong> count how many times an event happens in repeated yes/no trials.</li>
+<li><strong>Normal distribution:</strong> a symmetric bell-shaped model often used as an approximation for many natural or aggregated measurements.</li>
+<li><strong>Uniform distribution:</strong> each value in a range is equally likely in the model.</li>
+</ul>
+
+<p>At this course level, students should focus on the intuition of these distributions and when they are useful, rather than on advanced derivations.</p>
+</section>
+
+<section class="note-section">
+<span class="section-number">4.2</span>
+<h2>Hypothesis Testing</h2>
+<p><strong>Hypothesis testing</strong> is a structured way of using sample evidence to evaluate a claim. Instead of simply stating that two groups look different, hypothesis testing asks whether the observed difference is strong enough to be considered evidence against a default position.</p>
+
+<figure class="figure"><img src="media/topic4/hypothesis_testing.svg" alt="Simple hypothesis testing workflow"><figcaption>Figure 2. A simple five-step view of hypothesis testing.</figcaption></figure>
+
+<h3>Null and alternative hypotheses</h3>
+<p>The <strong>null hypothesis</strong> (H₀) usually represents a default claim such as “there is no difference” or “there is no effect”. The <strong>alternative hypothesis</strong> (H₁ or Hₐ) represents the competing claim such as “there is a difference” or “there is an effect”.</p>
+
+<table class="compare-table">
+<thead><tr><th>Scenario</th><th>Possible null hypothesis</th><th>Possible alternative hypothesis</th></tr></thead>
+<tbody>
+<tr><td>Two teaching methods</td><td>Both methods produce the same mean score</td><td>The mean scores differ</td></tr>
+<tr><td>New fertiliser</td><td>The fertiliser does not change yield</td><td>The fertiliser changes yield</td></tr>
+<tr><td>Website redesign</td><td>The redesign does not change completion rate</td><td>The redesign changes completion rate</td></tr>
+</tbody></table>
+
+<h3>Test statistics and p-values</h3>
+<p>A <strong>test statistic</strong> summarises how far the observed data depart from what would be expected if the null hypothesis were true. The <strong>p-value</strong> describes how unusual the observed result would be under the null hypothesis. A small p-value is evidence against the null hypothesis.</p>
+
+<div class="callout warning"><strong>Important interpretation:</strong> a p-value is <em>not</em> the probability that the null hypothesis is true. It is a statement about how unusual the data are if the null hypothesis were assumed to be true.</div>
+
+<h3>Decision and interpretation</h3>
+<p>Many introductory examples use a significance level such as 0.05. If the p-value is smaller than this threshold, we may say there is statistically significant evidence against the null hypothesis. Otherwise, we <strong>fail to reject</strong> the null hypothesis. Failing to reject is not the same as proving the null hypothesis true; it means the evidence was not strong enough.</p>
+
+<h3>Why context still matters</h3>
+<p>Statistical significance does not automatically imply practical importance. A tiny but statistically significant difference may not matter in real life. Good interpretation therefore considers the research question, the size of the effect, the quality of the data and the context of use.</p>
+</section>
+
+<section class="note-section">
+<span class="section-number">4.3</span>
+<h2>Regression Analysis</h2>
+<p><strong>Regression analysis</strong> studies how one variable changes in relation to another or to several others. It is widely used for explanation, prediction and trend estimation. In its simplest form, a regression model describes the relationship between one predictor variable and one outcome variable.</p>
+
+<figure class="figure"><img src="media/topic4/regression_analysis.svg" alt="Simple regression concept"><figcaption>Figure 3. Simple linear regression links a predictor to an outcome using a fitted line.</figcaption></figure>
+
+<h3>Simple linear regression</h3>
+<p>In a simple linear regression, one numerical predictor X is used to model an outcome Y. A fitted line is used to summarise the relationship. The <strong>slope</strong> of the line indicates the direction and size of change in the outcome when the predictor increases by one unit.</p>
+
+<p>For example, a model might relate study hours per week to final examination score. If the fitted line slopes upward, the model suggests that students who study more tend to achieve higher scores. This is an association pattern useful for description or prediction, but it does not automatically establish that study hours alone caused the score difference.</p>
+
+<h3>Prediction</h3>
+<p>Regression models can be used to estimate a likely outcome for a given input. Predictions should remain within sensible context and should be interpreted cautiously when extrapolating far beyond the observed data.</p>
+
+<h3>Residuals and model fit</h3>
+<p>A <strong>residual</strong> is the difference between an observed value and the value predicted by the model. Residuals help show how well the model matches the data and whether patterns remain unexplained.</p>
+
+<h3>Uses of regression in Data Science</h3>
+<ul>
+<li>predicting sales, yield, demand or scores;</li>
+<li>quantifying relationships between variables;</li>
+<li>supporting decision-making through estimates and trends;</li>
+<li>forming a foundation for more advanced predictive modelling.</li>
+</ul>
+</section>
+
+<section class="note-section">
+<span class="section-number">4.4</span>
+<h2>Interpreting Statistical Results Responsibly</h2>
+<ul>
+<li>Do not confuse a small p-value with proof of an important effect.</li>
+<li>Do not confuse association with causation.</li>
+<li>Do not assume a model is accurate only because it produces an equation.</li>
+<li>Check whether the data and question justify the method.</li>
+<li>Report findings in language that matches the evidence.</li>
+</ul>
+
+<div class="callout"><strong>Main lesson:</strong> Topic 4 introduces the basic language of uncertainty, evidence and relationships. At this level, clarity of interpretation is more important than complex algebra.</div>
+
+<h3>Topic 4 checklist</h3>
+<ul>
+<li>Can you explain probability as a measure of uncertainty?</li>
+<li>Can you distinguish discrete and continuous distributions?</li>
+<li>Can you explain the roles of the null and alternative hypotheses?</li>
+<li>Can you describe what a p-value tries to express?</li>
+<li>Can you explain the basic idea of regression and the meaning of slope?</li>
+<li>Can you interpret statistical evidence carefully without overclaiming?</li>
+</ul>
+</section>
+
+</div></body></html>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<rect width="1200" height="650" rx="36" fill="#f7f9fc"/>
+<text x="600" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#173a75">How Data Science, AI and Machine Learning Relate</text>
+
+<rect x="70" y="125" width="430" height="400" rx="36" fill="#eaf2ff" stroke="#6f95d8" stroke-width="3"/>
+<text x="285" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#173a75">Data Science</text>
+<text x="285" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#405675">Data • Statistics • Computing</text>
+<text x="285" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#405675">Domain Knowledge • Communication</text>
+<text x="285" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#405675">May use machine learning,</text>
+<text x="285" y="381" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#405675">but also includes non-AI analysis</text>
+
+<rect x="700" y="105" width="430" height="440" rx="36" fill="#f1ecfb" stroke="#8b6fc6" stroke-width="3"/>
+<text x="915" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#4c347d">Artificial Intelligence</text>
+<text x="915" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#5c4b75">Reasoning • Search • Planning</text>
+<text x="915" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#5c4b75">Learning • Perception • Language</text>
+
+<rect x="785" y="320" width="260" height="150" rx="28" fill="#ffffff" stroke="#6f95d8" stroke-width="3"/>
+<text x="915" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#234f9b">Machine Learning</text>
+<text x="915" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#52647c">Learns patterns from data</text>
+
+<line x1="500" y1="395" x2="775" y2="395" stroke="#234f9b" stroke-width="5"/>
+<polygon points="775,395 750,381 750,409" fill="#234f9b"/>
+<polygon points="500,395 525,381 525,409" fill="#234f9b"/>
+<rect x="545" y="342" width="185" height="42" rx="21" fill="#ffffff" stroke="#cbd8ec" stroke-width="2"/>
+<text x="638" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#234f9b">Data-driven overlap</text>
+
+<text x="600" y="612" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#667085">
+Conceptual diagram: Machine Learning is one approach within AI and is also widely used in Data Science.
+</text>
+</svg>

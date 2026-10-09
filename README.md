@@ -1,10 +1,13 @@
 # DT 111 — Introduction to Data Science and Artificial Intelligence
 
-Online teaching and learning package for **DT 111** at **Mkwawa University College of Education (MUCE), University of Dar es Salaam**.
+Online teaching and learning package for **DT 111: Introduction to Data Science and Artificial Intelligence**.
 
-The GitHub Pages edition is distributed as a self-contained `index.html`, so the full course can be served without a build process or external asset hosting.
+**Institution:** Mkwawa University College of Education (MUCE), University of Dar es Salaam  
+**Programme:** BSc in Data Science and Artificial Intelligence
 
-## Course topics
+## Contents
+
+The site contains all eight curriculum topics:
 
 1. Introduction to Data Science and AI
 2. Data Collection and Preprocessing
@@ -15,14 +18,32 @@ The GitHub Pages edition is distributed as a self-contained `index.html`, so the
 7. Ethical Implications and Societal Impact
 8. Contemporary Issues in AI
 
+Each topic includes notes, presentation mode, review questions, formative quizzes, practical demonstrations and assignments.
+
+## Use
+
+Open `index.html` locally for the offline version, or publish this repository with GitHub Pages for online access.
+
 ## GitHub Pages
 
-In the repository, open:
+After uploading the repository:
 
-**Settings → Pages → Deploy from a branch → `main` → `/(root)` → Save**
+1. Open **Settings → Pages**.
+2. Under **Build and deployment**, choose **Deploy from a branch**.
+3. Select **main** and **/(root)**.
+4. Save.
 
-Expected public URL:
+The published site will normally be available at:
 
-https://kamboedwin.github.io/dt111-data-science-ai/
+`https://<github-username>.github.io/<repository-name>/`
 
-Student progress is stored in the learner's browser using localStorage. External readings and the Google Drive assignment-submission link require internet access.
+## Notes
+
+- Core course content works without a server.
+- Student progress is stored in the browser using local storage.
+- External readings and the Google Drive assignment-submission link require internet access.
+- The lecturer-editable source files are in `LECTURER_EDIT/`.
+
+## Version
+
+Online Edition v1.0

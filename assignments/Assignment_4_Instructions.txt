@@ -1,0 +1,28 @@
+DT 111 — Assignment 4
+Introductory Statistical Interpretation Task
+
+Purpose
+Develop conceptual understanding of probability, hypothesis testing and simple regression interpretation without overloading calculation.
+
+Dataset
+datasets/topic4_regression_learning_data.csv
+
+Task
+1. Explain the difference between a discrete and a continuous variable, giving one example of each.
+2. Write one null hypothesis and one alternative hypothesis for the question:
+   Does a new teaching intervention change students’ average score?
+3. Explain what a p-value of 0.02 would suggest at the 0.05 significance level.
+4. Explain why this does not prove the alternative hypothesis with absolute certainty.
+5. Using the supplied dataset, create a scatter plot of study_hours_week against final_score.
+6. Add a trend line if your spreadsheet tool allows it, or describe the relationship visually.
+7. Write 200–300 words interpreting the relationship and explaining why it should not automatically be interpreted as causal.
+
+Expected submission
+A short report containing written answers and the scatter plot.
+
+Submission
+Upload to the DT 111 Google Drive assignment folder configured in:
+LECTURER_EDIT/course_settings.js
+
+Recommended filename
+DT111_A4_RegistrationNumber.pdf

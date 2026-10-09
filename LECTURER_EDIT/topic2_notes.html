@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DT111 Topic 2 Notes</title><link rel="stylesheet" href="notes.css"></head>
+<body><div class="notes-wrap">
+<h1>DT111 Topic 2</h1>
+<p class="intro-note">You can read these notes on screen or use the button below to print or save them as PDF.</p>
+<div class="toolbar"><button onclick="window.print()">Print / Save as PDF</button></div>
+
+
+<section class="note-section">
+<span class="section-number">2.1</span>
+<h2>Data Sources and Types</h2>
+<p>Every Data Science project depends on data. Before collecting anything, the analyst should ask: <strong>What problem are we trying to solve? What data are relevant? Where can they be obtained? Who owns them? Are they trustworthy and appropriate for the intended use?</strong></p>
+
+<h3>Data sources</h3>
+<p>Data may come from many places. A useful beginner distinction is between <strong>primary data</strong>, collected directly for the current purpose, and <strong>secondary data</strong>, originally collected by another person or organisation and later reused.</p>
+
+<table class="compare-table">
+<thead><tr><th>Source type</th><th>Meaning</th><th>Examples</th><th>Questions to ask</th></tr></thead>
+<tbody>
+<tr><td>Primary</td><td>Collected specifically for the current study or task</td><td>Survey, interview, experiment, field observation, sensor deployed for the project</td><td>Was the collection method reliable? Is the sample appropriate?</td></tr>
+<tr><td>Secondary</td><td>Existing data collected previously for another purpose</td><td>Government statistics, institutional records, published datasets, historical databases</td><td>Who created it? When? For what purpose? Are definitions compatible?</td></tr>
+<tr><td>Internal</td><td>Generated inside an organisation</td><td>Student records, transactions, attendance, inventory</td><td>Who is allowed to access it? Are fields consistently recorded?</td></tr>
+<tr><td>External</td><td>Obtained from outside an organisation</td><td>Weather data, census data, market prices, satellite data</td><td>Is the provider reliable? Are licences or usage restrictions involved?</td></tr>
+</tbody></table>
+
+<p>Modern data sources also include mobile devices, web applications, social media, remote sensing, Internet of Things sensors, digital transactions, images, text, audio, video and machine-generated logs.</p>
+
+<h3>Forms of data</h3>
+<figure class="figure"><img src="media/topic2/data_types.svg" alt="Common forms of data"><figcaption>Figure 1. Structured, semi-structured and unstructured data, together with numerical and categorical variables.</figcaption></figure>
+
+<p><strong>Structured data</strong> follow a defined schema, often organised in rows and columns. <strong>Semi-structured data</strong> contain organisational markers but may not fit a rigid table. <strong>Unstructured data</strong> such as free text, images, audio and video do not naturally follow a row-column format.</p>
+
+<p>Variables may also be described by the type of values they contain. <strong>Numerical data</strong> represent quantities or measurements. <strong>Categorical data</strong> represent groups or labels. Numerical data may be discrete or continuous, while categorical data may be nominal or ordinal.</p>
+
+<div class="callout info"><strong>Important:</strong> A number is not automatically numerical in the analytical sense. A student registration number or telephone number may contain digits but functions as an identifier, not a quantity to add or average.</div>
+
+<h3>Data and metadata</h3>
+<p><strong>Metadata</strong> are data that describe other data. A data dictionary, for example, may state each column name, definition, data type, unit, allowed values and whether the field can be missing. Good metadata make datasets easier to understand and reuse.</p>
+</section>
+
+<section class="note-section">
+<span class="section-number">2.2</span>
+<h2>Data Cleaning Techniques</h2>
+<p>Raw data are rarely ready for analysis. <strong>Data cleaning</strong> is the process of identifying and correcting errors, inconsistencies and quality problems so that the dataset becomes more reliable and usable.</p>
+
+<figure class="figure"><img src="media/topic2/data_quality.svg" alt="Data quality questions"><figcaption>Figure 2. Useful questions for assessing data quality.</figcaption></figure>
+
+<h3>Common data-quality problems</h3>
+<ul>
+<li><strong>Missing values:</strong> a field that should contain a value is empty or represented by symbols such as N/A, -, ?, 999 or blank.</li>
+<li><strong>Duplicate records:</strong> the same observation appears more than once.</li>
+<li><strong>Inconsistent formats:</strong> the same category appears as “Dar es Salaam”, “dar es salaam” and “DAR ES SALAAM”.</li>
+<li><strong>Invalid values:</strong> values violate logical or allowed ranges, such as attendance of 105%.</li>
+<li><strong>Data-entry errors:</strong> spelling mistakes, extra spaces, misplaced decimal points or impossible values.</li>
+<li><strong>Outliers:</strong> observations far from typical values. An outlier may be an error, but it can also be a valid and important observation.</li>
+<li><strong>Wrong data types:</strong> a field expected to contain numbers contains text such as “twenty”.</li>
+</ul>
+
+<figure class="figure"><img src="media/topic2/cleaning_cycle.svg" alt="Practical data cleaning cycle"><figcaption>Figure 3. Inspect, detect, correct and validate.</figcaption></figure>
+
+<h3>Handling missing values</h3>
+<p>There is no single correct treatment for all missing data. Options include leaving a value missing, removing records or variables when justified, or estimating a replacement value through <strong>imputation</strong>. The decision depends on why the value is missing, how much data are missing and how the field will be used.</p>
+
+<div class="callout warning"><strong>Do not fill missing values automatically.</strong> Replacing every missing numerical value with an average may be convenient but can distort the data. First investigate the reason for the missingness and the consequences of each option.</div>
+
+<h3>Duplicates and identifiers</h3>
+<p>Duplicates should be identified using appropriate identifiers or combinations of fields. Two people can legitimately have the same name, so a repeated name alone is not proof of a duplicate. Conversely, the same record copied twice with the same unique student ID is stronger evidence.</p>
+
+<h3>Outliers</h3>
+<p>An outlier should be investigated rather than automatically deleted. A test score of 103 when the maximum is 100 is invalid. A rainfall measurement much higher than usual may be a genuine extreme event. Context determines the correct response.</p>
+
+<h3>Documenting changes</h3>
+<p>Cleaning should be reproducible. Keep the original data unchanged, record what was changed and why, and save a cleaned version separately. This protects the original evidence and makes the process auditable.</p>
+</section>
+
+<section class="note-section">
+<span class="section-number">2.3</span>
+<h2>Data Preprocessing Methods</h2>
+<p><strong>Preprocessing</strong> is the broader preparation of data into a form suitable for analysis or modelling. Cleaning is part of preprocessing, but preprocessing can also include transformation, encoding, scaling, integration, selection and creating new variables.</p>
+
+<figure class="figure"><img src="media/topic2/preprocessing.svg" alt="Common data preprocessing operations"><figcaption>Figure 4. Common preprocessing operations.</figcaption></figure>
+
+<h3>Standardising formats</h3>
+<p>Dates may be written as 05/10/2026, 2026-10-05 or 5 October 2026. Measurements may use kilograms in one source and grams in another. Categories may differ only in capitalisation or spelling. Standardisation makes these representations consistent.</p>
+
+<h3>Encoding categorical data</h3>
+<p>Many computational methods require categories to be represented numerically. A simple binary category may be represented with two values, while a category with several unordered labels is often represented using separate indicator variables. Encoding should preserve the meaning of the original categories and should not create a false order.</p>
+
+<h3>Scaling numerical variables</h3>
+<p>Variables can have very different ranges: age may range from 18 to 60, while annual income may range from thousands to millions. Some algorithms are sensitive to these scale differences. <strong>Scaling</strong> changes the numerical representation to make features more comparable while preserving the information needed for analysis.</p>
+
+<h3>Transforming and deriving variables</h3>
+<p>Sometimes raw fields are converted into more useful representations. A date of birth can be used to derive age. A timestamp can be used to derive day of week. Multiple transaction records can be aggregated into monthly totals. Such transformations should be logically justified and documented.</p>
+
+<h3>Selecting relevant data</h3>
+<p>More data are not always better if fields are irrelevant, unreliable or ethically inappropriate. Preprocessing may include selecting useful variables and observations. Later in the programme, students will learn formal feature-selection and dimensionality-reduction methods.</p>
+
+<h3>Preparing subsets for model development</h3>
+<p>When data will be used for Machine Learning, the dataset is commonly divided into separate subsets for model development and evaluation. The exact procedures are studied later; at this stage, the key idea is that a model should not be evaluated only on the same examples from which it learned.</p>
+
+<div class="callout"><strong>Main lesson:</strong> Good analysis begins before any model is trained. Understanding the source, meaning, quality and preparation of data is a core Data Science skill.</div>
+
+<h3>Topic 2 checklist</h3>
+<ul>
+<li>Can you identify the source and form of a dataset?</li>
+<li>Can you distinguish numerical, categorical and identifier fields?</li>
+<li>Can you identify missing values, duplicates, invalid values and inconsistencies?</li>
+<li>Can you explain why an outlier should be investigated rather than automatically deleted?</li>
+<li>Can you describe common preprocessing operations and why they are used?</li>
+<li>Can you explain why the original raw data should be preserved?</li>
+</ul>
+</section>
+</div></body></html>

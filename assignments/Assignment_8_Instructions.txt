@@ -1,0 +1,36 @@
+DT 111 — Assignment 8
+Inclusive AI Solution Concept
+
+Purpose
+Design a simple AI-supported concept addressing one of the four curriculum areas in Topic 8 while demonstrating inclusive and responsible design.
+
+Dataset
+datasets/topic8_accessible_ai_scenarios.csv
+
+Task
+1. Choose one focus area:
+   - assistive communication or physical support;
+   - personalised learning for students with disabilities;
+   - mobility/accessibility;
+   - emotional well-being support.
+2. Define a specific user need or barrier. Begin with the problem, not the technology.
+3. Describe the proposed AI-supported solution and the information it would need.
+4. Explain how the user would interact with the system, including at least one alternative interaction mode.
+5. Identify at least three risks or failure cases and explain how each would be reduced.
+6. Explain how users with relevant lived experience would participate in requirements gathering or testing.
+7. State where human oversight, user control or escalation is required.
+8. Sketch a simple flow diagram:
+   User need → Inputs → AI function → Accessible output → User feedback/human support.
+
+For emotional well-being concepts
+Keep the proposed system within low-risk supportive functions. It should not autonomously diagnose disorders, prescribe treatment or replace emergency/professional care.
+
+Expected submission
+A concise 3–5 page concept note including the problem, proposed solution, inclusion safeguards and one diagram.
+
+Submission
+Upload to the DT 111 Google Drive assignment folder configured in:
+LECTURER_EDIT/course_settings.js
+
+Recommended filename
+DT111_A8_RegistrationNumber.pdf

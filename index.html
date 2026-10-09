@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DT 111: Introduction to Data Science and AI - Offline Learning Package" />
+  <title>DT 111 — Introduction to Data Science and AI | MUCE</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">DT</div>
+        <div>
+          <strong>DT 111</strong>
+          <span>Introduction to Data Science & AI</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-link active" data-view="home">🏠 <span>Home</span></button>
+        <button class="nav-link" data-view="topic1">1️⃣ <span>Topic 1: Introduction</span></button>
+        <button class="nav-link" data-view="topic2">2️⃣ <span>Topic 2: Data Collection</span></button>
+        <button class="nav-link" data-view="topic3">3️⃣ <span>Topic 3: EDA</span></button>
+        <button class="nav-link" data-view="topic4">4️⃣ <span>Topic 4: Statistics</span></button>
+        <button class="nav-link" data-view="topic5">5️⃣ <span>Topic 5: Machine Learning</span></button>
+        <button class="nav-link" data-view="topic6">6️⃣ <span>Topic 6: AI Basics</span></button>
+        <button class="nav-link" data-view="topic7">7️⃣ <span>Topic 7: Ethics & Society</span></button>
+        <button class="nav-link" data-view="topic8">8️⃣ <span>Topic 8: Contemporary AI</span></button>
+        <div class="nav-sep"></div>
+        <button class="nav-link" data-view="quiz">✅ <span>Topic 1 Quiz</span></button>
+        <button class="nav-link" data-view="assignment">📝 <span>Assignment 1</span></button>
+        <button class="nav-link" data-view="quiz2">✅ <span>Topic 2 Quiz</span></button>
+        <button class="nav-link" data-view="assignment2">🧹 <span>Assignment 2</span></button>
+        <button class="nav-link" data-view="quiz3">✅ <span>Topic 3 Quiz</span></button>
+        <button class="nav-link" data-view="assignment3">📊 <span>Assignment 3</span></button>
+        <button class="nav-link" data-view="quiz4">✅ <span>Topic 4 Quiz</span></button>
+        <button class="nav-link" data-view="assignment4">📈 <span>Assignment 4</span></button>
+        <button class="nav-link" data-view="quiz5">✅ <span>Topic 5 Quiz</span></button>
+        <button class="nav-link" data-view="assignment5">🤖 <span>Assignment 5</span></button>
+        <button class="nav-link" data-view="quiz6">✅ <span>Topic 6 Quiz</span></button>
+        <button class="nav-link" data-view="assignment6">🧠 <span>Assignment 6</span></button>
+        <button class="nav-link" data-view="quiz7">✅ <span>Topic 7 Quiz</span></button>
+        <button class="nav-link" data-view="assignment7">⚖️ <span>Assignment 7</span></button>
+        <button class="nav-link" data-view="quiz8">✅ <span>Topic 8 Quiz</span></button>
+        <button class="nav-link" data-view="assignment8">♿ <span>Assignment 8</span></button>
+        <button class="nav-link" data-view="glossary">📚 <span>Glossary</span></button>
+        <button class="nav-link" data-view="progress">📊 <span>My Progress</span></button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <small>Offline learning package · Version 1.0</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+        <div class="crumb" id="crumb">DT 111 / Home</div>
+        <div class="top-actions">
+          <button class="btn secondary" id="resetProgressBtn" title="Reset saved local progress">Reset progress</button>
+        </div>
+      </header>
+
+      <section class="view active" id="home">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow">BSc Data Science and Artificial Intelligence</span>
+            <h1>DT 111: Introduction to Data Science and AI</h1>
+            <p>
+              A beginner-friendly, offline interactive learning package for understanding
+              the foundations, workflow, applications and responsible use of Data Science and Artificial Intelligence.
+            </p>
+            <div class="hero-actions">
+              <button class="btn primary" data-go="topic1">Start Topic 1</button>
+              <button class="btn secondary" data-go="progress">View my progress</button>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <svg viewBox="0 0 420 300" role="img">
+              <rect x="32" y="28" width="356" height="244" rx="24" class="svg-panel"/>
+              <circle cx="105" cy="98" r="38" class="svg-node"/>
+              <circle cx="212" cy="74" r="28" class="svg-node alt"/>
+              <circle cx="320" cy="113" r="34" class="svg-node"/>
+              <circle cx="166" cy="204" r="32" class="svg-node alt"/>
+              <circle cx="282" cy="214" r="40" class="svg-node"/>
+              <path d="M132 102 L184 82 M238 84 L291 104 M126 127 L151 177 M193 200 L243 210 M312 146 L294 176 M202 94 L174 174 M231 92 L270 179" class="svg-line"/>
+              <text x="105" y="104" text-anchor="middle" class="svg-text">DATA</text>
+              <text x="212" y="80" text-anchor="middle" class="svg-text">AI</text>
+              <text x="320" y="119" text-anchor="middle" class="svg-text">ML</text>
+              <text x="166" y="210" text-anchor="middle" class="svg-text">INSIGHT</text>
+              <text x="282" y="220" text-anchor="middle" class="svg-text">ACTION</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <article class="card">
+            <h2>Course aim</h2>
+            <p>
+              Introduce the fundamental concepts, techniques and tools of Data Science and Artificial Intelligence,
+              providing a solid foundation for further study and application.
+            </p>
+          </article>
+          <article class="card">
+            <h2>Course structure</h2>
+            <p><strong>Core course · 12 credits · 120 hours</strong></p>
+            <p>The approved curriculum contains eight major topics, combining concepts, practical work, applications and responsible AI.</p>
+          </article>
+        </div>
+
+        <article class="card">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Learning journey</span>
+              <h2>Course topics</h2>
+            </div>
+          </div>
+          <div class="module-grid">
+            <button class="module ready" data-go="topic1"><span>01</span><strong>Introduction to Data Science and AI</strong><small>Overview · History · Applications</small></button>
+            <button class="module ready" data-go="topic2"><span>02</span><strong>Data Collection and Preprocessing</strong><small>Sources · Cleaning · Preprocessing</small></button>
+            <button class="module ready" data-go="topic3"><span>03</span><strong>Exploratory Data Analysis</strong><small>Statistics · Visualisation · Insights</small></button>
+            <button class="module ready" data-go="topic4"><span>04</span><strong>Statistical Methods</strong><small>Probability · Hypothesis testing · Regression</small></button>
+            <button class="module ready" data-go="topic5"><span>05</span><strong>Introduction to Machine Learning</strong><small>Supervised · Unsupervised · Evaluation</small></button>
+            <button class="module ready" data-go="topic6"><span>06</span><strong>Artificial Intelligence Basics</strong><small>Search · Logic · Reasoning · Neural networks</small></button>
+            <button class="module ready" data-go="topic7"><span>07</span><strong>Ethics and Societal Impact</strong><small>Privacy · Bias · Fairness · Responsible AI</small></button>
+            <button class="module ready" data-go="topic8"><span>08</span><strong>Contemporary Issues in AI</strong><small>Accessibility · Learning · Mobility · Well-being</small></button>
+          </div>
+        </article>
+
+        <div class="grid three">
+          <article class="card stat">
+            <span class="stat-value">8</span>
+            <span class="stat-label">Curriculum topics</span>
+          </article>
+          <article class="card stat">
+            <span class="stat-value">120</span>
+            <span class="stat-label">Learning hours</span>
+          </article>
+          <article class="card stat">
+            <span class="stat-value">12</span>
+            <span class="stat-label">Credits</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="topic1">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Topic 1</span>
+            <h1>Introduction to Data Science and AI</h1>
+            <p>Overview of Data Science and AI · History and evolution · Applications and impact in various industries</p>
+          </div>
+          <button class="btn primary" id="presentationBtn">▶ Presentation Mode</button>
+        </div>
+
+        <article class="card learning-outcomes">
+          <h2>Learning outcomes for this topic</h2>
+          <p>By the end of Topic 1, you should be able to:</p>
+          <ul class="checklist">
+            <li>explain Data Science and Artificial Intelligence in clear terms;</li>
+            <li>distinguish Data Science, AI and Machine Learning at an introductory level;</li>
+            <li>describe a simple Data Science workflow from problem to decision;</li>
+            <li>outline major milestones in the evolution of Data Science and AI;</li>
+            <li>identify applications, benefits and limitations of Data Science and AI in different sectors.</li>
+          </ul>
+        </article>
+
+        <div class="lesson-tabs">
+          <button class="tab active" data-tab="notes">📖 Notes</button>
+          <button class="tab" data-tab="examples">🧩 Examples</button>
+          <button class="tab" data-tab="checks">🧠 Quick Checks</button>
+          <button class="tab" data-tab="review">📋 Review Questions</button>
+          <button class="tab" data-tab="reading">🔎 Further Reading</button>
+          <button class="tab" data-tab="summary">📝 Summary</button>
+        </div>
+
+        <div class="tab-panel active" id="notes">
+          <div class="editable-note">
+            <span>Lecturer-editable notes</span>
+            <small>The displayed notes are loaded from <code>LECTURER_EDIT/topic1_notes.html</code>.</small>
+          </div>
+          <iframe class="content-frame notes-frame" src="LECTURER_EDIT/topic1_notes.html" title="Topic 1 full notes"></iframe>
+          <div class="lesson-complete">
+            <label>
+              <input type="checkbox" id="topic1Complete" />
+              <span>I have completed the Topic 1 notes.</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="examples">
+          <article class="card">
+            <h2>Example 1: Student performance</h2>
+            <p>A university wants to understand why some students struggle in the first semester.</p>
+            <div class="step-cards">
+              <div><b>Problem</b><span>Identify factors related to poor performance.</span></div>
+              <div><b>Data</b><span>Attendance, coursework, programme, prior achievement and study habits.</span></div>
+              <div><b>Analysis</b><span>Explore distributions, missing values and relationships.</span></div>
+              <div><b>Possible model</b><span>Estimate which students may need early academic support.</span></div>
+              <div><b>Action</b><span>Provide targeted support while protecting privacy and avoiding unfair labelling.</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2>Example 2: Crop disease support</h2>
+            <p>
+              A farmer photographs a crop leaf. An AI system analyses the image and estimates the most likely disease class.
+              The output may then be combined with agronomic knowledge to provide guidance.
+            </p>
+            <div class="mini-diagram">
+              <span>📷 Image</span><b>→</b><span>🧠 Model</span><b>→</b><span>🏷️ Prediction</span><b>→</b><span>👩🏾‍🌾 Decision support</span>
+            </div>
+            <p class="muted">Discussion: Where could errors occur in this pipeline?</p>
+          </article>
+
+          <article class="card">
+            <h2>Interactive demonstration: Rule-based or learning-based?</h2>
+            <p>Select a scenario and compare two broad ways a computer system may solve it.</p>
+            <select id="scenarioSelect" class="select">
+              <option value="spam">Detect spam email</option>
+              <option value="traffic">Choose a traffic-light schedule</option>
+              <option value="marks">Calculate the average of five marks</option>
+            </select>
+            <div id="scenarioOutput" class="demo-output"></div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="checks">
+          <article class="card quick-check" data-answer="c">
+            <h3>Quick Check 1</h3>
+            <p>Which statement best describes Data Science?</p>
+            <label><input type="radio" name="qc1" value="a"> A programming language used for AI</label>
+            <label><input type="radio" name="qc1" value="b"> A database management system</label>
+            <label><input type="radio" name="qc1" value="c"> An interdisciplinary field that uses data to generate understanding and support decisions</label>
+            <label><input type="radio" name="qc1" value="d"> A type of computer hardware</label>
+            <button class="btn secondary check-btn">Check answer</button>
+            <div class="feedback"></div>
+          </article>
+
+          <article class="card quick-check" data-answer="b">
+            <h3>Quick Check 2</h3>
+            <p>Which relationship is most accurate at an introductory level?</p>
+            <label><input type="radio" name="qc2" value="a"> AI and Machine Learning are exactly the same thing.</label>
+            <label><input type="radio" name="qc2" value="b"> Machine Learning is one important approach within AI.</label>
+            <label><input type="radio" name="qc2" value="c"> Data Science never uses Machine Learning.</label>
+            <label><input type="radio" name="qc2" value="d"> AI can only work with numerical data.</label>
+            <button class="btn secondary check-btn">Check answer</button>
+            <div class="feedback"></div>
+          </article>
+
+          <article class="card quick-check" data-answer="a">
+            <h3>Quick Check 3</h3>
+            <p>Which combination most strongly explains the recent growth of modern AI?</p>
+            <label><input type="radio" name="qc3" value="a"> More data, more computing power and improved algorithms</label>
+            <label><input type="radio" name="qc3" value="b"> Fewer computers and less digital data</label>
+            <label><input type="radio" name="qc3" value="c"> Elimination of statistics from computing</label>
+            <label><input type="radio" name="qc3" value="d"> Replacing all human decisions with machines</label>
+            <button class="btn secondary check-btn">Check answer</button>
+            <div class="feedback"></div>
+          </article>
+        </div>
+
+
+        <div class="tab-panel" id="review">
+          <div class="editable-note">
+            <span>Revision and self-study</span>
+            <small>Questions can be edited in <code>LECTURER_EDIT/topic1_review_questions.html</code>.</small>
+          </div>
+          <iframe class="content-frame review-frame" src="LECTURER_EDIT/topic1_review_questions.html" title="Topic 1 review questions"></iframe>
+        </div>
+
+        <div class="tab-panel" id="reading">
+          <article class="card">
+            <div class="section-heading">
+              <div>
+                <span class="eyebrow">Optional self-study</span>
+                <h2>Further reading and deeper learning</h2>
+              </div>
+              <span class="internet-badge">Internet required</span>
+            </div>
+            <p>
+              The core DT 111 notes work completely offline. The resources below are optional external sources for students
+              who want a deeper explanation or additional examples.
+            </p>
+
+            <div class="resource-grid">
+              <a class="resource-card" href="https://www.artint.info/" target="_blank" rel="noopener">
+                <span class="resource-type">Free online textbook</span>
+                <strong>Artificial Intelligence: Foundations of Computational Agents</strong>
+                <p>David Poole & Alan Mackworth. A comprehensive AI text; begin with the introductory material and return to later chapters as the course progresses.</p>
+                <span class="resource-action">Open resource ↗</span>
+              </a>
+
+              <a class="resource-card" href="https://jakevdp.github.io/PythonDataScienceHandbook/" target="_blank" rel="noopener">
+                <span class="resource-type">Free online book</span>
+                <strong>Python Data Science Handbook</strong>
+                <p>Jake VanderPlas. Useful for seeing how Python tools support real Data Science work. Best used progressively as programming skills develop.</p>
+                <span class="resource-action">Open resource ↗</span>
+              </a>
+
+              <a class="resource-card" href="https://www.helsinki.fi/en/admissions-and-education/open-university/multidisciplinary-themed-modules/artificial-intelligence-collection" target="_blank" rel="noopener">
+                <span class="resource-type">Free learning collection</span>
+                <strong>University of Helsinki — Artificial Intelligence Collection</strong>
+                <p>Beginner-friendly material, including Elements of AI, designed for learners without a technical background.</p>
+                <span class="resource-action">Open resource ↗</span>
+              </a>
+
+              <a class="resource-card" href="https://plato.stanford.edu/entries/ethics-ai/" target="_blank" rel="noopener">
+                <span class="resource-type">Reference article</span>
+                <strong>Stanford Encyclopedia of Philosophy — Ethics of AI and Robotics</strong>
+                <p>A deeper reference on privacy, bias, autonomy, responsibility and societal impacts. Particularly useful when the course reaches Topic 7.</p>
+                <span class="resource-action">Open resource ↗</span>
+              </a>
+            </div>
+
+            <div class="reading-guide">
+              <h3>Suggested reading for Topic 1</h3>
+              <p>
+                Start with the introductory sections of <em>Artificial Intelligence: Foundations of Computational Agents</em>
+                or the University of Helsinki material. The Python Data Science Handbook becomes increasingly useful once
+                students begin programming and data-handling activities.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="summary">
+          <article class="card">
+            <h2>Topic 1 summary</h2>
+            <ul class="summary-list">
+              <li>Data Science combines data, computing, statistics and domain knowledge to generate insight and support decisions.</li>
+              <li>Artificial Intelligence focuses on systems that perform tasks associated with intelligent behaviour.</li>
+              <li>Machine Learning is a major AI approach in which systems learn patterns from data.</li>
+              <li>A typical Data Science workflow moves from a problem through data collection, preparation, analysis, modelling, evaluation and communication.</li>
+              <li>The evolution of Data Science and AI has been accelerated by increasing data availability, computing power and algorithmic advances.</li>
+              <li>Applications span agriculture, health, finance, education, transport, environment and many other sectors.</li>
+              <li>Benefits must be considered together with limitations, privacy, fairness, data quality and the need for human judgement.</li>
+            </ul>
+            <div class="next-actions">
+              <button class="btn primary" data-go="quiz">Take Topic 1 Quiz</button>
+              <button class="btn secondary" data-go="assignment">View Assignment 1</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      
+      <section class="view" id="topic2">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Topic 2</span>
+            <h1>Data Collection and Preprocessing</h1>
+            <p>Data sources and types · Data cleaning techniques · Data preprocessing methods</p>
+          </div>
+          <button class="btn primary" id="presentationBtn2">▶ Presentation Mode</button>
+        </div>
+
+        <article class="card learning-outcomes">
+          <h2>Learning outcomes for this topic</h2>
+          <p>By the end of Topic 2, you should be able to:</p>
+          <ul class="checklist">
+            <li>identify common data sources and distinguish major forms and variable types;</li>
+            <li>recognise common data-quality problems including missing values, duplicates and invalid values;</li>
+            <li>explain and apply basic data-cleaning decisions;</li>
+            <li>describe common preprocessing operations such as standardisation, encoding and scaling;</li>
+            <li>document data changes and preserve the original raw dataset.</li>
+          </ul>
+        </article>
+
+        <div class="lesson-tabs topic2-tabs">
+          <button class="tab active" data-tab="t2notes">📖 Notes</button>
+          <button class="tab" data-tab="t2demo">🧪 Data Cleaning Demo</button>
+          <button class="tab" data-tab="t2checks">🧠 Quick Checks</button>
+          <button class="tab" data-tab="t2review">📋 Review Questions</button>
+          <button class="tab" data-tab="t2reading">🔎 Further Reading</button>
+          <button class="tab" data-tab="t2summary">📝 Summary</button>
+        </div>
+
+        <div class="tab-panel active" id="t2notes">
+          <div class="editable-note"><span>Lecturer-editable notes</span><small>Loaded from <code>LECTURER_EDIT/topic2_notes.html</code>.</small></div>
+          <iframe class="content-frame notes-frame" src="LECTURER_EDIT/topic2_notes.html" title="Topic 2 full notes"></iframe>
+          <div class="lesson-complete"><label><input type="checkbox" id="topic2Complete"><span>I have completed the Topic 2 notes.</span></label></div>
+        </div>
+
+        <div class="tab-panel" id="t2demo">
+          <article class="card">
+            <span class="eyebrow">Interactive demonstration</span>
+            <h2>Inspect a messy student dataset</h2>
+            <p>This small dataset deliberately contains missing values, duplicates, inconsistent categories, invalid ranges and formatting problems. Try identifying them before revealing the issues.</p>
+            <div class="demo-actions">
+              <button class="btn secondary" id="showIssuesBtn">Show data-quality issues</button>
+              <button class="btn primary" id="showCleanBtn">Show cleaned example</button>
+              <button class="btn secondary" id="resetDataDemoBtn">Reset</button>
+            </div>
+            <div class="table-scroll">
+              <table class="data-demo-table" id="messyDataTable">
+                <thead><tr><th>ID</th><th>Name</th><th>Age</th><th>Region</th><th>Programme</th><th>Score</th><th>Attendance %</th></tr></thead>
+                <tbody id="dataDemoBody"></tbody>
+              </table>
+            </div>
+            <div id="dataDemoMessage" class="demo-output">Start by scanning the table. Which cells would you investigate?</div>
+            <div class="dataset-links">
+              <a class="btn secondary link-btn" href="datasets/topic2_messy_student_data.csv" download>Download messy CSV</a>
+              <a class="btn secondary link-btn" href="datasets/topic2_cleaned_student_data_example.csv" download>Download cleaned example</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2>Cleaning decision challenge</h2>
+            <p>Select the best first response for each situation.</p>
+            <div class="decision-grid">
+              <div class="decision-card"><strong>Attendance = 105%</strong><select class="decision-select" data-correct="investigate"><option value="">Choose…</option><option value="delete">Delete the whole dataset</option><option value="investigate">Investigate source/range and correct or mark missing</option><option value="keep">Keep unchanged</option></select><span class="decision-feedback"></span></div>
+              <div class="decision-card"><strong>One missing age</strong><select class="decision-select" data-correct="context"><option value="">Choose…</option><option value="zero">Replace with 0 automatically</option><option value="context">Investigate why it is missing and decide using context</option><option value="average">Always replace with the mean</option></select><span class="decision-feedback"></span></div>
+              <div class="decision-card"><strong>Very high rainfall</strong><select class="decision-select" data-correct="verify"><option value="">Choose…</option><option value="delete">Delete because it is unusual</option><option value="verify">Verify against source/context before deciding</option><option value="average">Replace with average</option></select><span class="decision-feedback"></span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t2checks">
+          <article class="card quick-check" data-answer="b"><h3>Quick Check 1</h3><p>Which is an example of secondary data for a student researcher?</p>
+            <label><input type="radio" name="t2qc1" value="a"> A survey the student conducts today</label>
+            <label><input type="radio" name="t2qc1" value="b"> Existing national census data</label>
+            <label><input type="radio" name="t2qc1" value="c"> A sensor the student installs for the study</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+          <article class="card quick-check" data-answer="c"><h3>Quick Check 2</h3><p>Which value should normally be treated as an identifier rather than a numerical measurement?</p>
+            <label><input type="radio" name="t2qc2" value="a"> Age</label><label><input type="radio" name="t2qc2" value="b"> Rainfall in mm</label><label><input type="radio" name="t2qc2" value="c"> Student registration number</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+          <article class="card quick-check" data-answer="a"><h3>Quick Check 3</h3><p>What should you usually do first when you notice an extreme value?</p>
+            <label><input type="radio" name="t2qc3" value="a"> Investigate its source and context</label><label><input type="radio" name="t2qc3" value="b"> Delete it immediately</label><label><input type="radio" name="t2qc3" value="c"> Replace it with zero</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+          <article class="card quick-check" data-answer="b"><h3>Quick Check 4</h3><p>Which statement is most accurate?</p>
+            <label><input type="radio" name="t2qc4" value="a"> Cleaning and preprocessing are exactly identical terms</label><label><input type="radio" name="t2qc4" value="b"> Cleaning is one part of the broader preprocessing process</label><label><input type="radio" name="t2qc4" value="c"> Preprocessing happens only after a model is trained</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+        </div>
+
+        <div class="tab-panel" id="t2review">
+          <div class="editable-note"><span>Revision and self-study</span><small>Loaded from <code>LECTURER_EDIT/topic2_review_questions.html</code>.</small></div>
+          <iframe class="content-frame review-frame" src="LECTURER_EDIT/topic2_review_questions.html" title="Topic 2 review questions"></iframe>
+        </div>
+
+        <div class="tab-panel" id="t2reading">
+          <article class="card">
+            <div class="section-heading"><div><span class="eyebrow">Optional self-study</span><h2>Further reading and deeper learning</h2></div><span class="internet-badge">Internet required</span></div>
+            <div class="resource-grid">
+              <a class="resource-card" href="https://www.ibm.com/think/topics/data-cleaning" target="_blank" rel="noopener"><span class="resource-type">Concept guide</span><strong>IBM — What is Data Cleaning?</strong><p>A clear overview of cleaning goals and common problems such as duplicates, missing values and inconsistencies.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://pandas.pydata.org/docs/user_guide/missing_data.html" target="_blank" rel="noopener"><span class="resource-type">Technical reference</span><strong>pandas — Working with Missing Data</strong><p>Useful later when students begin Python-based data handling.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://developers.google.com/machine-learning/crash-course/overfitting/data-characteristics" target="_blank" rel="noopener"><span class="resource-type">Interactive learning</span><strong>Google ML Crash Course — Data Characteristics</strong><p>Explores dataset quality, unreliable data and missing values in preparation for Machine Learning.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://developers.google.com/machine-learning/crash-course/numerical-data" target="_blank" rel="noopener"><span class="resource-type">Interactive learning</span><strong>Google ML Crash Course — Numerical Data</strong><p>Introduces numerical feature preparation, outliers and scaling concepts.</p><span class="resource-action">Open resource ↗</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t2summary">
+          <article class="card"><h2>Topic 2 summary</h2>
+            <ul class="summary-list">
+              <li>Data may be primary or secondary, internal or external, and structured, semi-structured or unstructured.</li>
+              <li>Variable meaning matters: identifiers are different from quantities even when both contain digits.</li>
+              <li>Data quality includes completeness, accuracy, consistency, validity and uniqueness.</li>
+              <li>Cleaning addresses problems such as missing values, duplicates, errors and inconsistent formats.</li>
+              <li>Outliers should be investigated rather than automatically removed.</li>
+              <li>Preprocessing is broader than cleaning and can include encoding, scaling, transformation and selection.</li>
+              <li>Raw data should be preserved and cleaning decisions documented.</li>
+            </ul>
+            <div class="next-actions"><button class="btn primary" data-go="quiz2">Take Topic 2 Quiz</button><button class="btn secondary" data-go="assignment2">View Assignment 2</button></div>
+          </article>
+        </div>
+      </section>
+
+
+      <section class="view" id="topic3">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Topic 3</span>
+            <h1>Exploratory Data Analysis</h1>
+            <p>Descriptive statistics · Visualisation tools and techniques · Identifying patterns and insights</p>
+          </div>
+          <button class="btn primary" id="presentationBtn3">▶ Presentation Mode</button>
+        </div>
+
+        <article class="card learning-outcomes">
+          <h2>Learning outcomes for this topic</h2>
+          <p>By the end of Topic 3, you should be able to:</p>
+          <ul class="checklist">
+            <li>explain the purpose and iterative nature of Exploratory Data Analysis;</li>
+            <li>summarise numerical and categorical data using appropriate descriptive statistics;</li>
+            <li>select suitable basic visualisations for different analytical questions;</li>
+            <li>identify distributions, relationships, group differences, trends and unusual observations;</li>
+            <li>interpret patterns carefully without confusing association with causation.</li>
+          </ul>
+        </article>
+
+        <div class="lesson-tabs topic3-tabs">
+          <button class="tab active" data-tab="t3notes">📖 Notes</button>
+          <button class="tab" data-tab="t3lab">📊 EDA Lab</button>
+          <button class="tab" data-tab="t3checks">🧠 Quick Checks</button>
+          <button class="tab" data-tab="t3review">📋 Review Questions</button>
+          <button class="tab" data-tab="t3reading">🔎 Further Reading</button>
+          <button class="tab" data-tab="t3summary">📝 Summary</button>
+        </div>
+
+        <div class="tab-panel active" id="t3notes">
+          <div class="editable-note"><span>Lecturer-editable notes</span><small>Loaded from <code>LECTURER_EDIT/topic3_notes.html</code>.</small></div>
+          <iframe class="content-frame notes-frame" src="LECTURER_EDIT/topic3_notes.html" title="Topic 3 full notes"></iframe>
+          <div class="lesson-complete"><label><input type="checkbox" id="topic3Complete"><span>I have completed the Topic 3 notes.</span></label></div>
+        </div>
+
+        <div class="tab-panel" id="t3lab">
+          <article class="card">
+            <span class="eyebrow">Interactive practical</span>
+            <h2>EDA Lab: Student Learning Dataset</h2>
+            <p>Explore the supplied teaching dataset. Change the region filter and observe how the summaries and charts change. The dataset is illustrative and created for learning.</p>
+
+            <div class="eda-controls">
+              <label><strong>Filter by region</strong>
+                <select id="edaRegionFilter" class="select">
+                  <option value="All">All regions</option>
+                  <option value="Iringa">Iringa</option>
+                  <option value="Arusha">Arusha</option>
+                  <option value="Mbeya">Mbeya</option>
+                  <option value="Dar es Salaam">Dar es Salaam</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="eda-stat-grid">
+              <div class="eda-stat"><span id="edaCount">–</span><small>Students</small></div>
+              <div class="eda-stat"><span id="edaMeanScore">–</span><small>Mean final score</small></div>
+              <div class="eda-stat"><span id="edaMedianScore">–</span><small>Median final score</small></div>
+              <div class="eda-stat"><span id="edaMeanAttendance">–</span><small>Mean attendance</small></div>
+            </div>
+
+            <div class="eda-chart-grid">
+              <div class="eda-chart-card">
+                <h3>Distribution of final scores</h3>
+                <p class="muted">Histogram</p>
+                <div class="svg-chart" id="edaHistogram"></div>
+              </div>
+              <div class="eda-chart-card">
+                <h3>Attendance vs final score</h3>
+                <p class="muted">Scatter plot</p>
+                <div class="svg-chart" id="edaScatter"></div>
+              </div>
+            </div>
+
+            <div class="eda-chart-card">
+              <h3>Average final score by region</h3>
+              <p class="muted">Bar chart — uses the full dataset so groups can be compared.</p>
+              <div class="svg-chart wide" id="edaRegionBars"></div>
+            </div>
+
+            <div class="demo-output" id="edaInsightBox">Select a region or inspect the full dataset. Then describe one distribution pattern, one group comparison and one relationship.</div>
+            <div class="dataset-links"><a class="btn secondary link-btn" href="datasets/topic3_student_learning_data.csv" download>Download Topic 3 CSV</a></div>
+          </article>
+
+          <article class="card">
+            <h2>Interpretation challenge</h2>
+            <div class="interpret-grid">
+              <div class="interpret-card"><strong>Observation</strong><p>Students with higher attendance generally have higher final scores.</p><select class="interpret-select" data-correct="association"><option value="">Choose the best interpretation…</option><option value="cause">Attendance definitely causes higher scores</option><option value="association">There is a positive association worth further investigation</option><option value="none">There is no relationship at all</option></select><span class="decision-feedback"></span></div>
+              <div class="interpret-card"><strong>Observation</strong><p>One score is much lower than most others.</p><select class="interpret-select" data-correct="investigate"><option value="">Choose the best response…</option><option value="delete">Delete it immediately</option><option value="investigate">Investigate the case and data source before deciding</option><option value="replace">Replace it with the mean automatically</option></select><span class="decision-feedback"></span></div>
+              <div class="interpret-card"><strong>Observation</strong><p>Two regions have different average scores.</p><select class="interpret-select" data-correct="compare"><option value="">Choose the best next step…</option><option value="rank">Declare the higher average region better</option><option value="compare">Examine group sizes, distributions and context before concluding</option><option value="ignore">Ignore the difference</option></select><span class="decision-feedback"></span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t3checks">
+          <article class="card quick-check" data-answer="b"><h3>Quick Check 1</h3><p>What is the main purpose of EDA?</p>
+            <label><input type="radio" name="t3qc1" value="a"> Prove a preferred conclusion</label>
+            <label><input type="radio" name="t3qc1" value="b"> Understand data characteristics, patterns and questions for deeper analysis</label>
+            <label><input type="radio" name="t3qc1" value="c"> Replace data cleaning</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="c"><h3>Quick Check 2</h3><p>Which chart is most appropriate for examining the distribution of examination scores?</p>
+            <label><input type="radio" name="t3qc2" value="a"> Bar chart of student names</label>
+            <label><input type="radio" name="t3qc2" value="b"> Line chart connecting students in alphabetical order</label>
+            <label><input type="radio" name="t3qc2" value="c"> Histogram</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="a"><h3>Quick Check 3</h3><p>When a distribution contains a very large extreme value, which measure of centre is often less affected?</p>
+            <label><input type="radio" name="t3qc3" value="a"> Median</label><label><input type="radio" name="t3qc3" value="b"> Mean</label><label><input type="radio" name="t3qc3" value="c"> Range</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="b"><h3>Quick Check 4</h3><p>A scatter plot shows attendance and scores increasing together. What can we conclude immediately?</p>
+            <label><input type="radio" name="t3qc4" value="a"> Attendance is proven to be the only cause of the score</label>
+            <label><input type="radio" name="t3qc4" value="b"> The variables appear positively associated, but causation requires more evidence</label>
+            <label><input type="radio" name="t3qc4" value="c"> Scatter plots cannot show relationships</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+        </div>
+
+        <div class="tab-panel" id="t3review">
+          <div class="editable-note"><span>Revision and self-study</span><small>Loaded from <code>LECTURER_EDIT/topic3_review_questions.html</code>.</small></div>
+          <iframe class="content-frame review-frame" src="LECTURER_EDIT/topic3_review_questions.html" title="Topic 3 review questions"></iframe>
+        </div>
+
+        <div class="tab-panel" id="t3reading">
+          <article class="card">
+            <div class="section-heading"><div><span class="eyebrow">Optional self-study</span><h2>Further reading and deeper learning</h2></div><span class="internet-badge">Internet required</span></div>
+            <div class="resource-grid">
+              <a class="resource-card" href="https://www.itl.nist.gov/div898/handbook/eda/eda.htm" target="_blank" rel="noopener"><span class="resource-type">Reference handbook</span><strong>NIST/SEMATECH — Exploratory Data Analysis</strong><p>A deeper reference on the purpose and methods of exploratory analysis.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html" target="_blank" rel="noopener"><span class="resource-type">Free online book</span><strong>Python Data Science Handbook — Visualisation</strong><p>Introduces visualisation in Python; especially useful when students begin programming.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://pandas.pydata.org/docs/user_guide/basics.html#descriptive-statistics" target="_blank" rel="noopener"><span class="resource-type">Technical reference</span><strong>pandas — Descriptive Statistics</strong><p>Shows how descriptive summaries are produced programmatically.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://datavizcatalogue.com/" target="_blank" rel="noopener"><span class="resource-type">Visual reference</span><strong>The Data Visualisation Catalogue</strong><p>A visual guide to chart types and the questions different visualisations can answer.</p><span class="resource-action">Open resource ↗</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t3summary">
+          <article class="card"><h2>Topic 3 summary</h2>
+            <ul class="summary-list">
+              <li>EDA is an iterative process of understanding, summarising, visualising and questioning data.</li>
+              <li>Measures of centre describe typical values; measures of spread describe variability.</li>
+              <li>Bar charts compare categories, histograms show numerical distributions, line charts show ordered change and scatter plots examine relationships.</li>
+              <li>EDA looks for distributions, relationships, group differences, trends and anomalies.</li>
+              <li>Charts should be selected to answer specific questions and designed honestly.</li>
+              <li>Association does not automatically establish causation.</li>
+              <li>An insight combines an observed pattern with context, significance and a useful next question or action.</li>
+            </ul>
+            <div class="next-actions"><button class="btn primary" data-go="quiz3">Take Topic 3 Quiz</button><button class="btn secondary" data-go="assignment3">View Assignment 3</button></div>
+          </article>
+        </div>
+      </section>
+
+
+      <section class="view" id="topic4">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Topic 4</span>
+            <h1>Statistical Methods for Data Analysis</h1>
+            <p>Probability theory and distributions · Hypothesis testing · Regression analysis</p>
+          </div>
+          <button class="btn primary" id="presentationBtn4">▶ Presentation Mode</button>
+        </div>
+
+        <article class="card learning-outcomes">
+          <h2>Learning outcomes for this topic</h2>
+          <p>By the end of Topic 4, you should be able to:</p>
+          <ul class="checklist">
+            <li>explain probability as a way of describing uncertainty;</li>
+            <li>distinguish discrete and continuous distributions;</li>
+            <li>describe the basic logic of hypothesis testing using null and alternative hypotheses;</li>
+            <li>explain the meaning of a p-value in introductory terms;</li>
+            <li>describe the purpose of simple regression analysis and interpret a regression slope carefully.</li>
+          </ul>
+        </article>
+
+        <div class="lesson-tabs topic4-tabs">
+          <button class="tab active" data-tab="t4notes">📖 Notes</button>
+          <button class="tab" data-tab="t4lab">🧪 Statistics Lab</button>
+          <button class="tab" data-tab="t4checks">🧠 Quick Checks</button>
+          <button class="tab" data-tab="t4review">📋 Review Questions</button>
+          <button class="tab" data-tab="t4reading">🔎 Further Reading</button>
+          <button class="tab" data-tab="t4summary">📝 Summary</button>
+        </div>
+
+        <div class="tab-panel active" id="t4notes">
+          <div class="editable-note"><span>Lecturer-editable notes</span><small>Loaded from <code>LECTURER_EDIT/topic4_notes.html</code>.</small></div>
+          <iframe class="content-frame notes-frame" src="LECTURER_EDIT/topic4_notes.html" title="Topic 4 full notes"></iframe>
+          <div class="lesson-complete"><label><input type="checkbox" id="topic4Complete"><span>I have completed the Topic 4 notes.</span></label></div>
+        </div>
+
+        <div class="tab-panel" id="t4lab">
+          <article class="card">
+            <span class="eyebrow">Interactive practical</span>
+            <h2>Statistics Lab</h2>
+            <p>This lab keeps the mathematics light and focuses on visual, conceptual understanding.</p>
+
+            <div class="stats-lab-grid">
+              <div class="stats-lab-card">
+                <h3>1. Probability intuition</h3>
+                <p>Choose a probability and interpret what it means.</p>
+                <label><strong>Probability value</strong>
+                  <input type="range" min="0" max="100" value="50" id="probSlider">
+                </label>
+                <div class="big-metric" id="probValue">0.50</div>
+                <div class="demo-output" id="probMeaning">An event with probability 0.50 is neither very unlikely nor very likely in the model.</div>
+              </div>
+
+              <div class="stats-lab-card">
+                <h3>2. Hypothesis testing decisions</h3>
+                <p>Select the most appropriate interpretation.</p>
+                <div class="decision-card"><strong>Case A:</strong> p-value = 0.03, significance level = 0.05<select class="decision-select" data-correct="reject"><option value="">Choose…</option><option value="true">The null hypothesis is true</option><option value="reject">There is evidence against H₀ at the 0.05 level</option><option value="none">The result has no meaning</option></select><span class="decision-feedback"></span></div>
+                <div class="decision-card"><strong>Case B:</strong> p-value = 0.18, significance level = 0.05<select class="decision-select" data-correct="fail"><option value="">Choose…</option><option value="fail">There is not enough evidence to reject H₀</option><option value="prove">H₀ is proven true forever</option><option value="reject">Reject H₀</option></select><span class="decision-feedback"></span></div>
+              </div>
+            </div>
+
+            <div class="eda-chart-card">
+              <h3>3. Regression explorer</h3>
+              <p class="muted">Dataset: study hours per week and final score.</p>
+              <div class="svg-chart wide" id="regressionChart"></div>
+              <div class="eda-stat-grid">
+                <div class="eda-stat"><span id="regSlope">–</span><small>Slope</small></div>
+                <div class="eda-stat"><span id="regIntercept">–</span><small>Intercept</small></div>
+                <div class="eda-stat"><span id="regPrediction">–</span><small>Predicted score</small></div>
+                <div class="eda-stat"><span id="regRough">–</span><small>Relationship direction</small></div>
+              </div>
+              <label><strong>Predict score for study hours per week</strong>
+                <input type="range" min="3" max="14" step="1" value="8" id="studyHourSlider">
+              </label>
+              <div class="demo-output" id="regInterpretation">Move the slider to see the predicted score from the fitted line.</div>
+              <div class="dataset-links"><a class="btn secondary link-btn" href="datasets/topic4_regression_learning_data.csv" download>Download Topic 4 CSV</a></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t4checks">
+          <article class="card quick-check" data-answer="a"><h3>Quick Check 1</h3><p>Which statement about probability is most accurate?</p>
+            <label><input type="radio" name="t4qc1" value="a"> Probability describes how likely an event is</label>
+            <label><input type="radio" name="t4qc1" value="b"> Probability proves a single future event with certainty</label>
+            <label><input type="radio" name="t4qc1" value="c"> Probability can be larger than 1</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="c"><h3>Quick Check 2</h3><p>Which is an example of a continuous variable?</p>
+            <label><input type="radio" name="t4qc2" value="a"> Number of absent students</label>
+            <label><input type="radio" name="t4qc2" value="b"> Number of correct answers</label>
+            <label><input type="radio" name="t4qc2" value="c"> Time required to complete a task</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="b"><h3>Quick Check 3</h3><p>The null hypothesis usually represents:</p>
+            <label><input type="radio" name="t4qc3" value="a"> The most exciting explanation</label>
+            <label><input type="radio" name="t4qc3" value="b"> A default claim such as no difference or no effect</label>
+            <label><input type="radio" name="t4qc3" value="c"> A guaranteed true claim</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="a"><h3>Quick Check 4</h3><p>An upward regression slope suggests:</p>
+            <label><input type="radio" name="t4qc4" value="a"> A positive association between the predictor and outcome</label>
+            <label><input type="radio" name="t4qc4" value="b"> Proof of causation</label>
+            <label><input type="radio" name="t4qc4" value="c"> There is no relationship</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+        </div>
+
+        <div class="tab-panel" id="t4review">
+          <div class="editable-note"><span>Revision and self-study</span><small>Loaded from <code>LECTURER_EDIT/topic4_review_questions.html</code>.</small></div>
+          <iframe class="content-frame review-frame" src="LECTURER_EDIT/topic4_review_questions.html" title="Topic 4 review questions"></iframe>
+        </div>
+
+        <div class="tab-panel" id="t4reading">
+          <article class="card">
+            <div class="section-heading"><div><span class="eyebrow">Optional self-study</span><h2>Further reading and deeper learning</h2></div><span class="internet-badge">Internet required</span></div>
+            <div class="resource-grid">
+              <a class="resource-card" href="https://openstax.org/details/books/introductory-statistics" target="_blank" rel="noopener"><span class="resource-type">Free textbook</span><strong>OpenStax — Introductory Statistics</strong><p>A full introductory statistics book with sections on probability, inference and regression.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://seeing-theory.brown.edu/" target="_blank" rel="noopener"><span class="resource-type">Interactive resource</span><strong>Seeing Theory</strong><p>Visual explanations of probability and statistical concepts.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://www.khanacademy.org/math/statistics-probability" target="_blank" rel="noopener"><span class="resource-type">Lessons</span><strong>Khan Academy — Statistics and Probability</strong><p>Introductory videos and practice on distributions, tests and regression-related ideas.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://pandas.pydata.org/docs/user_guide/computation.html" target="_blank" rel="noopener"><span class="resource-type">Technical reference</span><strong>pandas — Computation and descriptive tools</strong><p>Useful later when students implement statistical ideas programmatically.</p><span class="resource-action">Open resource ↗</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t4summary">
+          <article class="card"><h2>Topic 4 summary</h2>
+            <ul class="summary-list">
+              <li>Probability provides a way to reason about uncertainty.</li>
+              <li>Distributions describe how values or probabilities are spread.</li>
+              <li>Hypothesis testing evaluates a claim by comparing evidence to a null hypothesis.</li>
+              <li>A p-value expresses how unusual the data would be if the null hypothesis were true.</li>
+              <li>Regression analysis describes or predicts how an outcome changes with a predictor.</li>
+              <li>Statistical significance is not the same as practical importance.</li>
+              <li>Association patterns should be interpreted carefully and do not automatically imply causation.</li>
+            </ul>
+            <div class="next-actions"><button class="btn primary" data-go="quiz4">Take Topic 4 Quiz</button><button class="btn secondary" data-go="assignment4">View Assignment 4</button></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="topic5">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Topic 5</span>
+            <h1>Introduction to Machine Learning</h1>
+            <p>Supervised vs unsupervised learning · Linear regression · Decision trees · K-means clustering · Model evaluation and validation</p>
+          </div>
+          <button class="btn primary" id="presentationBtn5">▶ Presentation Mode</button>
+        </div>
+
+        <article class="card learning-outcomes">
+          <h2>Learning outcomes for this topic</h2>
+          <p>By the end of Topic 5, you should be able to:</p>
+          <ul class="checklist">
+            <li>distinguish supervised and unsupervised learning;</li>
+            <li>differentiate regression, classification and clustering tasks;</li>
+            <li>explain the basic ideas behind linear regression, decision trees and K-means clustering;</li>
+            <li>describe the purpose of training, validation and test data;</li>
+            <li>explain generalisation, overfitting and underfitting at an introductory level.</li>
+          </ul>
+        </article>
+
+        <div class="lesson-tabs topic5-tabs">
+          <button class="tab active" data-tab="t5notes">📖 Notes</button>
+          <button class="tab" data-tab="t5lab">🤖 ML Lab</button>
+          <button class="tab" data-tab="t5checks">🧠 Quick Checks</button>
+          <button class="tab" data-tab="t5review">📋 Review Questions</button>
+          <button class="tab" data-tab="t5reading">🔎 Further Reading</button>
+          <button class="tab" data-tab="t5summary">📝 Summary</button>
+        </div>
+
+        <div class="tab-panel active" id="t5notes">
+          <div class="editable-note"><span>Lecturer-editable notes</span><small>Loaded from <code>LECTURER_EDIT/topic5_notes.html</code>.</small></div>
+          <iframe class="content-frame notes-frame" src="LECTURER_EDIT/topic5_notes.html" title="Topic 5 full notes"></iframe>
+          <div class="lesson-complete"><label><input type="checkbox" id="topic5Complete"><span>I have completed the Topic 5 notes.</span></label></div>
+        </div>
+
+        <div class="tab-panel" id="t5lab">
+          <article class="card">
+            <span class="eyebrow">Interactive practical</span>
+            <h2>Machine Learning Concept Lab</h2>
+            <p>Use these mini-demonstrations to connect the vocabulary of Machine Learning with actual decisions.</p>
+
+            <div class="ml-lab-grid">
+              <div class="ml-lab-card">
+                <h3>1. Supervised or unsupervised?</h3>
+                <label><strong>Scenario</strong>
+                  <select id="mlScenario" class="select">
+                    <option value="score">Predict a student's final score from study data</option>
+                    <option value="spam">Predict whether an email is spam using labelled examples</option>
+                    <option value="groups">Group farmers into similar production profiles without labels</option>
+                    <option value="customers">Group customers by transaction behaviour without predefined segments</option>
+                  </select>
+                </label>
+                <div id="mlScenarioAnswer" class="demo-output"></div>
+              </div>
+
+              <div class="ml-lab-card">
+                <h3>2. Decision tree explorer</h3>
+                <label><strong>Attendance: <span id="treeAttendanceValue">78</span>%</strong>
+                  <input type="range" id="treeAttendance" min="50" max="100" value="78">
+                </label>
+                <label><strong>Assignment score: <span id="treeAssignmentValue">64</span></strong>
+                  <input type="range" id="treeAssignment" min="40" max="100" value="64">
+                </label>
+                <div class="tree-result" id="treeResult"></div>
+              </div>
+            </div>
+
+            <div class="ml-lab-card">
+              <h3>3. K-means clustering explorer</h3>
+              <p class="muted">The same unlabeled points are regrouped when K changes. The coloured groups are created by the algorithm, not supplied as labels.</p>
+              <div class="kmeans-controls">
+                <label><strong>Number of clusters (K)</strong>
+                  <select id="kmeansK" class="select">
+                    <option value="2">K = 2</option>
+                    <option value="3" selected>K = 3</option>
+                    <option value="4">K = 4</option>
+                  </select>
+                </label>
+              </div>
+              <div class="svg-chart wide" id="kmeansChart"></div>
+              <div class="demo-output" id="kmeansMessage"></div>
+            </div>
+
+            <div class="ml-lab-card">
+              <h3>4. Train/test split explorer</h3>
+              <p>Change the percentage of examples used for training. A simple regression model is fitted to the training subset and evaluated on the held-out test subset.</p>
+              <label><strong>Training percentage: <span id="splitValue">80</span>%</strong>
+                <input type="range" id="splitSlider" min="60" max="90" step="5" value="80">
+              </label>
+              <div class="eda-stat-grid">
+                <div class="eda-stat"><span id="trainCount">–</span><small>Training examples</small></div>
+                <div class="eda-stat"><span id="testCount">–</span><small>Test examples</small></div>
+                <div class="eda-stat"><span id="trainMAE">–</span><small>Training MAE</small></div>
+                <div class="eda-stat"><span id="testMAE">–</span><small>Test MAE</small></div>
+              </div>
+              <div class="demo-output" id="splitMessage"></div>
+              <div class="dataset-links"><a class="btn secondary link-btn" href="datasets/topic5_machine_learning_student_data.csv" download>Download Topic 5 CSV</a></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t5checks">
+          <article class="card quick-check" data-answer="b"><h3>Quick Check 1</h3><p>Which task is supervised learning?</p>
+            <label><input type="radio" name="t5qc1" value="a"> Group customers without predefined labels</label>
+            <label><input type="radio" name="t5qc1" value="b"> Predict Pass/Fail using historical labelled examples</label>
+            <label><input type="radio" name="t5qc1" value="c"> Discover clusters in unlabeled data</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="a"><h3>Quick Check 2</h3><p>Which task is regression?</p>
+            <label><input type="radio" name="t5qc2" value="a"> Predict a numerical crop yield</label>
+            <label><input type="radio" name="t5qc2" value="b"> Predict disease class</label>
+            <label><input type="radio" name="t5qc2" value="c"> Group farms without labels</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="c"><h3>Quick Check 3</h3><p>What is K in K-means?</p>
+            <label><input type="radio" name="t5qc3" value="a"> Number of target labels</label>
+            <label><input type="radio" name="t5qc3" value="b"> Number of test records</label>
+            <label><input type="radio" name="t5qc3" value="c"> Number of clusters requested</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="b"><h3>Quick Check 4</h3><p>Why hold back test data?</p>
+            <label><input type="radio" name="t5qc4" value="a"> So the model can memorise more examples</label>
+            <label><input type="radio" name="t5qc4" value="b"> To estimate how the trained model performs on unseen examples</label>
+            <label><input type="radio" name="t5qc4" value="c"> To guarantee 100% accuracy</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+        </div>
+
+        <div class="tab-panel" id="t5review">
+          <div class="editable-note"><span>Revision and self-study</span><small>Loaded from <code>LECTURER_EDIT/topic5_review_questions.html</code>.</small></div>
+          <iframe class="content-frame review-frame" src="LECTURER_EDIT/topic5_review_questions.html" title="Topic 5 review questions"></iframe>
+        </div>
+
+        <div class="tab-panel" id="t5reading">
+          <article class="card">
+            <div class="section-heading"><div><span class="eyebrow">Optional self-study</span><h2>Further reading and deeper learning</h2></div><span class="internet-badge">Internet required</span></div>
+            <div class="resource-grid">
+              <a class="resource-card" href="https://developers.google.com/machine-learning/crash-course/ml-intro" target="_blank" rel="noopener"><span class="resource-type">Interactive learning</span><strong>Google ML Crash Course — Introduction to Machine Learning</strong><p>A beginner-friendly overview of supervised learning, models, features and labels.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://scikit-learn.org/stable/supervised_learning.html" target="_blank" rel="noopener"><span class="resource-type">Technical reference</span><strong>scikit-learn — Supervised Learning</strong><p>A reference for regression, classification and related algorithms.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://scikit-learn.org/stable/modules/tree.html" target="_blank" rel="noopener"><span class="resource-type">Technical reference</span><strong>scikit-learn — Decision Trees</strong><p>Further details on decision-tree models and their strengths and limitations.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://scikit-learn.org/stable/modules/clustering.html#k-means" target="_blank" rel="noopener"><span class="resource-type">Technical reference</span><strong>scikit-learn — K-Means</strong><p>Further explanation of K-means clustering and related clustering methods.</p><span class="resource-action">Open resource ↗</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t5summary">
+          <article class="card"><h2>Topic 5 summary</h2>
+            <ul class="summary-list">
+              <li>Supervised learning uses known targets; unsupervised learning searches for structure without target labels.</li>
+              <li>Regression predicts numbers, classification predicts classes and clustering discovers groups.</li>
+              <li>Linear regression can be used as a supervised learning algorithm for numerical prediction.</li>
+              <li>Decision trees make predictions by following a sequence of simple feature-based questions.</li>
+              <li>K-means groups similar observations into K clusters.</li>
+              <li>Models should be evaluated on unseen data to assess generalisation.</li>
+              <li>Overfitting and underfitting are two ways a model can fail to generalise well.</li>
+            </ul>
+            <div class="next-actions"><button class="btn primary" data-go="quiz5">Take Topic 5 Quiz</button><button class="btn secondary" data-go="assignment5">View Assignment 5</button></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="topic6">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Topic 6</span>
+            <h1>Artificial Intelligence Basics</h1>
+            <p>Definition and scope of AI · Search algorithms · Logic and reasoning · Introduction to neural networks</p>
+          </div>
+          <button class="btn primary" id="presentationBtn6">▶ Presentation Mode</button>
+        </div>
+
+        <article class="card learning-outcomes">
+          <h2>Learning outcomes for this topic</h2>
+          <p>By the end of Topic 6, you should be able to:</p>
+          <ul class="checklist">
+            <li>define Artificial Intelligence and explain its scope beyond Machine Learning;</li>
+            <li>describe states, actions, goals and basic search strategies;</li>
+            <li>compare Breadth-First Search, Depth-First Search and heuristic search conceptually;</li>
+            <li>explain how facts, rules and inference support logic-based AI;</li>
+            <li>identify the major components of a simple neural network and explain the basic idea of training.</li>
+          </ul>
+        </article>
+
+        <div class="lesson-tabs topic6-tabs">
+          <button class="tab active" data-tab="t6notes">📖 Notes</button>
+          <button class="tab" data-tab="t6lab">🧠 AI Lab</button>
+          <button class="tab" data-tab="t6checks">🧠 Quick Checks</button>
+          <button class="tab" data-tab="t6review">📋 Review Questions</button>
+          <button class="tab" data-tab="t6reading">🔎 Further Reading</button>
+          <button class="tab" data-tab="t6summary">📝 Summary</button>
+        </div>
+
+        <div class="tab-panel active" id="t6notes">
+          <div class="editable-note"><span>Lecturer-editable notes</span><small>Loaded from <code>LECTURER_EDIT/topic6_notes.html</code>.</small></div>
+          <iframe class="content-frame notes-frame" src="LECTURER_EDIT/topic6_notes.html" title="Topic 6 full notes"></iframe>
+          <div class="lesson-complete"><label><input type="checkbox" id="topic6Complete"><span>I have completed the Topic 6 notes.</span></label></div>
+        </div>
+
+        <div class="tab-panel" id="t6lab">
+          <article class="card">
+            <span class="eyebrow">Interactive practical</span>
+            <h2>AI Basics Lab</h2>
+            <p>Explore three different AI traditions: search, explicit reasoning and neural networks.</p>
+
+            <div class="ai-lab-card">
+              <h3>1. Search algorithm explorer</h3>
+              <p class="muted">The start, goal and obstacles remain fixed. Change the algorithm and compare the number and order of states explored.</p>
+              <div class="search-controls">
+                <label><strong>Algorithm</strong>
+                  <select id="searchAlgorithm" class="select">
+                    <option value="bfs">Breadth-First Search (BFS)</option>
+                    <option value="dfs">Depth-First Search (DFS)</option>
+                    <option value="astar">A* Search</option>
+                  </select>
+                </label>
+                <button class="btn primary" id="runSearchBtn">Run Search</button>
+                <button class="btn secondary" id="resetSearchBtn">Reset</button>
+              </div>
+              <div class="search-layout">
+                <div class="search-grid" id="searchGrid" aria-label="Search maze"></div>
+                <div class="search-explain">
+                  <div class="eda-stat-grid search-stats">
+                    <div class="eda-stat"><span id="searchVisited">–</span><small>States visited</small></div>
+                    <div class="eda-stat"><span id="searchPathLength">–</span><small>Path length</small></div>
+                  </div>
+                  <div class="demo-output" id="searchMessage">Choose an algorithm and run the search.</div>
+                  <div class="search-legend"><span><i class="legend-start"></i> Start</span><span><i class="legend-goal"></i> Goal</span><span><i class="legend-wall"></i> Wall</span><span><i class="legend-visited"></i> Visited</span><span><i class="legend-path"></i> Final path</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ai-lab-grid">
+              <div class="ai-lab-card">
+                <h3>2. Rule-based reasoning explorer</h3>
+                <p>Select facts and see which conclusions can be inferred from the rules.</p>
+                <label class="fact-check"><input type="checkbox" id="factDry" checked> Soil is dry</label>
+                <label class="fact-check"><input type="checkbox" id="factNoRain" checked> Rain is not expected</label>
+                <label class="fact-check"><input type="checkbox" id="factWater" checked> Water is available</label>
+                <div class="rule-box"><strong>Rule 1:</strong> IF soil is dry AND rain is not expected THEN irrigation is needed.</div>
+                <div class="rule-box"><strong>Rule 2:</strong> IF irrigation is needed AND water is available THEN irrigate now.</div>
+                <div class="demo-output" id="logicOutput"></div>
+              </div>
+
+              <div class="ai-lab-card">
+                <h3>3. Neural-network activation explorer</h3>
+                <p class="muted">Illustrative network only — it is not a real trained student-performance model.</p>
+                <label><strong>Study hours: <span id="nnHoursValue">7</span></strong>
+                  <input type="range" id="nnHours" min="0" max="14" step="1" value="7">
+                </label>
+                <label><strong>Attendance: <span id="nnAttendanceValue">80</span>%</strong>
+                  <input type="range" id="nnAttendance" min="50" max="100" step="1" value="80">
+                </label>
+                <div class="nn-mini" id="nnMini">
+                  <div class="nn-col">
+                    <span class="nn-node" id="nnInput1">I1</span>
+                    <span class="nn-node" id="nnInput2">I2</span>
+                    <small>Inputs</small>
+                  </div>
+                  <div class="nn-arrows">→</div>
+                  <div class="nn-col">
+                    <span class="nn-node hidden-node" id="nnH1">H1</span>
+                    <span class="nn-node hidden-node" id="nnH2">H2</span>
+                    <span class="nn-node hidden-node" id="nnH3">H3</span>
+                    <small>Hidden</small>
+                  </div>
+                  <div class="nn-arrows">→</div>
+                  <div class="nn-col">
+                    <span class="nn-node output-node" id="nnOutputNode">O</span>
+                    <small>Output</small>
+                  </div>
+                </div>
+                <div class="big-metric" id="nnOutputValue">–</div>
+                <div class="demo-output" id="nnOutputText"></div>
+              </div>
+            </div>
+
+            <div class="dataset-links">
+              <a class="btn secondary link-btn" href="datasets/topic6_ai_problem_scenarios.csv" download>Download AI problem scenarios CSV</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t6checks">
+          <article class="card quick-check" data-answer="b"><h3>Quick Check 1</h3><p>Which statement is most accurate?</p>
+            <label><input type="radio" name="t6qc1" value="a"> AI and Machine Learning mean exactly the same thing</label>
+            <label><input type="radio" name="t6qc1" value="b"> Machine Learning is one approach within the broader field of AI</label>
+            <label><input type="radio" name="t6qc1" value="c"> AI only refers to robots</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="a"><h3>Quick Check 2</h3><p>Which search method explores level by level?</p>
+            <label><input type="radio" name="t6qc2" value="a"> BFS</label>
+            <label><input type="radio" name="t6qc2" value="b"> DFS</label>
+            <label><input type="radio" name="t6qc2" value="c"> K-means</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="c"><h3>Quick Check 3</h3><p>In a rule-based system, inference means:</p>
+            <label><input type="radio" name="t6qc3" value="a"> Deleting all rules</label>
+            <label><input type="radio" name="t6qc3" value="b"> Training a neural network</label>
+            <label><input type="radio" name="t6qc3" value="c"> Deriving a conclusion from facts and rules</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="b"><h3>Quick Check 4</h3><p>What is adjusted during neural-network training?</p>
+            <label><input type="radio" name="t6qc4" value="a"> The definition of AI</label>
+            <label><input type="radio" name="t6qc4" value="b"> Connection weights, so prediction error can be reduced</label>
+            <label><input type="radio" name="t6qc4" value="c"> The students' registration numbers</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+        </div>
+
+        <div class="tab-panel" id="t6review">
+          <div class="editable-note"><span>Revision and self-study</span><small>Loaded from <code>LECTURER_EDIT/topic6_review_questions.html</code>.</small></div>
+          <iframe class="content-frame review-frame" src="LECTURER_EDIT/topic6_review_questions.html" title="Topic 6 review questions"></iframe>
+        </div>
+
+        <div class="tab-panel" id="t6reading">
+          <article class="card">
+            <div class="section-heading"><div><span class="eyebrow">Optional self-study</span><h2>Further reading and deeper learning</h2></div><span class="internet-badge">Internet required</span></div>
+            <div class="resource-grid">
+              <a class="resource-card" href="https://artint.info/" target="_blank" rel="noopener"><span class="resource-type">Free online textbook</span><strong>Artificial Intelligence: Foundations of Computational Agents</strong><p>Useful deeper reading on agents, search, reasoning and Machine Learning.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://aima.cs.berkeley.edu/" target="_blank" rel="noopener"><span class="resource-type">AI reference</span><strong>Artificial Intelligence: A Modern Approach resources</strong><p>Supplementary material associated with a major AI textbook.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://playground.tensorflow.org/" target="_blank" rel="noopener"><span class="resource-type">Interactive visualisation</span><strong>TensorFlow Playground</strong><p>Experiment visually with a small neural network and see how hidden layers learn decision boundaries.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://developers.google.com/machine-learning/crash-course/neural-networks" target="_blank" rel="noopener"><span class="resource-type">Interactive learning</span><strong>Google ML Crash Course — Neural Networks</strong><p>A more detailed introduction to neural-network components and learning.</p><span class="resource-action">Open resource ↗</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t6summary">
+          <article class="card"><h2>Topic 6 summary</h2>
+            <ul class="summary-list">
+              <li>AI is broader than Machine Learning and includes search, reasoning, planning, perception and language technologies.</li>
+              <li>Search problems can be represented using states, actions and goals.</li>
+              <li>BFS explores level by level, DFS follows branches deeply, and A* uses heuristic guidance.</li>
+              <li>Logic-based AI represents facts and rules explicitly and uses inference to derive conclusions.</li>
+              <li>Neural networks use weighted connections, hidden layers and training to learn complex patterns.</li>
+              <li>Different AI techniques are suitable for different kinds of problems.</li>
+            </ul>
+            <div class="next-actions"><button class="btn primary" data-go="quiz6">Take Topic 6 Quiz</button><button class="btn secondary" data-go="assignment6">View Assignment 6</button></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="topic7">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Topic 7</span>
+            <h1>Ethical Implications and Societal Impact</h1>
+            <p>Ethical issues in Data Science and AI · Privacy · Bias · Fairness · Societal impacts · Responsible AI</p>
+          </div>
+          <button class="btn primary" id="presentationBtn7">▶ Presentation Mode</button>
+        </div>
+
+        <article class="card learning-outcomes">
+          <h2>Learning outcomes for this topic</h2>
+          <p>By the end of Topic 7, you should be able to:</p>
+          <ul class="checklist">
+            <li>identify common ethical issues arising across the Data Science and AI lifecycle;</li>
+            <li>explain privacy, purpose limitation and data minimisation;</li>
+            <li>identify major sources of bias and explain why fairness requires context;</li>
+            <li>distinguish transparency, explainability and accountability;</li>
+            <li>discuss positive and negative societal impacts of AI;</li>
+            <li>propose practical responsible-AI safeguards.</li>
+          </ul>
+        </article>
+
+        <div class="lesson-tabs topic7-tabs">
+          <button class="tab active" data-tab="t7notes">📖 Notes</button>
+          <button class="tab" data-tab="t7lab">⚖️ Ethics Lab</button>
+          <button class="tab" data-tab="t7checks">🧠 Quick Checks</button>
+          <button class="tab" data-tab="t7review">📋 Review Questions</button>
+          <button class="tab" data-tab="t7reading">🔎 Further Reading</button>
+          <button class="tab" data-tab="t7summary">📝 Summary</button>
+        </div>
+
+        <div class="tab-panel active" id="t7notes">
+          <div class="editable-note"><span>Lecturer-editable notes</span><small>Loaded from <code>LECTURER_EDIT/topic7_notes.html</code>.</small></div>
+          <iframe class="content-frame notes-frame" src="LECTURER_EDIT/topic7_notes.html" title="Topic 7 full notes"></iframe>
+          <div class="lesson-complete"><label><input type="checkbox" id="topic7Complete"><span>I have completed the Topic 7 notes.</span></label></div>
+        </div>
+
+        <div class="tab-panel" id="t7lab">
+          <article class="card">
+            <span class="eyebrow">Interactive practical</span>
+            <h2>Ethics and Responsible AI Lab</h2>
+            <p>These activities are designed to show that ethical questions often involve trade-offs, context and human judgement rather than one automatic answer.</p>
+
+            <div class="ethics-lab-grid">
+              <div class="ethics-lab-card">
+                <h3>1. Data minimisation challenge</h3>
+                <p><strong>Scenario:</strong> A university shuttle app wants to show the nearest shuttle and estimate arrival time for the user's selected route.</p>
+                <p>Select only the data that are reasonably relevant to this purpose.</p>
+                <label class="ethics-check"><input type="checkbox" class="min-data" value="location"> Current location</label>
+                <label class="ethics-check"><input type="checkbox" class="min-data" value="route"> Selected route/destination</label>
+                <label class="ethics-check"><input type="checkbox" class="min-data" value="religion"> Religion</label>
+                <label class="ethics-check"><input type="checkbox" class="min-data" value="politics"> Political opinions</label>
+                <label class="ethics-check"><input type="checkbox" class="min-data" value="health"> Full health history</label>
+                <label class="ethics-check"><input type="checkbox" class="min-data" value="contacts"> Full phone contact list</label>
+                <button class="btn primary" id="checkMinDataBtn">Check selection</button>
+                <div class="demo-output" id="minDataFeedback">Choose the fields, then check your reasoning.</div>
+              </div>
+
+              <div class="ethics-lab-card">
+                <h3>2. Bias-source challenge</h3>
+                <p>Identify where the main bias risk begins.</p>
+                <div class="bias-challenge">
+                  <strong>A loan model is trained mostly on records from one region but is deployed nationally.</strong>
+                  <select class="bias-select" data-correct="sampling"><option value="">Choose…</option><option value="historical">Historical bias</option><option value="sampling">Sampling bias</option><option value="measurement">Measurement bias</option><option value="label">Label bias</option><option value="deployment">Deployment bias</option></select>
+                  <span class="decision-feedback"></span>
+                </div>
+                <div class="bias-challenge">
+                  <strong>Past hiring labels reflect years of inconsistent human decisions.</strong>
+                  <select class="bias-select" data-correct="label"><option value="">Choose…</option><option value="historical">Historical bias</option><option value="sampling">Sampling bias</option><option value="measurement">Measurement bias</option><option value="label">Label bias</option><option value="deployment">Deployment bias</option></select>
+                  <span class="decision-feedback"></span>
+                </div>
+                <div class="bias-challenge">
+                  <strong>A health sensor is less accurate for one user group.</strong>
+                  <select class="bias-select" data-correct="measurement"><option value="">Choose…</option><option value="historical">Historical bias</option><option value="sampling">Sampling bias</option><option value="measurement">Measurement bias</option><option value="label">Label bias</option><option value="deployment">Deployment bias</option></select>
+                  <span class="decision-feedback"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ethics-lab-card">
+              <h3>3. Fairness audit explorer</h3>
+              <p>Compare two fictional groups in a screening system. Focus on both overall accuracy and false-negative rate.</p>
+              <label><strong>Model version</strong>
+                <select id="fairnessVersion" class="select">
+                  <option value="baseline">Baseline model</option>
+                  <option value="adjusted">Adjusted threshold example</option>
+                </select>
+              </label>
+              <div class="fairness-grid">
+                <div class="fairness-card">
+                  <h4>Group A</h4>
+                  <div><span>Accuracy</span><strong id="fairAAccuracy">–</strong></div>
+                  <div><span>False-negative rate</span><strong id="fairAFNR">–</strong></div>
+                  <div><span>False-positive rate</span><strong id="fairAFPR">–</strong></div>
+                </div>
+                <div class="fairness-card">
+                  <h4>Group B</h4>
+                  <div><span>Accuracy</span><strong id="fairBAccuracy">–</strong></div>
+                  <div><span>False-negative rate</span><strong id="fairBFNR">–</strong></div>
+                  <div><span>False-positive rate</span><strong id="fairBFPR">–</strong></div>
+                </div>
+              </div>
+              <div class="demo-output" id="fairnessMessage"></div>
+            </div>
+
+            <div class="ethics-lab-card">
+              <h3>4. Responsible-AI checklist</h3>
+              <p><strong>Scenario:</strong> An automated scholarship recommendation system will influence which applications receive priority review.</p>
+              <div class="responsible-check-grid">
+                <label><input type="checkbox" class="rai-check"> Identify affected stakeholders</label>
+                <label><input type="checkbox" class="rai-check"> Review whether data are necessary and representative</label>
+                <label><input type="checkbox" class="rai-check"> Compare important subgroup error rates</label>
+                <label><input type="checkbox" class="rai-check"> Explain the role and limitations of the system</label>
+                <label><input type="checkbox" class="rai-check"> Provide human review or appeal for important cases</label>
+                <label><input type="checkbox" class="rai-check"> Monitor the system after deployment</label>
+              </div>
+              <div class="demo-output" id="raiChecklistOutput">0 of 6 responsible-AI safeguards selected.</div>
+            </div>
+
+            <div class="dataset-links"><a class="btn secondary link-btn" href="datasets/topic7_responsible_ai_cases.csv" download>Download responsible-AI cases CSV</a></div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t7checks">
+          <article class="card quick-check" data-answer="b"><h3>Quick Check 1</h3><p>What does data minimisation mean?</p>
+            <label><input type="radio" name="t7qc1" value="a"> Collect every available field in case it becomes useful</label>
+            <label><input type="radio" name="t7qc1" value="b"> Collect only data reasonably needed for the stated purpose</label>
+            <label><input type="radio" name="t7qc1" value="c"> Delete all data immediately</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="c"><h3>Quick Check 2</h3><p>Which is an example of sampling bias?</p>
+            <label><input type="radio" name="t7qc2" value="a"> A strong password is not used</label>
+            <label><input type="radio" name="t7qc2" value="b"> A model has a low learning rate</label>
+            <label><input type="radio" name="t7qc2" value="c"> Training data come mostly from one group while the model is used for a broader population</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="a"><h3>Quick Check 3</h3><p>Why can overall accuracy be insufficient for fairness evaluation?</p>
+            <label><input type="radio" name="t7qc3" value="a"> Different groups may experience different kinds or rates of error</label>
+            <label><input type="radio" name="t7qc3" value="b"> Accuracy is never useful</label>
+            <label><input type="radio" name="t7qc3" value="c"> Fairness only concerns model speed</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="b"><h3>Quick Check 4</h3><p>Who remains accountable for important decisions made using AI?</p>
+            <label><input type="radio" name="t7qc4" value="a"> Nobody, because the algorithm made the decision</label>
+            <label><input type="radio" name="t7qc4" value="b"> The responsible people and organisations using and governing the system</label>
+            <label><input type="radio" name="t7qc4" value="c"> Only the computer hardware manufacturer</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+        </div>
+
+        <div class="tab-panel" id="t7review">
+          <div class="editable-note"><span>Revision and self-study</span><small>Loaded from <code>LECTURER_EDIT/topic7_review_questions.html</code>.</small></div>
+          <iframe class="content-frame review-frame" src="LECTURER_EDIT/topic7_review_questions.html" title="Topic 7 review questions"></iframe>
+        </div>
+
+        <div class="tab-panel" id="t7reading">
+          <article class="card">
+            <div class="section-heading"><div><span class="eyebrow">Optional self-study</span><h2>Further reading and deeper learning</h2></div><span class="internet-badge">Internet required</span></div>
+            <div class="resource-grid">
+              <a class="resource-card" href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener"><span class="resource-type">Official framework</span><strong>NIST — AI Risk Management Framework</strong><p>A practical framework for identifying and managing AI risks and trustworthiness considerations.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://www.unesco.org/ethics-ai/en/recommendation" target="_blank" rel="noopener"><span class="resource-type">Global recommendation</span><strong>UNESCO — Recommendation on the Ethics of AI</strong><p>Human-rights-centred principles including fairness, transparency, oversight and societal well-being.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://oecd.ai/en/ai-principles" target="_blank" rel="noopener"><span class="resource-type">International principles</span><strong>OECD AI Principles</strong><p>Principles for trustworthy AI, including human-centred values, fairness, transparency, robustness and accountability.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://plato.stanford.edu/entries/ethics-ai/" target="_blank" rel="noopener"><span class="resource-type">Philosophical reference</span><strong>Stanford Encyclopedia — Ethics of AI and Robotics</strong><p>Deeper discussion of privacy, bias, autonomy, employment and wider societal issues.</p><span class="resource-action">Open resource ↗</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t7summary">
+          <article class="card"><h2>Topic 7 summary</h2>
+            <ul class="summary-list">
+              <li>Ethical questions arise across the full Data Science and AI lifecycle.</li>
+              <li>Privacy concerns appropriate collection and use of personal data; security concerns protecting those data.</li>
+              <li>Bias can arise from history, sampling, measurement, labels and deployment.</li>
+              <li>Fairness requires examining who experiences which benefits, harms and error types.</li>
+              <li>Transparency, explainability, accountability and human oversight support responsible use.</li>
+              <li>AI can create major social benefits while also introducing risks such as exclusion, misinformation, surveillance and unequal access.</li>
+              <li>Responsible AI requires practical safeguards, monitoring and human responsibility.</li>
+            </ul>
+            <div class="next-actions"><button class="btn primary" data-go="quiz7">Take Topic 7 Quiz</button><button class="btn secondary" data-go="assignment7">View Assignment 7</button></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="topic8">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Topic 8</span>
+            <h1>Contemporary Issues in AI</h1>
+            <p>AI-powered assistive technologies · Personalised learning · Mobility and accessibility · Mental health and emotional well-being</p>
+          </div>
+          <button class="btn primary" id="presentationBtn8">▶ Presentation Mode</button>
+        </div>
+
+        <article class="card learning-outcomes">
+          <h2>Learning outcomes for this topic</h2>
+          <p>By the end of Topic 8, you should be able to:</p>
+          <ul class="checklist">
+            <li>describe common AI-powered assistive technologies for communication, vision, physical access and cognitive support;</li>
+            <li>explain how AI can support personalised learning for students with disabilities;</li>
+            <li>explain how AI may improve mobility and accessibility when local context is represented accurately;</li>
+            <li>distinguish supportive uses of AI for emotional well-being from clinical or high-risk uses requiring qualified human care;</li>
+            <li>apply inclusive-design principles such as co-design, user choice, alternatives, privacy and human support.</li>
+          </ul>
+        </article>
+
+        <div class="lesson-tabs topic8-tabs">
+          <button class="tab active" data-tab="t8notes">📖 Notes</button>
+          <button class="tab" data-tab="t8lab">♿ Inclusion Lab</button>
+          <button class="tab" data-tab="t8checks">🧠 Quick Checks</button>
+          <button class="tab" data-tab="t8review">📋 Review Questions</button>
+          <button class="tab" data-tab="t8reading">🔎 Further Reading</button>
+          <button class="tab" data-tab="t8summary">📝 Summary</button>
+        </div>
+
+        <div class="tab-panel active" id="t8notes">
+          <div class="editable-note"><span>Lecturer-editable notes</span><small>Loaded from <code>LECTURER_EDIT/topic8_notes.html</code>.</small></div>
+          <iframe class="content-frame notes-frame" src="LECTURER_EDIT/topic8_notes.html" title="Topic 8 full notes"></iframe>
+          <div class="lesson-complete"><label><input type="checkbox" id="topic8Complete"><span>I have completed the Topic 8 notes.</span></label></div>
+        </div>
+
+        <div class="tab-panel" id="t8lab">
+          <article class="card">
+            <span class="eyebrow">Interactive practical</span>
+            <h2>Inclusive AI Lab</h2>
+            <p>Explore how the same AI capability can be helpful, unhelpful or unsafe depending on user needs, local context and system boundaries.</p>
+
+            <div class="inclusive-lab-grid">
+              <div class="inclusive-lab-card">
+                <h3>1. Assistive technology matcher</h3>
+                <label><strong>User need</strong>
+                  <select id="assistiveNeed" class="select">
+                    <option value="hearing">Access spoken lecture content without relying on audio</option>
+                    <option value="vision">Read signs and understand nearby visual information</option>
+                    <option value="physical">Control a device without reliable touchscreen or mouse use</option>
+                    <option value="cognitive">Follow a complex multi-step task more easily</option>
+                  </select>
+                </label>
+                <div class="demo-output" id="assistiveMatch"></div>
+              </div>
+
+              <div class="inclusive-lab-card">
+                <h3>2. Personalised learning designer</h3>
+                <p>Select adaptations that could support a learner without removing their control.</p>
+                <label class="inclusive-check"><input type="checkbox" class="learn-adapt" value="format"> Offer text, audio and visual alternatives</label>
+                <label class="inclusive-check"><input type="checkbox" class="learn-adapt" value="pace"> Allow flexible pacing</label>
+                <label class="inclusive-check"><input type="checkbox" class="learn-adapt" value="teacher"> Keep teacher review available</label>
+                <label class="inclusive-check"><input type="checkbox" class="learn-adapt" value="choice"> Let the learner change or reject recommendations</label>
+                <label class="inclusive-check"><input type="checkbox" class="learn-adapt" value="lock"> Lock the learner permanently into one AI-selected difficulty</label>
+                <label class="inclusive-check"><input type="checkbox" class="learn-adapt" value="secret"> Collect disability data without explaining why</label>
+                <button class="btn primary" id="checkLearningDesignBtn">Check design</button>
+                <div class="demo-output" id="learningDesignFeedback">Select adaptations and review your design.</div>
+              </div>
+            </div>
+
+            <div class="inclusive-lab-card">
+              <h3>3. Accessible route explorer</h3>
+              <p>Choose a user preference. The shortest route is not always the most suitable route.</p>
+              <label><strong>Route priority</strong>
+                <select id="routePriority" class="select">
+                  <option value="shortest">Shortest distance</option>
+                  <option value="stepfree">Step-free access</option>
+                  <option value="loweffort">Lower physical effort</option>
+                </select>
+              </label>
+              <div class="route-grid" id="routeGrid"></div>
+              <div class="demo-output" id="routeMessage"></div>
+            </div>
+
+            <div class="inclusive-lab-card">
+              <h3>4. Emotional well-being support boundaries</h3>
+              <p>Classify each proposed AI function as appropriate supportive use or a function that should not be handled by a general AI system alone.</p>
+              <div class="support-boundary">
+                <strong>Offer a daily reflection prompt and links to university counselling services.</strong>
+                <select class="wellbeing-select" data-correct="support"><option value="">Choose…</option><option value="support">Appropriate supportive use</option><option value="human">Requires qualified human care / should not be handled alone</option></select>
+                <span class="decision-feedback"></span>
+              </div>
+              <div class="support-boundary">
+                <strong>Diagnose a psychiatric disorder and prescribe treatment autonomously.</strong>
+                <select class="wellbeing-select" data-correct="human"><option value="">Choose…</option><option value="support">Appropriate supportive use</option><option value="human">Requires qualified human care / should not be handled alone</option></select>
+                <span class="decision-feedback"></span>
+              </div>
+              <div class="support-boundary">
+                <strong>Help a user find contact details and opening hours for available support services.</strong>
+                <select class="wellbeing-select" data-correct="support"><option value="">Choose…</option><option value="support">Appropriate supportive use</option><option value="human">Requires qualified human care / should not be handled alone</option></select>
+                <span class="decision-feedback"></span>
+              </div>
+              <div class="support-boundary">
+                <strong>Act as the only responder to an immediate high-risk mental-health emergency.</strong>
+                <select class="wellbeing-select" data-correct="human"><option value="">Choose…</option><option value="support">Appropriate supportive use</option><option value="human">Requires qualified human care / should not be handled alone</option></select>
+                <span class="decision-feedback"></span>
+              </div>
+            </div>
+
+            <div class="dataset-links"><a class="btn secondary link-btn" href="datasets/topic8_accessible_ai_scenarios.csv" download>Download Topic 8 scenarios CSV</a></div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t8checks">
+          <article class="card quick-check" data-answer="b"><h3>Quick Check 1</h3><p>Which is an example of AI-powered communication accessibility?</p>
+            <label><input type="radio" name="t8qc1" value="a"> Deleting captions from a video</label>
+            <label><input type="radio" name="t8qc1" value="b"> Real-time speech-to-text captioning</label>
+            <label><input type="radio" name="t8qc1" value="c"> Requiring everyone to use the same interface</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="a"><h3>Quick Check 2</h3><p>Which is the best principle for personalised learning?</p>
+            <label><input type="radio" name="t8qc2" value="a"> Adapt support while preserving learner choice and teacher judgement</label>
+            <label><input type="radio" name="t8qc2" value="b"> Let the algorithm permanently decide what a learner can study</label>
+            <label><input type="radio" name="t8qc2" value="c"> Collect all possible personal data</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="c"><h3>Quick Check 3</h3><p>Why may the shortest route be inaccessible?</p>
+            <label><input type="radio" name="t8qc3" value="a"> Short routes cannot use GPS</label>
+            <label><input type="radio" name="t8qc3" value="b"> Accessibility has nothing to do with routes</label>
+            <label><input type="radio" name="t8qc3" value="c"> It may include stairs, rough surfaces or unavailable lifts</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+
+          <article class="card quick-check" data-answer="b"><h3>Quick Check 4</h3><p>Which is the safest role for a general AI well-being system?</p>
+            <label><input type="radio" name="t8qc4" value="a"> Replace professional mental-health care</label>
+            <label><input type="radio" name="t8qc4" value="b"> Provide low-risk support and connect users to appropriate human services when needed</label>
+            <label><input type="radio" name="t8qc4" value="c"> Make autonomous emergency treatment decisions</label>
+            <button class="btn secondary check-btn">Check answer</button><div class="feedback"></div></article>
+        </div>
+
+        <div class="tab-panel" id="t8review">
+          <div class="editable-note"><span>Revision and self-study</span><small>Loaded from <code>LECTURER_EDIT/topic8_review_questions.html</code>.</small></div>
+          <iframe class="content-frame review-frame" src="LECTURER_EDIT/topic8_review_questions.html" title="Topic 8 review questions"></iframe>
+        </div>
+
+        <div class="tab-panel" id="t8reading">
+          <article class="card">
+            <div class="section-heading"><div><span class="eyebrow">Optional self-study</span><h2>Further reading and deeper learning</h2></div><span class="internet-badge">Internet required</span></div>
+            <div class="resource-grid">
+              <a class="resource-card" href="https://www.w3.org/WAI/fundamentals/accessibility-intro/" target="_blank" rel="noopener"><span class="resource-type">Accessibility foundation</span><strong>W3C Web Accessibility Initiative</strong><p>An introduction to accessibility and why inclusive design matters.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://www.who.int/health-topics/assistive-technology" target="_blank" rel="noopener"><span class="resource-type">Global health resource</span><strong>WHO — Assistive Technology</strong><p>Background on assistive products, access and participation.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://www.unesco.org/en/digital-education/artificial-intelligence" target="_blank" rel="noopener"><span class="resource-type">Education resource</span><strong>UNESCO — Artificial Intelligence in Education</strong><p>Broader material on opportunities and considerations for AI-supported learning.</p><span class="resource-action">Open resource ↗</span></a>
+              <a class="resource-card" href="https://www.who.int/health-topics/digital-health" target="_blank" rel="noopener"><span class="resource-type">Digital health context</span><strong>WHO — Digital Health</strong><p>Useful context for responsible digital and AI-enabled health support.</p><span class="resource-action">Open resource ↗</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="tab-panel" id="t8summary">
+          <article class="card"><h2>Topic 8 summary</h2>
+            <ul class="summary-list">
+              <li>AI-powered assistive technologies can support communication, vision, physical access and cognitive participation.</li>
+              <li>Personalised learning can adapt content, pace and interaction, but should preserve learner choice and teacher judgement.</li>
+              <li>Accessible mobility systems need accurate information about ramps, lifts, surfaces, entrances and transport conditions.</li>
+              <li>AI can provide low-risk emotional well-being support, but should not replace qualified clinical care or emergency response.</li>
+              <li>Inclusive AI should be designed with intended users, provide alternatives, protect sensitive data and communicate limitations.</li>
+              <li>The value of contemporary AI should be judged by meaningful access, autonomy and participation—not novelty alone.</li>
+            </ul>
+            <div class="next-actions"><button class="btn primary" data-go="quiz8">Take Topic 8 Quiz</button><button class="btn secondary" data-go="assignment8">View Assignment 8</button></div>
+          </article>
+        </div>
+      </section>
+<section class="view" id="quiz">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Assessment</span>
+            <h1>Topic 1 Quiz</h1>
+            <p>10 questions · Instant feedback · Saved on this device</p>
+          </div>
+        </div>
+
+        <form id="quizForm" class="quiz-form">
+          <div id="quizQuestions"></div>
+          <button type="submit" class="btn primary large">Submit Quiz</button>
+        </form>
+        <div id="quizResult" class="quiz-result hidden"></div>
+      </section>
+
+      <section class="view" id="assignment">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Assignment 1</span>
+            <h1>Data Science and AI Around Us</h1>
+            <p>Individual assignment · Introductory analysis and reflection</p>
+          </div>
+        </div>
+
+        <article class="card">
+          <h2>Purpose</h2>
+          <p>
+            Identify a real problem in your community, institution or sector that could benefit from Data Science or AI,
+            and explain how data might contribute to understanding or addressing the problem.
+          </p>
+
+          <h2>Task</h2>
+          <ol>
+            <li>Choose one real-world problem.</li>
+            <li>Describe the problem clearly in approximately 150–200 words.</li>
+            <li>Identify at least three types of data that could be useful.</li>
+            <li>State where those data might come from.</li>
+            <li>Explain whether the problem mainly requires descriptive analysis, prediction, an AI capability, or a combination.</li>
+            <li>Identify one potential benefit and one ethical or practical risk.</li>
+            <li>Draw a simple workflow from problem → data → analysis/model → output → decision.</li>
+          </ol>
+
+          <h2>Submission format</h2>
+          <p>Submit a PDF or Word document. Recommended length: 2–3 pages.</p>
+
+          <div class="assignment-meta">
+            <div><strong>Due date</strong><span id="assignment1DueDate">To be announced by the lecturer</span></div>
+            <div><strong>Submission</strong><span>DT 111 Google Drive assignment folder</span></div>
+            <div><strong>Recommended filename</strong><span>DT111_Assignment1_RegistrationNumber</span></div>
+          </div>
+
+          <div class="submission-box">
+            <div>
+              <strong>Ready to submit?</strong>
+              <p>Upload your completed assignment to the DT 111 Google Drive folder. Internet access is required only for submission.</p>
+            </div>
+            <a class="btn primary link-btn" id="assignmentSubmissionLink" href="#" target="_blank" rel="noopener">Open Assignment Submission Folder ↗</a>
+          </div>
+
+          <button id="assignmentDoneBtn" class="btn secondary">Mark assignment as completed on this device</button>
+        </article>
+      </section>
+
+      
+      <section class="view" id="quiz2">
+        <div class="page-head"><div><span class="eyebrow">Assessment</span><h1>Topic 2 Quiz</h1><p>10 questions · Instant feedback · Saved on this device</p></div></div>
+        <form id="quizForm2" class="quiz-form"><div id="quizQuestions2"></div><button type="submit" class="btn primary large">Submit Quiz</button></form>
+        <div id="quizResult2" class="quiz-result hidden"></div>
+      </section>
+
+      <section class="view" id="assignment2">
+        <div class="page-head"><div><span class="eyebrow">Assignment 2</span><h1>Data Quality Audit and Cleaning</h1><p>Individual practical assignment using the supplied messy dataset</p></div></div>
+        <article class="card">
+          <h2>Purpose</h2><p>Apply Topic 2 concepts by inspecting, documenting and cleaning a small dataset.</p>
+          <h2>Files</h2>
+          <div class="dataset-links"><a class="btn secondary link-btn" href="datasets/topic2_messy_student_data.csv" download>Download messy dataset</a><a class="btn secondary link-btn" href="datasets/topic2_cleaned_student_data_example.csv" download>View example cleaned version</a></div>
+          <h2>Task</h2>
+          <ol>
+            <li>Open <strong>topic2_messy_student_data.csv</strong> in a spreadsheet application.</li>
+            <li>Identify at least eight data-quality issues.</li>
+            <li>Create a short cleaning log with columns: <em>problem, affected field/row, action taken, reason</em>.</li>
+            <li>Create your own cleaned version. Do not overwrite the original raw file.</li>
+            <li>Write 200–300 words explaining two cleaning decisions where more than one reasonable option was possible.</li>
+            <li>Submit the cleaned dataset and your short report/cleaning log.</li>
+          </ol>
+          <div class="callout warning"><strong>Important:</strong> The supplied “cleaned example” is for comparison after you attempt the task. It is not the only defensible cleaned version because some missing values require context.</div>
+          <div class="assignment-meta">
+            <div><strong>Due date</strong><span id="assignment2DueDate">To be announced by the lecturer</span></div>
+            <div><strong>Submission</strong><span>DT 111 Google Drive assignment folder</span></div>
+            <div><strong>Recommended files</strong><span>DT111_A2_RegNo.xlsx / .csv + report.pdf</span></div>
+          </div>
+          <div class="submission-box"><div><strong>Ready to submit?</strong><p>Upload both the cleaned dataset and report/cleaning log to the DT 111 Google Drive folder.</p></div><a class="btn primary link-btn" id="assignmentSubmissionLink2" href="#" target="_blank" rel="noopener">Open Assignment Submission Folder ↗</a></div>
+          <button id="assignment2DoneBtn" class="btn secondary">Mark assignment as completed on this device</button>
+        </article>
+      </section>
+
+      <section class="view" id="quiz3">
+        <div class="page-head"><div><span class="eyebrow">Assessment</span><h1>Topic 3 Quiz</h1><p>10 questions · Instant feedback · Saved on this device</p></div></div>
+        <form id="quizForm3" class="quiz-form"><div id="quizQuestions3"></div><button type="submit" class="btn primary large">Submit Quiz</button></form>
+        <div id="quizResult3" class="quiz-result hidden"></div>
+      </section>
+
+      <section class="view" id="assignment3">
+        <div class="page-head"><div><span class="eyebrow">Assignment 3</span><h1>Exploratory Data Analysis Report</h1><p>Individual practical assignment using the Topic 3 student-learning dataset</p></div></div>
+        <article class="card">
+          <h2>Purpose</h2><p>Use descriptive statistics and visualisation to explore a clean dataset and communicate evidence-based observations.</p>
+          <div class="dataset-links"><a class="btn secondary link-btn" href="datasets/topic3_student_learning_data.csv" download>Download Topic 3 dataset</a></div>
+
+          <h2>Task</h2>
+          <ol>
+            <li>Open <strong>topic3_student_learning_data.csv</strong> in a spreadsheet or analytical tool.</li>
+            <li>Describe the dataset: number of observations, variables and data types.</li>
+            <li>Calculate suitable descriptive statistics for <em>final_score</em>, <em>attendance_pct</em> and <em>study_hours_week</em>.</li>
+            <li>Create at least <strong>three appropriate visualisations</strong>: one distribution chart, one group-comparison chart and one relationship chart.</li>
+            <li>For each chart, write 2–4 sentences explaining what it shows.</li>
+            <li>Identify at least three patterns or insights and one question that would require further investigation.</li>
+            <li>Include a short paragraph explaining why any observed relationship should not automatically be interpreted as causal.</li>
+          </ol>
+
+          <h2>Expected submission</h2>
+          <p>A concise EDA report of approximately 3–5 pages containing tables/summary statistics, charts, interpretation and a short conclusion.</p>
+
+          <div class="assignment-meta">
+            <div><strong>Due date</strong><span id="assignment3DueDate">To be announced by the lecturer</span></div>
+            <div><strong>Submission</strong><span>DT 111 Google Drive assignment folder</span></div>
+            <div><strong>Recommended filename</strong><span>DT111_A3_RegistrationNumber.pdf</span></div>
+          </div>
+          <div class="submission-box"><div><strong>Ready to submit?</strong><p>Upload your EDA report to the DT 111 Google Drive folder.</p></div><a class="btn primary link-btn" id="assignmentSubmissionLink3" href="#" target="_blank" rel="noopener">Open Assignment Submission Folder ↗</a></div>
+          <button id="assignment3DoneBtn" class="btn secondary">Mark assignment as completed on this device</button>
+        </article>
+      </section>
+
+      <section class="view" id="quiz4">
+        <div class="page-head"><div><span class="eyebrow">Assessment</span><h1>Topic 4 Quiz</h1><p>10 questions · Instant feedback · Saved on this device</p></div></div>
+        <form id="quizForm4" class="quiz-form"><div id="quizQuestions4"></div><button type="submit" class="btn primary large">Submit Quiz</button></form>
+        <div id="quizResult4" class="quiz-result hidden"></div>
+      </section>
+
+      <section class="view" id="assignment4">
+        <div class="page-head"><div><span class="eyebrow">Assignment 4</span><h1>Introductory Statistical Interpretation Task</h1><p>Probability, hypothesis testing and simple regression interpretation</p></div></div>
+        <article class="card">
+          <h2>Purpose</h2><p>Develop conceptual understanding of statistical methods without overloading calculation.</p>
+          <div class="dataset-links"><a class="btn secondary link-btn" href="datasets/topic4_regression_learning_data.csv" download>Download Topic 4 dataset</a></div>
+          <h2>Task</h2>
+          <ol>
+            <li>Using your own words, explain the difference between a discrete and a continuous variable, giving one example of each.</li>
+            <li>Write one null hypothesis and one alternative hypothesis for the question: <em>Does a new teaching intervention change students’ average score?</em></li>
+            <li>Explain what a p-value of 0.02 would suggest at the 0.05 significance level, and explain why this does not prove the alternative hypothesis is absolutely true.</li>
+            <li>Using the supplied dataset, create a scatter plot of <em>study_hours_week</em> against <em>final_score</em>.</li>
+            <li>Add a trend line using your spreadsheet tool if possible, or describe the relationship visually.</li>
+            <li>Write 200–300 words interpreting what the relationship suggests and why it should not automatically be interpreted as causal.</li>
+          </ol>
+          <div class="assignment-meta">
+            <div><strong>Due date</strong><span id="assignment4DueDate">To be announced by the lecturer</span></div>
+            <div><strong>Submission</strong><span>DT 111 Google Drive assignment folder</span></div>
+            <div><strong>Recommended filename</strong><span>DT111_A4_RegistrationNumber.pdf</span></div>
+          </div>
+          <div class="submission-box"><div><strong>Ready to submit?</strong><p>Upload your response/report to the DT 111 Google Drive folder.</p></div><a class="btn primary link-btn" id="assignmentSubmissionLink4" href="#" target="_blank" rel="noopener">Open Assignment Submission Folder ↗</a></div>
+          <button id="assignment4DoneBtn" class="btn secondary">Mark assignment as completed on this device</button>
+        </article>
+      </section>
+
+      <section class="view" id="quiz5">
+        <div class="page-head"><div><span class="eyebrow">Assessment</span><h1>Topic 5 Quiz</h1><p>10 questions · Instant feedback · Saved on this device</p></div></div>
+        <form id="quizForm5" class="quiz-form"><div id="quizQuestions5"></div><button type="submit" class="btn primary large">Submit Quiz</button></form>
+        <div id="quizResult5" class="quiz-result hidden"></div>
+      </section>
+
+      <section class="view" id="assignment5">
+        <div class="page-head"><div><span class="eyebrow">Assignment 5</span><h1>Machine Learning Problem Design and Evaluation</h1><p>Individual concept-and-practical assignment</p></div></div>
+        <article class="card">
+          <h2>Purpose</h2><p>Apply the main Topic 5 ideas without requiring advanced programming.</p>
+          <div class="dataset-links"><a class="btn secondary link-btn" href="datasets/topic5_machine_learning_student_data.csv" download>Download Topic 5 dataset</a></div>
+
+          <h2>Task</h2>
+          <ol>
+            <li>Using the supplied dataset, identify which columns could serve as <strong>features</strong> and which could serve as a <strong>target</strong> for:
+              <ul><li>a regression problem;</li><li>a classification problem.</li></ul>
+            </li>
+            <li>Explain why predicting <em>final_score</em> is a regression task while predicting <em>pass_label</em> is a classification task.</li>
+            <li>Create a scatter plot of <em>study_hours_week</em> against <em>final_score</em> and describe the relationship.</li>
+            <li>Use the Topic 5 decision-tree explorer and test at least three combinations of attendance and assignment score. Record the resulting predictions and the path followed.</li>
+            <li>Use the K-means explorer with K = 2, 3 and 4. Explain how changing K changes the grouping and why the algorithm cannot tell you automatically which clusters are meaningful in the real world.</li>
+            <li>Explain why a train/test split is used and define overfitting in your own words.</li>
+            <li>Write a short conclusion describing which parts of an ML project require human judgement even when an algorithm is available.</li>
+          </ol>
+
+          <h2>Expected submission</h2>
+          <p>A concise 3–5 page report with one chart, short tables/screenshots if useful, and written interpretation.</p>
+
+          <div class="assignment-meta">
+            <div><strong>Due date</strong><span id="assignment5DueDate">To be announced by the lecturer</span></div>
+            <div><strong>Submission</strong><span>DT 111 Google Drive assignment folder</span></div>
+            <div><strong>Recommended filename</strong><span>DT111_A5_RegistrationNumber.pdf</span></div>
+          </div>
+          <div class="submission-box"><div><strong>Ready to submit?</strong><p>Upload your report to the DT 111 Google Drive folder.</p></div><a class="btn primary link-btn" id="assignmentSubmissionLink5" href="#" target="_blank" rel="noopener">Open Assignment Submission Folder ↗</a></div>
+          <button id="assignment5DoneBtn" class="btn secondary">Mark assignment as completed on this device</button>
+        </article>
+      </section>
+
+      <section class="view" id="quiz6">
+        <div class="page-head"><div><span class="eyebrow">Assessment</span><h1>Topic 6 Quiz</h1><p>10 questions · Instant feedback · Saved on this device</p></div></div>
+        <form id="quizForm6" class="quiz-form"><div id="quizQuestions6"></div><button type="submit" class="btn primary large">Submit Quiz</button></form>
+        <div id="quizResult6" class="quiz-result hidden"></div>
+      </section>
+
+      <section class="view" id="assignment6">
+        <div class="page-head"><div><span class="eyebrow">Assignment 6</span><h1>AI Problem-Solving Approaches</h1><p>Search, reasoning and neural-network concepts</p></div></div>
+        <article class="card">
+          <h2>Purpose</h2><p>Compare different AI approaches and justify which technique is suitable for a problem.</p>
+          <div class="dataset-links"><a class="btn secondary link-btn" href="datasets/topic6_ai_problem_scenarios.csv" download>Download AI problem scenarios</a></div>
+
+          <h2>Task</h2>
+          <ol>
+            <li>Use the supplied scenario file. For each scenario, identify the most suitable broad approach: search/planning, logic/reasoning, supervised Machine Learning, clustering, or neural-network-based perception/language.</li>
+            <li>Choose any <strong>three</strong> scenarios and justify your choices in 2–4 sentences each.</li>
+            <li>Use the Search Explorer with BFS, DFS and A*. Record the number of states visited and path length for each algorithm, then explain why the exploration behaviour differs.</li>
+            <li>Use the Rule-Based Reasoning Explorer. Change at least two facts and record which conclusions are or are not inferred.</li>
+            <li>Use the Neural-Network Activation Explorer with at least three input combinations. Explain what changes in the hidden/output activations illustrate.</li>
+            <li>Write a short conclusion explaining why AI should be viewed as a toolbox rather than as a single algorithm.</li>
+          </ol>
+
+          <div class="callout warning"><strong>Important:</strong> the interactive neural network is an educational illustration, not a real trained prediction model. Do not interpret its output as an actual student-performance probability.</div>
+
+          <div class="assignment-meta">
+            <div><strong>Due date</strong><span id="assignment6DueDate">To be announced by the lecturer</span></div>
+            <div><strong>Submission</strong><span>DT 111 Google Drive assignment folder</span></div>
+            <div><strong>Recommended filename</strong><span>DT111_A6_RegistrationNumber.pdf</span></div>
+          </div>
+          <div class="submission-box"><div><strong>Ready to submit?</strong><p>Upload your report to the DT 111 Google Drive folder.</p></div><a class="btn primary link-btn" id="assignmentSubmissionLink6" href="#" target="_blank" rel="noopener">Open Assignment Submission Folder ↗</a></div>
+          <button id="assignment6DoneBtn" class="btn secondary">Mark assignment as completed on this device</button>
+        </article>
+      </section>
+
+      <section class="view" id="quiz7">
+        <div class="page-head"><div><span class="eyebrow">Assessment</span><h1>Topic 7 Quiz</h1><p>10 questions · Instant feedback · Saved on this device</p></div></div>
+        <form id="quizForm7" class="quiz-form"><div id="quizQuestions7"></div><button type="submit" class="btn primary large">Submit Quiz</button></form>
+        <div id="quizResult7" class="quiz-result hidden"></div>
+      </section>
+
+      <section class="view" id="assignment7">
+        <div class="page-head"><div><span class="eyebrow">Assignment 7</span><h1>Responsible AI Case Review</h1><p>Privacy, bias, fairness, accountability and societal impact</p></div></div>
+        <article class="card">
+          <h2>Purpose</h2><p>Analyse an AI or Data Science scenario from both technical and ethical perspectives.</p>
+          <div class="dataset-links"><a class="btn secondary link-btn" href="datasets/topic7_responsible_ai_cases.csv" download>Download responsible-AI cases</a></div>
+
+          <h2>Task</h2>
+          <ol>
+            <li>Choose <strong>one</strong> case from the supplied scenario file.</li>
+            <li>Describe the intended purpose of the system and identify at least three affected stakeholders.</li>
+            <li>Identify the main ethical risks. Consider privacy, bias, fairness, transparency, accountability, human oversight and wider societal effects where relevant.</li>
+            <li>Identify what additional evidence you would need before deciding whether the system should be deployed.</li>
+            <li>Propose at least five practical safeguards or design changes.</li>
+            <li>Explain how the system should be monitored after deployment and what should trigger review, correction or suspension.</li>
+            <li>Conclude whether the system should be deployed as described, deployed only after changes, or not deployed. Justify your position.</li>
+          </ol>
+
+          <h2>Expected submission</h2>
+          <p>A concise 3–5 page case review. Students should support conclusions with clear reasoning rather than merely listing ethical keywords.</p>
+
+          <div class="assignment-meta">
+            <div><strong>Due date</strong><span id="assignment7DueDate">To be announced by the lecturer</span></div>
+            <div><strong>Submission</strong><span>DT 111 Google Drive assignment folder</span></div>
+            <div><strong>Recommended filename</strong><span>DT111_A7_RegistrationNumber.pdf</span></div>
+          </div>
+          <div class="submission-box"><div><strong>Ready to submit?</strong><p>Upload your responsible-AI case review to the DT 111 Google Drive folder.</p></div><a class="btn primary link-btn" id="assignmentSubmissionLink7" href="#" target="_blank" rel="noopener">Open Assignment Submission Folder ↗</a></div>
+          <button id="assignment7DoneBtn" class="btn secondary">Mark assignment as completed on this device</button>
+        </article>
+      </section>
+
+      <section class="view" id="quiz8">
+        <div class="page-head"><div><span class="eyebrow">Assessment</span><h1>Topic 8 Quiz</h1><p>10 questions · Instant feedback · Saved on this device</p></div></div>
+        <form id="quizForm8" class="quiz-form"><div id="quizQuestions8"></div><button type="submit" class="btn primary large">Submit Quiz</button></form>
+        <div id="quizResult8" class="quiz-result hidden"></div>
+      </section>
+
+      <section class="view" id="assignment8">
+        <div class="page-head"><div><span class="eyebrow">Assignment 8</span><h1>Inclusive AI Solution Concept</h1><p>Assistive technology, personalised learning, accessibility or well-being support</p></div></div>
+        <article class="card">
+          <h2>Purpose</h2>
+          <p>Design a simple AI-supported concept that addresses one of the four curriculum areas in Topic 8 while demonstrating inclusive and responsible design.</p>
+          <div class="dataset-links"><a class="btn secondary link-btn" href="datasets/topic8_accessible_ai_scenarios.csv" download>Download Topic 8 scenarios</a></div>
+
+          <h2>Task</h2>
+          <ol>
+            <li>Choose one focus area: assistive communication/physical support, personalised learning, mobility/accessibility, or emotional well-being support.</li>
+            <li>Define a specific user need or barrier. Avoid beginning with the technology; begin with the problem.</li>
+            <li>Describe the proposed AI-supported solution and the information it would need.</li>
+            <li>Explain how the user would interact with the system, including at least one alternative interaction mode.</li>
+            <li>Identify at least three risks or failure cases and explain how each would be reduced.</li>
+            <li>Explain how users with relevant lived experience would participate in requirements gathering or testing.</li>
+            <li>State where human oversight, user control or escalation is required.</li>
+            <li>Sketch a simple flow diagram showing: <em>User need → Inputs → AI function → Accessible output → User feedback/human support</em>.</li>
+          </ol>
+
+          <h2>Expected submission</h2>
+          <p>A concise 3–5 page concept note including the problem, proposed solution, inclusion safeguards and one diagram.</p>
+
+          <div class="callout warning"><strong>For emotional well-being concepts:</strong> keep the proposed system within low-risk supportive functions. It should not autonomously diagnose disorders, prescribe treatment or replace emergency/professional care.</div>
+
+          <div class="assignment-meta">
+            <div><strong>Due date</strong><span id="assignment8DueDate">To be announced by the lecturer</span></div>
+            <div><strong>Submission</strong><span>DT 111 Google Drive assignment folder</span></div>
+            <div><strong>Recommended filename</strong><span>DT111_A8_RegistrationNumber.pdf</span></div>
+          </div>
+          <div class="submission-box"><div><strong>Ready to submit?</strong><p>Upload your inclusive-AI concept note to the DT 111 Google Drive folder.</p></div><a class="btn primary link-btn" id="assignmentSubmissionLink8" href="#" target="_blank" rel="noopener">Open Assignment Submission Folder ↗</a></div>
+          <button id="assignment8DoneBtn" class="btn secondary">Mark assignment as completed on this device</button>
+        </article>
+      </section>
+<section class="view" id="glossary">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Reference</span>
+            <h1>DT 111 Glossary</h1>
+            <p>Search key terms introduced in the course.</p>
+          </div>
+        </div>
+
+        <input id="glossarySearch" class="search" type="search" placeholder="Search a term..." />
+        <div id="glossaryList" class="glossary-list"></div>
+      </section>
+
+      <section class="view" id="progress">
+        <div class="page-head">
+          <div>
+            <span class="eyebrow">Local progress</span>
+            <h1>My Progress</h1>
+            <p>Progress is stored only in this browser on this device.</p>
+          </div>
+        </div>
+
+        <article class="card">
+          <div class="progress-line">
+            <div><strong>Topic 1 notes</strong><span id="topicProgressText">Not completed</span></div>
+            <div class="bar"><span id="topicProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Topic 1 quiz</strong><span id="quizProgressText">Not attempted</span></div>
+            <div class="bar"><span id="quizProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Assignment 1</strong><span id="assignmentProgressText">Not completed</span></div>
+            <div class="bar"><span id="assignmentProgressBar"></span></div>
+          </div>          <hr class="progress-sep">
+          <div class="progress-line">
+            <div><strong>Topic 2 notes</strong><span id="topic2ProgressText">Not completed</span></div>
+            <div class="bar"><span id="topic2ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Topic 2 quiz</strong><span id="quiz2ProgressText">Not attempted</span></div>
+            <div class="bar"><span id="quiz2ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Assignment 2</strong><span id="assignment2ProgressText">Not completed</span></div>
+            <div class="bar"><span id="assignment2ProgressBar"></span></div>
+          </div>          <hr class="progress-sep">
+          <div class="progress-line">
+            <div><strong>Topic 3 notes</strong><span id="topic3ProgressText">Not completed</span></div>
+            <div class="bar"><span id="topic3ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Topic 3 quiz</strong><span id="quiz3ProgressText">Not attempted</span></div>
+            <div class="bar"><span id="quiz3ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Assignment 3</strong><span id="assignment3ProgressText">Not completed</span></div>
+            <div class="bar"><span id="assignment3ProgressBar"></span></div>
+          </div>          <hr class="progress-sep">
+          <div class="progress-line">
+            <div><strong>Topic 4 notes</strong><span id="topic4ProgressText">Not completed</span></div>
+            <div class="bar"><span id="topic4ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Topic 4 quiz</strong><span id="quiz4ProgressText">Not attempted</span></div>
+            <div class="bar"><span id="quiz4ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Assignment 4</strong><span id="assignment4ProgressText">Not completed</span></div>
+            <div class="bar"><span id="assignment4ProgressBar"></span></div>
+          </div>          <hr class="progress-sep">
+          <div class="progress-line">
+            <div><strong>Topic 5 notes</strong><span id="topic5ProgressText">Not completed</span></div>
+            <div class="bar"><span id="topic5ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Topic 5 quiz</strong><span id="quiz5ProgressText">Not attempted</span></div>
+            <div class="bar"><span id="quiz5ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Assignment 5</strong><span id="assignment5ProgressText">Not completed</span></div>
+            <div class="bar"><span id="assignment5ProgressBar"></span></div>
+          </div>          <hr class="progress-sep">
+          <div class="progress-line">
+            <div><strong>Topic 6 notes</strong><span id="topic6ProgressText">Not completed</span></div>
+            <div class="bar"><span id="topic6ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Topic 6 quiz</strong><span id="quiz6ProgressText">Not attempted</span></div>
+            <div class="bar"><span id="quiz6ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Assignment 6</strong><span id="assignment6ProgressText">Not completed</span></div>
+            <div class="bar"><span id="assignment6ProgressBar"></span></div>
+          </div>          <hr class="progress-sep">
+          <div class="progress-line">
+            <div><strong>Topic 7 notes</strong><span id="topic7ProgressText">Not completed</span></div>
+            <div class="bar"><span id="topic7ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Topic 7 quiz</strong><span id="quiz7ProgressText">Not attempted</span></div>
+            <div class="bar"><span id="quiz7ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Assignment 7</strong><span id="assignment7ProgressText">Not completed</span></div>
+            <div class="bar"><span id="assignment7ProgressBar"></span></div>
+          </div>          <hr class="progress-sep">
+          <div class="progress-line">
+            <div><strong>Topic 8 notes</strong><span id="topic8ProgressText">Not completed</span></div>
+            <div class="bar"><span id="topic8ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Topic 8 quiz</strong><span id="quiz8ProgressText">Not attempted</span></div>
+            <div class="bar"><span id="quiz8ProgressBar"></span></div>
+          </div>
+          <div class="progress-line">
+            <div><strong>Assignment 8</strong><span id="assignment8ProgressText">Not completed</span></div>
+            <div class="bar"><span id="assignment8ProgressBar"></span></div>
+          </div>
+        </article>
+      </section>
+    
+      <footer class="course-footer">
+        <p><strong>DT 111 — Introduction to Data Science and Artificial Intelligence</strong></p>
+        <p>Mkwawa University College of Education · University of Dar es Salaam</p>
+        <small>Online Edition v1.0 · Core learning content is also available in the offline package.</small>
+      </footer>
+
+    </main>
+  </div>
+
+  <div class="presentation-overlay hidden" id="presentationOverlay">
+    <div class="presentation-top">
+      <span id="slideCounter">1 / 1</span>
+      <button id="closePresentation" class="btn secondary">Exit</button>
+    </div>
+    <div class="slide-stage" id="slideStage"></div>
+    <div class="presentation-controls">
+      <button id="prevSlide" class="btn secondary">← Previous</button>
+      <button id="nextSlide" class="btn primary">Next →</button>
+    </div>
+  </div>
+
+  <script src="LECTURER_EDIT/course_settings.js"></script>
+  <script src="LECTURER_EDIT/topic1_slides.js"></script>
+  <script src="LECTURER_EDIT/topic2_slides.js"></script>
+  <script src="LECTURER_EDIT/topic3_slides.js"></script>
+  <script src="LECTURER_EDIT/topic4_slides.js"></script>
+  <script src="LECTURER_EDIT/topic5_slides.js"></script>
+  <script src="LECTURER_EDIT/topic6_slides.js"></script>
+  <script src="LECTURER_EDIT/topic7_slides.js"></script>
+  <script src="LECTURER_EDIT/topic8_slides.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

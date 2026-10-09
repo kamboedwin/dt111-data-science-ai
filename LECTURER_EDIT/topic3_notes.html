@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DT111 Topic 3 Notes</title><link rel="stylesheet" href="notes.css"></head>
+<body><div class="notes-wrap">
+<h1>DT111 Topic 3</h1>
+<p class="intro-note">You can read these notes on screen or use the button below to print or save them as PDF.</p>
+<div class="toolbar"><button onclick="window.print()">Print / Save as PDF</button></div>
+
+
+<section class="note-section">
+<span class="section-number">3.1</span>
+<h2>Exploratory Data Analysis</h2>
+<p><strong>Exploratory Data Analysis (EDA)</strong> is the process of examining a dataset in order to understand its structure, summarise its main characteristics, identify patterns, detect unusual observations and generate questions for deeper analysis. EDA usually combines numerical summaries with visualisation.</p>
+
+<p>EDA comes after data have been collected and sufficiently prepared for use, but it is not always a perfectly separate stage. Exploration may reveal new quality problems that require the analyst to return to cleaning. For that reason, EDA is often <strong>iterative</strong>.</p>
+
+<figure class="figure"><img src="media/topic3/eda_cycle.svg" alt="Exploratory data analysis cycle"><figcaption>Figure 1. EDA involves repeated understanding, summarising, visualising and questioning.</figcaption></figure>
+
+<div class="callout info"><strong>Purpose of EDA:</strong> not to force the data to confirm an expectation, but to learn what the data actually show and what deserves further investigation.</div>
+
+<h3>Questions to ask when first opening a dataset</h3>
+<ul>
+<li>How many observations and variables are present?</li>
+<li>What does each variable mean?</li>
+<li>Which variables are numerical, categorical, dates or identifiers?</li>
+<li>What units are used?</li>
+<li>Are values missing?</li>
+<li>What are the typical values?</li>
+<li>How much do values vary?</li>
+<li>Are there unusual or extreme cases?</li>
+<li>Do variables appear related?</li>
+<li>Do groups differ?</li>
+</ul>
+</section>
+
+<section class="note-section">
+<span class="section-number">3.2</span>
+<h2>Descriptive Statistics</h2>
+
+<p><strong>Descriptive statistics</strong> summarise the main characteristics of data. They help reduce a large collection of values into a smaller set of interpretable quantities. They describe the data that have been observed; by themselves, they do not establish why a pattern occurs.</p>
+
+<h3>Measures of centre</h3>
+<table class="compare-table">
+<thead><tr><th>Measure</th><th>Meaning</th><th>When it is useful</th></tr></thead>
+<tbody>
+<tr><td>Mean</td><td>The arithmetic average</td><td>Useful for numerical data when extreme values are not dominating the summary</td></tr>
+<tr><td>Median</td><td>The middle value after sorting</td><td>Useful when data are skewed or contain extreme values</td></tr>
+<tr><td>Mode</td><td>The most frequently occurring value or category</td><td>Useful for identifying the most common category or repeated value</td></tr>
+</tbody>
+</table>
+
+<p>Suppose five monthly household expenditures are 100, 110, 120, 130 and 800. The unusually large value of 800 pulls the <strong>mean</strong> upward, while the <strong>median</strong> remains near the centre of most observations. This is why choosing a summary measure should depend on the distribution.</p>
+
+<h3>Measures of spread</h3>
+<p>Two datasets can have the same mean but very different variability. Measures of spread describe how widely values are dispersed.</p>
+<ul>
+<li><strong>Range:</strong> difference between the maximum and minimum.</li>
+<li><strong>Interquartile range (IQR):</strong> spread of the middle 50% of observations.</li>
+<li><strong>Variance and standard deviation:</strong> describe how far values tend to vary around the mean.</li>
+</ul>
+
+<p>At this introductory stage, the important idea is conceptual: <strong>centre tells us what is typical; spread tells us how variable the data are.</strong></p>
+
+<h3>Counts and proportions</h3>
+<p>For categorical data, useful summaries include the number of observations in each category and their percentages. For example, a class may contain students from Iringa, Arusha, Mbeya and Dar es Salaam. A frequency table shows how the observations are distributed across those regions.</p>
+
+<h3>Five-number summary</h3>
+<p>A useful numerical summary consists of the minimum, first quartile, median, third quartile and maximum. This summary is closely related to the box plot and helps describe location, spread and possible unusual observations.</p>
+</section>
+
+<section class="note-section">
+<span class="section-number">3.3</span>
+<h2>Data Visualisation Tools and Techniques</h2>
+
+<p>Visualisation helps people see patterns that may be difficult to detect from raw tables. The goal is not decoration. A good chart should answer a question clearly and honestly.</p>
+
+<figure class="figure"><img src="media/topic3/chart_selection.svg" alt="Choosing common data visualisations"><figcaption>Figure 2. Basic chart selection depends on the analytical question.</figcaption></figure>
+
+<h3>Bar chart</h3>
+<p>A bar chart compares values across categories. The categories are discrete, so bars are normally separated. Examples include number of students by region or average yield by crop type.</p>
+
+<h3>Histogram</h3>
+<p>A histogram shows the distribution of a numerical variable by grouping values into intervals called <strong>bins</strong>. Adjacent bins touch because they represent intervals along a continuous numerical scale. Histograms help reveal concentration, spread, skewness, multiple peaks and unusual values.</p>
+
+<div class="callout info"><strong>Bar chart versus histogram:</strong> a bar chart compares categories; a histogram describes the distribution of numerical values. They may look similar, but they represent different questions.</div>
+
+<h3>Line chart</h3>
+<p>A line chart is useful when values are ordered, especially across time. Examples include monthly rainfall, daily temperature, annual crop production or weekly website traffic.</p>
+
+<h3>Scatter plot</h3>
+<p>A scatter plot displays pairs of numerical values. Each observation becomes a point. The plot helps reveal whether two variables appear related, whether the relationship is positive or negative, whether groups form clusters and whether unusual observations exist.</p>
+
+<h3>Box plot</h3>
+<p>A box plot summarises a numerical distribution using quartiles and the median. It is useful for comparing distributions between groups, although students should remember that it compresses detail and should sometimes be combined with other views.</p>
+
+<h3>Good visualisation practice</h3>
+<ul>
+<li>Choose a chart that matches the question and data type.</li>
+<li>Use clear titles and axis labels.</li>
+<li>Include units where necessary.</li>
+<li>Avoid unnecessary visual effects that make interpretation harder.</li>
+<li>Use axis scales carefully and avoid misleading truncation.</li>
+<li>Do not overcrowd a chart with too many categories or labels.</li>
+<li>Explain what the chart shows rather than assuming the reader will infer the intended message.</li>
+</ul>
+</section>
+
+<section class="note-section">
+<span class="section-number">3.4</span>
+<h2>Identifying Patterns and Insights</h2>
+
+<figure class="figure"><img src="media/topic3/eda_patterns.svg" alt="Patterns examined in exploratory data analysis"><figcaption>Figure 3. Common patterns examined during EDA.</figcaption></figure>
+
+<h3>Distribution</h3>
+<p>A distribution describes how values are arranged. Questions include: Where are most values concentrated? Is the distribution roughly symmetric or skewed? Are there multiple groups? How variable are the observations?</p>
+
+<h3>Relationships</h3>
+<p>Two variables may appear to move together. For example, attendance and examination score might show a positive association. A scatter plot can reveal such a pattern, but the presence of a relationship does not prove that one variable causes the other.</p>
+
+<div class="callout warning"><strong>Correlation is not causation.</strong> If two variables are associated, other variables may explain the relationship, the direction may be unclear, or the pattern may be coincidental. EDA generates evidence and questions; it does not automatically establish causal explanations.</div>
+
+<h3>Groups and comparisons</h3>
+<p>EDA often compares subgroups. For example, average performance may be compared across regions, programmes or teaching methods. Differences should be interpreted carefully because group size, sampling and other characteristics can influence the comparison.</p>
+
+<h3>Trends</h3>
+<p>When data are ordered over time, EDA can reveal upward or downward trends, seasonal patterns, sudden changes or periods of unusual behaviour.</p>
+
+<h3>Anomalies</h3>
+<p>An anomaly is an observation that differs noticeably from the general pattern. It may be an error, an exceptional real case or evidence of a new phenomenon. As in Topic 2, investigation should come before deletion.</p>
+
+<h3>From pattern to insight</h3>
+<p>A pattern becomes useful when it is interpreted in context. Saying “students with higher attendance tend to have higher scores” describes a relationship. An <strong>insight</strong> goes further by explaining why the pattern matters, what further questions it raises and how it could inform a decision.</p>
+
+<div class="question-box"><strong>Example:</strong> If a scatter plot shows that students who attend more classes often score higher, what additional information would you want before recommending a policy based on this relationship?</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">3.5</span>
+<h2>A Simple EDA Workflow</h2>
+<ol>
+<li><strong>Understand the context.</strong> What does each record represent?</li>
+<li><strong>Inspect structure.</strong> Count rows, columns, data types and missing values.</li>
+<li><strong>Summarise individual variables.</strong> Use counts, centre and spread.</li>
+<li><strong>Visualise distributions.</strong> Use suitable charts.</li>
+<li><strong>Compare groups.</strong> Look for meaningful differences.</li>
+<li><strong>Explore relationships.</strong> Use cross-tabulations, grouped summaries or scatter plots.</li>
+<li><strong>Investigate unusual cases.</strong> Verify anomalies and data-quality issues.</li>
+<li><strong>Record observations and questions.</strong> Distinguish what the data show from what you infer.</li>
+</ol>
+
+<div class="callout"><strong>Main lesson:</strong> EDA is a disciplined form of curiosity. Good exploration combines statistics, visualisation, context and careful interpretation.</div>
+
+<h3>Topic 3 checklist</h3>
+<ul>
+<li>Can you explain the purpose of EDA?</li>
+<li>Can you distinguish mean, median and mode?</li>
+<li>Can you explain why spread matters?</li>
+<li>Can you choose a basic chart based on the analytical question?</li>
+<li>Can you identify distributions, relationships, trends, groups and anomalies?</li>
+<li>Can you explain why association does not automatically imply causation?</li>
+<li>Can you turn an observed pattern into a meaningful question or insight?</li>
+</ul>
+</section>
+
+</div></body></html>

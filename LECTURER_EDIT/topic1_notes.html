@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DT111 Topic 1 Notes</title>
+<link rel="stylesheet" href="notes.css">
+</head>
+<body>
+<div class="notes-wrap">
+<h1>DT111 Topic 1</h1>
+<p class="intro-note">You can read these notes on screen or use the button below to print or save them as PDF.</p>
+<div class="toolbar"><button onclick="window.print()">Print / Save as PDF</button></div>
+
+
+<section class="note-section">
+<span class="section-number">1.1</span>
+<h2>Overview of Data Science and Artificial Intelligence</h2>
+
+<p><strong>Data Science</strong> is an interdisciplinary field concerned with using data to answer questions, discover patterns, generate evidence and support decisions. It draws on computing, statistics, mathematics and knowledge of the problem domain. A Data Scientist therefore does more than run software: the person must understand the problem, judge whether the data are suitable, select appropriate methods, interpret results and communicate them clearly.</p>
+
+<p><strong>Artificial Intelligence (AI)</strong> is the broad field concerned with designing computer systems that perform tasks associated with intelligent behaviour. Such tasks include reasoning, planning, learning, recognising patterns, understanding language, perceiving images or sound, making predictions and supporting decisions.</p>
+
+<p><strong>Machine Learning (ML)</strong> is one major approach within AI. Instead of explicitly programming every rule, a machine-learning system learns patterns from examples or data. For example, rather than writing a long list of visual rules describing diseased leaves, a model can be trained using labelled images and learn patterns associated with different disease classes.</p>
+
+<div class="callout info"><strong>Key distinction:</strong> Data Science, AI and Machine Learning overlap, but they are not interchangeable. Data Science may use machine learning, but many valuable Data Science tasks use descriptive statistics, visualisation or simple statistical methods without AI.</div>
+
+<figure class="figure">
+<img src="media/topic1/relationship_ds_ai_ml.svg" alt="Conceptual relationship between Data Science, Artificial Intelligence and Machine Learning">
+<figcaption>Figure 1. Conceptual relationship between Data Science, AI and Machine Learning.</figcaption>
+</figure>
+
+<h3>From data to information, knowledge and decisions</h3>
+<p>Raw data on their own may have little meaning. Their value emerges when they are placed in context and analysed. For example, a list of rainfall measurements is data. Calculating average rainfall by month creates information. Comparing several years may reveal a pattern. Combining that pattern with agricultural knowledge may support a planting decision.</p>
+
+<table class="compare-table">
+<thead><tr><th>Concept</th><th>Simple meaning</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Data</td><td>Recorded observations or measurements</td><td>Daily rainfall values</td></tr>
+<tr><td>Information</td><td>Data organised or summarised into a meaningful form</td><td>Average monthly rainfall</td></tr>
+<tr><td>Insight</td><td>An interpretable pattern or finding</td><td>Rainfall is starting later than usual</td></tr>
+<tr><td>Decision</td><td>An action informed by evidence and context</td><td>Adjust planting time or irrigation planning</td></tr>
+</tbody>
+</table>
+
+<h3>Why domain knowledge matters</h3>
+<p>A technically correct analysis can still be misleading if the analyst does not understand the real-world setting. Domain knowledge helps determine which variables matter, which assumptions are reasonable and whether an output makes practical sense. In agriculture this may require agronomic knowledge; in health it may require clinical knowledge; in education it may require knowledge of teaching, assessment and student support.</p>
+
+<h3>A simple Data Science workflow</h3>
+<p>Although real projects are often iterative rather than perfectly linear, a beginner can understand Data Science using the following sequence:</p>
+
+<ol>
+<li><strong>Define the problem:</strong> What question are we trying to answer and why does it matter?</li>
+<li><strong>Collect data:</strong> What data are needed and where can they be obtained?</li>
+<li><strong>Clean and prepare:</strong> Are there missing values, duplicate records, inconsistent formats or errors?</li>
+<li><strong>Explore and analyse:</strong> What distributions, trends, relationships or unusual observations appear?</li>
+<li><strong>Model when needed:</strong> Would a statistical or machine-learning model help answer the question?</li>
+<li><strong>Evaluate:</strong> How reliable, accurate, useful or fair is the result?</li>
+<li><strong>Communicate and act:</strong> What do the findings mean to the people making decisions?</li>
+</ol>
+
+<figure class="figure">
+<img src="media/topic1/workflow_problem_data_action.svg" alt="Problem to data to insight or model to action workflow">
+<figcaption>Figure 2. A simplified view of how evidence moves from a problem to action.</figcaption>
+</figure>
+
+<h3>What is a model?</h3>
+<p>A <strong>model</strong> is a simplified representation of a real process, relationship or pattern. Models can be mathematical, statistical or computational. A regression model may estimate a numerical value such as expected sales. A classification model may assign an image to a category. A forecasting model may estimate future demand. Models are useful because they simplify reality, but that same simplification means they can also be wrong.</p>
+
+<h3>Rule-based systems and learning-based systems</h3>
+<p>Not every intelligent system learns from data. A <strong>rule-based system</strong> follows rules written by people, such as “if temperature exceeds a threshold, issue a warning”. A <strong>learning-based system</strong> estimates patterns from examples. The best approach depends on the problem. Some systems combine explicit rules and learned models.</p>
+
+<div class="question-box"><strong>Think about it:</strong> If a university wants to calculate every student's average mark, does it need AI? Why or why not?</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">1.2</span>
+<h2>History and Evolution</h2>
+
+<p>The histories of statistics, computing and AI developed separately before converging into today's data-intensive technologies. Modern Data Science and AI have advanced because several conditions developed together: large quantities of digital data became available, computing became faster and cheaper, and algorithms improved.</p>
+
+<figure class="figure">
+<img src="media/topic1/evolution_timeline.svg" alt="Simplified timeline of the evolution of Data Science and AI">
+<figcaption>Figure 3. Simplified milestones in the evolution of modern Data Science and AI.</figcaption>
+</figure>
+
+<h3>Early digital computing and AI</h3>
+<p>Early digital computers made it possible to automate calculations at a scale and speed that were difficult to achieve manually. Researchers also began asking whether computers could solve problems that appeared to require intelligence. Early AI work emphasised symbolic reasoning, search, logic and game playing.</p>
+
+<h3>Expert systems and knowledge representation</h3>
+<p>During the 1970s and 1980s, <strong>expert systems</strong> became an important AI approach. These systems attempted to capture specialist knowledge in the form of explicit rules. They were useful in narrow domains but were expensive to maintain and often struggled outside the situations anticipated by their designers.</p>
+
+<h3>Statistical learning and data-driven methods</h3>
+<p>As digital databases and the internet expanded, researchers increasingly used statistical and machine-learning methods that learned from data. This changed the emphasis from only encoding human rules to also identifying patterns automatically from examples.</p>
+
+<h3>Big data and deep learning</h3>
+<p>During the 2000s and 2010s, data volumes grew rapidly while storage, cloud computing and specialised processors became more accessible. Deep learning methods achieved major advances in areas such as image recognition, speech recognition and natural language processing.</p>
+
+<h3>Generative AI and foundation models</h3>
+<p>In the 2020s, large-scale models capable of generating text, images, audio, video and software code became widely accessible. These systems are often called <strong>generative AI</strong>. Their capabilities are significant, but they also create new questions about reliability, misinformation, intellectual property, privacy, bias, education and responsible use.</p>
+
+<div class="callout warning"><strong>Study the trend, not only the dates.</strong> A useful way to understand the evolution is: <em>more digital data + more computing power + improved algorithms + wider connectivity</em>.</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">1.3</span>
+<h2>Applications and Impact in Various Industries</h2>
+
+<p>Data Science and AI are useful when organisations need to understand complex data, predict outcomes, automate repetitive tasks or support decisions. Their value comes from matching a suitable method to a meaningful problem.</p>
+
+<figure class="figure">
+<img src="media/topic1/applications_overview.svg" alt="Examples of Data Science and AI applications across sectors">
+<figcaption>Figure 4. Examples of application areas.</figcaption>
+</figure>
+
+<h3>Agriculture</h3>
+<p>Applications include crop-disease recognition, yield forecasting, weather-informed farm planning, soil and sensor analysis, precision agriculture, market-price analysis and agricultural credit assessment. These tools can support farmers and extension officers, but they must be adapted to local crops, languages, infrastructure and farming conditions.</p>
+
+<h3>Health</h3>
+<p>Data Science can help analyse disease patterns, hospital demand and patient outcomes. AI systems can assist with medical images, triage, risk prediction or clinical decision support. Because health decisions can affect safety, such systems require careful validation, privacy protection and qualified human oversight.</p>
+
+<h3>Finance and banking</h3>
+<p>Financial institutions use data to assess credit risk, detect unusual transactions, identify fraud, understand customer behaviour and monitor portfolios. Automated decisions must be examined for fairness because historical financial data may contain social or economic biases.</p>
+
+<h3>Education</h3>
+<p>Educational data may be used to study student participation, performance and progression. AI can support personalised learning, automated feedback, language assistance and accessibility. These applications should support teaching rather than reduce students to scores or remove educators from important decisions.</p>
+
+<h3>Transport, environment and public services</h3>
+<p>Transport systems use data for traffic analysis, route planning and demand forecasting. Environmental applications include weather analysis, climate modelling, pollution monitoring, disaster-risk assessment and remote sensing. Government and public-service organisations can use data to understand service demand and allocate resources more effectively.</p>
+
+<h3>Potential benefits</h3>
+<div class="term-grid">
+<div class="term-card"><strong>Scale</strong><br>Analyse more records than a person could inspect manually.</div>
+<div class="term-card"><strong>Consistency</strong><br>Apply the same computational procedure repeatedly.</div>
+<div class="term-card"><strong>Pattern discovery</strong><br>Identify relationships that may be difficult to notice manually.</div>
+<div class="term-card"><strong>Prediction</strong><br>Estimate future or unknown outcomes.</div>
+<div class="term-card"><strong>Automation</strong><br>Reduce repetitive work where automation is appropriate.</div>
+<div class="term-card"><strong>Decision support</strong><br>Provide evidence to people responsible for decisions.</div>
+</div>
+
+<h3>Limitations and risks</h3>
+<ul>
+<li><strong>Data quality:</strong> missing, incorrect or unrepresentative data can weaken conclusions.</li>
+<li><strong>Bias and fairness:</strong> models may reproduce or amplify biases in historical data.</li>
+<li><strong>Privacy:</strong> personal or sensitive data require careful protection.</li>
+<li><strong>Uncertainty:</strong> predictions are estimates, not guarantees.</li>
+<li><strong>Context:</strong> a model that works in one setting may perform poorly in another.</li>
+<li><strong>Over-reliance:</strong> automated outputs should not automatically replace professional judgement.</li>
+</ul>
+
+<div class="callout"><strong>Responsible use:</strong> A useful AI system is not simply one that produces an answer. It should also be appropriate for the problem, evaluated using suitable evidence, understandable to its users, and deployed with attention to safety, fairness, privacy and accountability.</div>
+
+<h3>Key terms for Topic 1</h3>
+<div class="term-grid">
+<div class="term-card"><strong>Data Science</strong><br>Using data and analytical methods to generate knowledge and support decisions.</div>
+<div class="term-card"><strong>Artificial Intelligence</strong><br>Computer systems performing tasks associated with intelligent behaviour.</div>
+<div class="term-card"><strong>Machine Learning</strong><br>Models that learn patterns from data.</div>
+<div class="term-card"><strong>Algorithm</strong><br>A defined sequence of steps for solving a problem.</div>
+<div class="term-card"><strong>Model</strong><br>A simplified representation used to describe, explain or predict.</div>
+<div class="term-card"><strong>Dataset</strong><br>A collection of related observations or records.</div>
+</div>
+
+<div class="question-box"><strong>Reflection:</strong> Identify one problem in Tanzania where Data Science could be useful. What data would be needed, and what could go wrong if those data were incomplete or biased?</div>
+</section>
+
+</div>
+</body>
+</html>

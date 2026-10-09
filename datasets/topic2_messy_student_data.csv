@@ -1,0 +1,12 @@
+student_id,name,age,region,programme,test_score,attendance_pct
+DS001,Asha M.,20,Iringa,DSAI,78,92
+DS002,Baraka K.,21,Dar es salaam,DSAI,65,85
+DS003,Neema P.,,ARUSHA,DSAI,81,89
+DS004,John T.,22,Iringa,Data Science & AI,103,88
+DS005,Rehema S.,twenty,Mbeya,DSAI,74,
+DS005,Rehema S.,twenty,Mbeya,DSAI,74,
+DS006,Omari J.,19,Arusha ,DSAI,69,105
+DS007,Zawadi L.,20,-,DSAI,72,80
+DS008,Kelvin B.,21,Dar es Salaam,DSAI, 67 ,83
+DS009,Fatma A.,20,Iringa,DSAI,N/A,91
+DS010,Musa R.,22,Mbeya,DSAI,76,87

@@ -1,0 +1,34 @@
+DT 111 — Assignment 6
+AI Problem-Solving Approaches
+
+Purpose
+Compare different Artificial Intelligence approaches and justify which technique is suitable for a problem.
+
+Dataset
+datasets/topic6_ai_problem_scenarios.csv
+
+Task
+1. For each supplied scenario, identify the most suitable broad approach:
+   - search/planning;
+   - logic/reasoning;
+   - supervised Machine Learning;
+   - clustering;
+   - neural-network-based perception/language.
+2. Choose any three scenarios and justify your choices in 2–4 sentences each.
+3. Use the Search Explorer with BFS, DFS and A*. Record:
+   - number of states visited;
+   - path length;
+   - one observation about how the algorithms explored differently.
+4. Use the Rule-Based Reasoning Explorer. Change at least two facts and record which conclusions are or are not inferred.
+5. Use the Neural-Network Activation Explorer with at least three input combinations and explain what changes in the hidden/output activations illustrate.
+6. Write a short conclusion explaining why AI should be viewed as a toolbox rather than as a single algorithm.
+
+Important
+The interactive neural network is an educational illustration, not a real trained student-performance model. Its output must not be interpreted as an actual probability or decision about a student.
+
+Submission
+Upload to the DT 111 Google Drive assignment folder configured in:
+LECTURER_EDIT/course_settings.js
+
+Recommended filename
+DT111_A6_RegistrationNumber.pdf

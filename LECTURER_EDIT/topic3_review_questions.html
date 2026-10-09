@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DT111 Topic 3 Review Questions</title><link rel="stylesheet" href="review.css"></head>
+<body><div class="wrap">
+<h1>Topic 3 Review Questions</h1>
+<p class="intro">Use these questions for tutorial discussion, self-study and revision. Attempt each question before opening the suggested answer.</p>
+<div class="toolbar"><button onclick="window.print()">Print / Save as PDF</button><button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Show all suggested answers</button><button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Hide answers</button></div>
+
+<section class="group"><h2>A. EDA and descriptive statistics</h2>
+<div class="q"><strong>1.</strong> What is Exploratory Data Analysis?<details><summary>Suggested answer</summary><div class="answer">EDA is the process of examining a dataset using summaries, visualisations and questions to understand its structure, patterns, variability and unusual observations before deeper analysis.</div></details></div>
+<div class="q"><strong>2.</strong> Why is EDA described as iterative?<details><summary>Suggested answer</summary><div class="answer">Exploration often reveals new questions or data-quality problems, so the analyst may return to cleaning, create new summaries and visualise the data again.</div></details></div>
+<div class="q"><strong>3.</strong> Distinguish mean, median and mode.<details><summary>Suggested answer</summary><div class="answer">Mean is the arithmetic average; median is the middle ordered value; mode is the most frequently occurring value or category.</div></details></div>
+<div class="q"><strong>4.</strong> When may the median be more informative than the mean?<details><summary>Suggested answer</summary><div class="answer">When a numerical distribution is skewed or contains extreme values that strongly influence the mean.</div></details></div>
+<div class="q"><strong>5.</strong> Why do measures of spread matter?<details><summary>Suggested answer</summary><div class="answer">Two datasets may have the same centre but very different variability. Spread shows how dispersed or consistent the observations are.</div></details></div>
+<div class="q"><strong>6.</strong> Name three measures of spread.<details><summary>Suggested answer</summary><div class="answer">Range, interquartile range, variance and standard deviation are examples.</div></details></div>
+</section>
+
+<section class="group"><h2>B. Visualisation</h2>
+<div class="q"><strong>7.</strong> What is the main difference between a bar chart and a histogram?<details><summary>Suggested answer</summary><div class="answer">A bar chart compares categories, while a histogram shows the distribution of a numerical variable across intervals.</div></details></div>
+<div class="q"><strong>8.</strong> Which chart would you use to examine monthly rainfall over three years? Why?<details><summary>Suggested answer</summary><div class="answer">A line chart is appropriate because the observations are ordered over time and the aim is to see change and trend.</div></details></div>
+<div class="q"><strong>9.</strong> Which chart is useful for examining the relationship between study hours and final score?<details><summary>Suggested answer</summary><div class="answer">A scatter plot because both variables are numerical and each point can represent one student's pair of values.</div></details></div>
+<div class="q"><strong>10.</strong> Give three features of a well-designed chart.<details><summary>Suggested answer</summary><div class="answer">Examples: clear title, labelled axes, correct units, suitable scale, appropriate chart type and absence of distracting decoration.</div></details></div>
+<div class="q"><strong>11.</strong> How can a misleading axis influence interpretation?<details><summary>Suggested answer</summary><div class="answer">A truncated or inappropriate scale can visually exaggerate or minimise differences and make a pattern appear stronger or weaker than it really is.</div></details></div>
+</section>
+
+<section class="group"><h2>C. Patterns and interpretation</h2>
+<div class="q"><strong>12.</strong> What kinds of patterns are commonly examined during EDA?<details><summary>Suggested answer</summary><div class="answer">Distributions, relationships, group differences, trends and anomalies.</div></details></div>
+<div class="q"><strong>13.</strong> What does a positive relationship between two numerical variables mean?<details><summary>Suggested answer</summary><div class="answer">In general, larger values of one variable tend to occur with larger values of the other, although the relationship may be weak or affected by other factors.</div></details></div>
+<div class="q"><strong>14.</strong> Why does correlation not automatically prove causation?<details><summary>Suggested answer</summary><div class="answer">Other variables may influence both variables, the causal direction may be different from what is assumed, or the association may be coincidental.</div></details></div>
+<div class="q"><strong>15.</strong> What is an anomaly and how should it be handled during EDA?<details><summary>Suggested answer</summary><div class="answer">An anomaly is an observation that differs from the general pattern. It should be investigated and verified before deciding whether it is an error or a meaningful extreme case.</div></details></div>
+<div class="q"><strong>16.</strong> A class has an average score of 70. What important information is missing from this statement?<details><summary>Suggested answer</summary><div class="answer">We do not know the distribution, spread, number of students, possible outliers or whether different groups have different score patterns.</div></details></div>
+<div class="q"><strong>17.</strong> If two regions have average scores of 75 and 68, what else would you check before concluding one region performs better?<details><summary>Suggested answer</summary><div class="answer">Group sizes, score distributions, variability, data quality, sampling differences and other factors that may differ between the regions.</div></details></div>
+<div class="q"><strong>18.</strong> Using the Topic 3 dataset, formulate one descriptive question, one comparison question and one relationship question.<details><summary>Suggested answer</summary><div class="answer">Examples: What is the typical final score? Do average scores differ by region? Is attendance associated with final score?</div></details></div>
+<div class="q"><strong>19.</strong> What turns an observed pattern into an insight?<details><summary>Suggested answer</summary><div class="answer">An insight connects the observed pattern to context, explains why it matters and identifies a useful implication or a question for further investigation.</div></details></div>
+<div class="q"><strong>20.</strong> Why should EDA observations be written carefully as evidence rather than conclusions that go beyond the data?<details><summary>Suggested answer</summary><div class="answer">EDA can reveal patterns and associations, but without appropriate study design or further analysis it may not justify causal or generalised claims.</div></details></div>
+</section>
+</div></body></html>

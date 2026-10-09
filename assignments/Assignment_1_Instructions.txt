@@ -1,0 +1,21 @@
+DT 111 — Assignment 1
+Data Science and AI Around Us
+
+Purpose
+Identify a real problem in your community, institution or sector that could benefit from Data Science or AI, and explain how data might contribute to understanding or addressing the problem.
+
+Task
+1. Choose one real-world problem.
+2. Describe the problem clearly in approximately 150–200 words.
+3. Identify at least three types of data that could be useful.
+4. State where those data might come from.
+5. Explain whether the problem mainly requires descriptive analysis, prediction, an AI capability, or a combination.
+6. Identify one potential benefit and one ethical or practical risk.
+7. Draw a simple workflow from problem → data → analysis/model → output → decision.
+
+Submission format
+- PDF or Word document
+- Recommended length: 2–3 pages
+- Due date: To be announced by the lecturer
+- Submit to: https://drive.google.com/drive/folders/1Lt_4xgl9Y_Wc-DX7j1i7rMxWYbq12Zn8?usp=sharing
+- Recommended filename: DT111_Assignment1_RegistrationNumber

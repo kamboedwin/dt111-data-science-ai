@@ -1,0 +1,30 @@
+DT 111 — Assignment 3
+Exploratory Data Analysis Report
+
+Purpose
+Use descriptive statistics and visualisation to explore a clean dataset and communicate evidence-based observations.
+
+Dataset
+datasets/topic3_student_learning_data.csv
+
+Task
+1. Describe the dataset: number of observations, variables and data types.
+2. Calculate suitable descriptive statistics for final_score, attendance_pct and study_hours_week.
+3. Create at least three appropriate visualisations:
+   - one distribution chart;
+   - one group-comparison chart;
+   - one relationship chart.
+4. For each chart, write 2–4 sentences explaining what it shows.
+5. Identify at least three patterns or insights.
+6. State one question that would require further investigation.
+7. Include a short paragraph explaining why an observed relationship should not automatically be interpreted as causal.
+
+Expected submission
+A concise 3–5 page EDA report containing summary statistics, charts, interpretation and a short conclusion.
+
+Submission
+Upload to the DT 111 Google Drive assignment folder configured in:
+LECTURER_EDIT/course_settings.js
+
+Recommended filename
+DT111_A3_RegistrationNumber.pdf

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="630" viewBox="0 0 1300 630">
+<rect width="1300" height="630" rx="32" fill="#f7f9fc"/>
+<text x="650" y="58" text-anchor="middle" font-family="Arial" font-size="36" font-weight="700" fill="#173a75">AI Support for Mental Health and Emotional Well-Being</text>
+<g font-family="Arial">
+  <g transform="translate(75,155)">
+    <rect width="330" height="220" rx="24" fill="#f0f8f3" stroke="#79b795" stroke-width="3"/>
+    <text x="165" y="50" text-anchor="middle" font-size="26" font-weight="700" fill="#245d3c">Appropriate Support</text>
+    <text x="165" y="95" text-anchor="middle" font-size="18" fill="#50627b">Well-being check-ins</text>
+    <text x="165" y="125" text-anchor="middle" font-size="18" fill="#50627b">Self-reflection prompts</text>
+    <text x="165" y="155" text-anchor="middle" font-size="18" fill="#50627b">Reminders &amp; resources</text>
+    <text x="165" y="185" text-anchor="middle" font-size="18" fill="#50627b">Navigation to human support</text>
+  </g>
+
+  <g transform="translate(485,155)">
+    <rect width="330" height="220" rx="24" fill="#fff8e8" stroke="#d6a94f" stroke-width="3"/>
+    <text x="165" y="50" text-anchor="middle" font-size="26" font-weight="700" fill="#7b5600">Safeguards</text>
+    <text x="165" y="95" text-anchor="middle" font-size="18" fill="#50627b">Privacy protection</text>
+    <text x="165" y="125" text-anchor="middle" font-size="18" fill="#50627b">Clear limitations</text>
+    <text x="165" y="155" text-anchor="middle" font-size="18" fill="#50627b">Human oversight</text>
+    <text x="165" y="185" text-anchor="middle" font-size="18" fill="#50627b">Escalation pathways</text>
+  </g>
+
+  <g transform="translate(895,155)">
+    <rect width="330" height="220" rx="24" fill="#f8eeee" stroke="#c98989" stroke-width="3"/>
+    <text x="165" y="50" text-anchor="middle" font-size="26" font-weight="700" fill="#883e3e">Not Appropriate Alone</text>
+    <text x="165" y="95" text-anchor="middle" font-size="18" fill="#50627b">Clinical diagnosis</text>
+    <text x="165" y="125" text-anchor="middle" font-size="18" fill="#50627b">Emergency response</text>
+    <text x="165" y="155" text-anchor="middle" font-size="18" fill="#50627b">High-stakes treatment decisions</text>
+    <text x="165" y="185" text-anchor="middle" font-size="18" fill="#50627b">Replacing qualified care</text>
+  </g>
+
+  <text x="650" y="470" text-anchor="middle" font-size="22" font-weight="700" fill="#173a75">AI can support access and self-management, but it should not be treated as a substitute for professional care.</text>
+  <text x="650" y="510" text-anchor="middle" font-size="19" fill="#667085">Systems should communicate limitations and provide routes to qualified human support when appropriate.</text>
+</g>
+</svg>

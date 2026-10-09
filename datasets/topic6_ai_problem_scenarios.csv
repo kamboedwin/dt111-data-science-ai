@@ -1,0 +1,11 @@
+scenario_id,scenario,suggested_ai_approach
+A01,Find the shortest route through a road network,Search / planning
+A02,Apply explicit IF-THEN rules to an irrigation recommendation,Logic / rule-based reasoning
+A03,Classify an image as cat or dog from labelled examples,Machine learning / neural network
+A04,Group unlabeled customers by behaviour,Machine learning / clustering
+A05,Choose moves in a puzzle to reach a goal state,Search
+A06,Infer a conclusion from known facts and logical rules,Logic / reasoning
+A07,Recognise spoken words,Perception / neural networks
+A08,Predict final examination score from historical examples,Machine learning / regression
+A09,Translate text between languages,Language AI / neural networks
+A10,Plan actions for a delivery robot to reach a destination,Search / planning

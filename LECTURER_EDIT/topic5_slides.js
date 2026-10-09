@@ -1,0 +1,20 @@
+/*
+DT 111 — Topic 5 Presentation Content
+LECTURER EDIT FILE
+*/
+window.DT111_TOPIC5_SLIDES = [
+{title:"DT 111 · Topic 5",body:`<p class="big-line">Introduction to Machine Learning</p><p>Supervised vs unsupervised learning · Linear regression · Decision trees · K-means · Evaluation and validation</p><p class="slide-note">Goal: understand what it means for a model to learn from data and generalise to new examples.</p>`},
+{title:"Where Machine Learning fits",body:`<p>Machine Learning is an approach within AI in which models learn patterns from data.</p><div class="slide-grid"><div class="slide-box"><h2>Input</h2><p>Prepared data</p></div><div class="slide-box"><h2>Learning</h2><p>An algorithm identifies patterns</p></div><div class="slide-box"><h2>Output</h2><p>Prediction, class or group</p></div></div>`},
+{title:"Supervised vs unsupervised learning",body:`<img class="slide-figure" src="LECTURER_EDIT/media/topic5/supervised_unsupervised.svg" alt="Supervised and unsupervised learning">`},
+{title:"Three task types to remember",body:`<div class="slide-grid"><div class="slide-box"><h2>Regression</h2><p>Predict a number.</p><p>Example: final score.</p></div><div class="slide-box"><h2>Classification</h2><p>Predict a class.</p><p>Example: Pass/Fail.</p></div><div class="slide-box"><h2>Clustering</h2><p>Discover groups.</p><p>Example: study profiles.</p></div></div>`},
+{title:"Linear regression as Machine Learning",body:`<p>Training examples contain an input and a known numerical target.</p><p>The algorithm learns a fitted line and uses it to predict the target for new inputs.</p><p class="slide-note">Connection to Topic 4: same model, but now we emphasise learning and prediction on unseen data.</p>`},
+{title:"Decision trees",body:`<img class="slide-figure" src="LECTURER_EDIT/media/topic5/decision_tree.svg" alt="Simple decision tree">`},
+{title:"Why decision trees are intuitive",body:`<p>A tree follows simple questions:</p><ol><li>Check a feature.</li><li>Choose a branch.</li><li>Ask another question if needed.</li><li>Reach a prediction.</li></ol><p class="slide-note">Easy to explain does not mean impossible to overfit.</p>`},
+{title:"K-means clustering",body:`<img class="slide-figure" src="LECTURER_EDIT/media/topic5/kmeans_clustering.svg" alt="K-means clustering">`},
+{title:"K-means in four steps",body:`<ol><li>Choose K.</li><li>Assign points to nearby centres.</li><li>Move centres to represent their assigned points.</li><li>Repeat until assignments stabilise.</li></ol><p class="slide-note">No target labels are used.</p>`},
+{title:"Training is not evaluation",body:`<img class="slide-figure" src="LECTURER_EDIT/media/topic5/model_evaluation.svg" alt="Training and test data">`},
+{title:"Generalisation",body:`<p class="big-line">A useful model should work on new data, not only the examples it already saw.</p><div class="slide-two-col"><div class="slide-box"><h2>Overfitting</h2><p>Too closely fitted to training details.</p></div><div class="slide-box"><h2>Underfitting</h2><p>Too simple to capture important patterns.</p></div></div>`},
+{title:"Evaluation depends on the task",body:`<div class="slide-grid"><div class="slide-box"><h2>Classification</h2><p>Accuracy and later precision/recall.</p></div><div class="slide-box"><h2>Regression</h2><p>Error between predicted and true values, e.g. MAE.</p></div><div class="slide-box"><h2>Clustering</h2><p>Assess separation, cohesion and usefulness of groups.</p></div></div>`},
+{title:"A complete ML workflow",body:`<p class="big-line">Problem → Data → Preparation → Split → Train → Evaluate → Interpret → Use</p><p class="slide-note">The algorithm is only one part of the workflow.</p>`},
+{title:"Topic 5 takeaway",body:`<p class="big-line">Machine Learning is successful when a model learns useful patterns that generalise to unseen data.</p><p>Supervised learning predicts known targets; unsupervised learning discovers structure.</p>`}
+];

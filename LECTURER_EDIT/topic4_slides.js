@@ -1,0 +1,20 @@
+/*
+DT 111 — Topic 4 Presentation Content
+LECTURER EDIT FILE
+*/
+window.DT111_TOPIC4_SLIDES = [
+{title:"DT 111 · Topic 4",body:`<p class="big-line">Statistical Methods for Data Analysis</p><p>Probability theory and distributions · Hypothesis testing · Regression analysis</p><p class="slide-note">Goal: understand the language of uncertainty, evidence and statistical relationships.</p>`},
+{title:"Why do we need statistical methods?",body:`<p>Data often contain variation and uncertainty. Statistical methods help us:</p><ul><li>summarise uncertain patterns,</li><li>reason about likelihood,</li><li>evaluate claims using evidence,</li><li>describe and predict relationships.</li></ul>`},
+{title:"Probability and distributions",body:`<img class="slide-figure" src="LECTURER_EDIT/media/topic4/probability_distributions.svg" alt="Probability and distributions">`},
+{title:"Core probability ideas",body:`<div class="slide-grid"><div class="slide-box"><h2>Event</h2><p>An outcome or condition of interest.</p></div><div class="slide-box"><h2>Random variable</h2><p>A numerical way of representing outcomes.</p></div><div class="slide-box"><h2>Expected value</h2><p>A long-run average suggested by the model.</p></div></div>`},
+{title:"Discrete vs continuous",body:`<div class="slide-two-col"><div class="slide-box"><h2>Discrete</h2><p>Separated outcomes, such as number of correct answers or number of heads.</p></div><div class="slide-box"><h2>Continuous</h2><p>Measured values, such as time, height, score or temperature.</p></div></div>`},
+{title:"Hypothesis testing workflow",body:`<img class="slide-figure" src="LECTURER_EDIT/media/topic4/hypothesis_testing.svg" alt="Hypothesis testing workflow">`},
+{title:"Null and alternative hypotheses",body:`<div class="slide-two-col"><div class="slide-box"><h2>H₀</h2><p>The default claim — often no difference or no effect.</p></div><div class="slide-box"><h2>H₁</h2><p>The competing claim — a difference or an effect exists.</p></div></div>`},
+{title:"What does a p-value try to express?",body:`<p class="big-line">How unusual would our observed result be if the null hypothesis were true?</p><p class="slide-note">A small p-value is evidence against H₀, but it is not the probability that H₀ is true.</p>`},
+{title:"Statistical significance is not everything",body:`<div class="slide-grid"><div class="slide-box"><h2>Statistical</h2><p>Evidence against a null model.</p></div><div class="slide-box"><h2>Practical</h2><p>Whether the effect matters in the real world.</p></div><div class="slide-box"><h2>Interpretation</h2><p>Always consider both.</p></div></div>`},
+{title:"Regression analysis",body:`<img class="slide-figure" src="LECTURER_EDIT/media/topic4/regression_analysis.svg" alt="Regression analysis concept">`},
+{title:"How to interpret a simple regression line",body:`<div class="slide-grid"><div class="slide-box"><h2>Slope</h2><p>Direction and rate of change.</p></div><div class="slide-box"><h2>Prediction</h2><p>Estimate Y from X.</p></div><div class="slide-box"><h2>Residual</h2><p>Difference between observed and predicted.</p></div></div>`},
+{title:"Association does not prove causation",body:`<p>If study hours and score move together, the pattern is useful — but other factors may also matter.</p><p class="slide-note">Regression is powerful, but interpretation must remain careful.</p>`},
+{title:"What should students remember most?",body:`<div class="slide-grid"><div class="slide-box"><h2>Probability</h2><p>Uncertainty can be reasoned about.</p></div><div class="slide-box"><h2>Hypothesis testing</h2><p>Evidence is compared to a default claim.</p></div><div class="slide-box"><h2>Regression</h2><p>Relationships can be described and used for prediction.</p></div></div>`},
+{title:"Topic 4 takeaway",body:`<p class="big-line">Use statistical methods to reason carefully — not mechanically.</p><p>Good interpretation is more valuable than memorising formulas without meaning.</p>`}
+];

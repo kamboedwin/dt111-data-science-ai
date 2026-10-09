@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DT111 Topic 5 Notes</title><link rel="stylesheet" href="notes.css"></head>
+<body><div class="notes-wrap">
+<h1>DT111 Topic 5</h1>
+<p class="intro-note">You can read these notes on screen or use the button below to print or save them as PDF.</p>
+<div class="toolbar"><button onclick="window.print()">Print / Save as PDF</button></div>
+
+<section class="note-section">
+<span class="section-number">5.1</span>
+<h2>Introduction to Machine Learning</h2>
+<p><strong>Machine Learning (ML)</strong> is an approach within Artificial Intelligence in which computer systems learn patterns from data and use those patterns to make predictions, classifications or groupings. Instead of writing every decision rule manually, the developer provides examples, variables and an algorithm that can learn useful relationships.</p>
+
+<p>Machine Learning is already familiar from earlier topics. Topic 1 introduced it as part of AI, Topic 2 prepared the data, Topic 3 explored patterns, and Topic 4 introduced regression and statistical relationships. Topic 5 brings these ideas together in the context of building and evaluating simple predictive or grouping models.</p>
+
+<div class="callout info"><strong>Scope of DT 111:</strong> this topic introduces the basic ideas and workflow. Detailed mathematics, programming and algorithmic implementation belong in the dedicated Machine Learning courses that follow.</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">5.2</span>
+<h2>Supervised and Unsupervised Learning</h2>
+<figure class="figure"><img src="media/topic5/supervised_unsupervised.svg" alt="Supervised and unsupervised learning"><figcaption>Figure 1. Two broad Machine Learning approaches.</figcaption></figure>
+
+<h3>Supervised learning</h3>
+<p>In <strong>supervised learning</strong>, the training data include both input variables and a known target. The goal is to learn a relationship that can be applied to new examples.</p>
+
+<p>Two common supervised tasks are:</p>
+<ul>
+<li><strong>Regression:</strong> predict a numerical value, such as examination score, crop yield or house price.</li>
+<li><strong>Classification:</strong> predict a category, such as Pass/Fail, spam/not spam, or disease class.</li>
+</ul>
+
+<h3>Unsupervised learning</h3>
+<p>In <strong>unsupervised learning</strong>, the data do not contain a known target label. The algorithm looks for structure or grouping within the input data. <strong>Clustering</strong> is a common unsupervised task.</p>
+
+<div class="question-box"><strong>Example:</strong> Predicting whether a student will pass is supervised because the historical data contain Pass/Fail labels. Grouping students into similar study-behaviour profiles without predefined labels is unsupervised.</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">5.3</span>
+<h2>Linear Regression as a Machine Learning Algorithm</h2>
+<p>Topic 4 introduced regression as a statistical method. In Machine Learning, linear regression can also be viewed as a <strong>supervised learning algorithm</strong>: the model learns a line that relates input variables to a numerical target.</p>
+
+<p>For example, the input may be study hours and the target may be final score. During training, the model estimates the line that best fits the training examples. The fitted model can then estimate scores for new students.</p>
+
+<h3>Training and prediction</h3>
+<ul>
+<li><strong>Training:</strong> use known examples to estimate model parameters.</li>
+<li><strong>Prediction:</strong> apply the learned relationship to a new input.</li>
+<li><strong>Error:</strong> compare predicted values with the known outcomes during evaluation.</li>
+</ul>
+
+<div class="callout"><strong>Connection:</strong> the same mathematical model can be discussed from both statistical and Machine Learning perspectives. Topic 4 focused on interpretation; Topic 5 focuses more on learning from data and testing performance on unseen examples.</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">5.4</span>
+<h2>Decision Trees</h2>
+<p>A <strong>decision tree</strong> makes a prediction by asking a sequence of simple questions about the input variables. Each question splits the data into smaller groups until a prediction is made.</p>
+
+<figure class="figure"><img src="media/topic5/decision_tree.svg" alt="Simple decision tree"><figcaption>Figure 2. A simple classification tree using attendance and assignment score.</figcaption></figure>
+
+<p>Decision trees are attractive because their logic can often be explained in plain language. A tree may ask, for example:</p>
+<ol>
+<li>Is attendance at least 80%?</li>
+<li>If not, is the assignment score at least 65?</li>
+<li>Based on the path followed, predict Pass or Fail.</li>
+</ol>
+
+<h3>Advantages</h3>
+<ul>
+<li>easy to visualise and explain;</li>
+<li>can handle numerical and categorical information;</li>
+<li>can model relationships that are not simply straight lines.</li>
+</ul>
+
+<h3>Limitations</h3>
+<ul>
+<li>a very deep tree can memorise the training data;</li>
+<li>small changes in the data may change the tree;</li>
+<li>a simple tree may miss important patterns.</li>
+</ul>
+</section>
+
+<section class="note-section">
+<span class="section-number">5.5</span>
+<h2>K-Means Clustering</h2>
+<p><strong>K-means</strong> is an unsupervised clustering algorithm that groups observations based on similarity. The analyst chooses the number of clusters, K, and the algorithm repeatedly assigns observations to nearby cluster centres and updates those centres.</p>
+
+<figure class="figure"><img src="media/topic5/kmeans_clustering.svg" alt="K-means clustering concept"><figcaption>Figure 3. K-means groups similar observations without using known target labels.</figcaption></figure>
+
+<h3>Basic process</h3>
+<ol>
+<li>Choose the number of clusters, K.</li>
+<li>Choose initial cluster centres.</li>
+<li>Assign each point to the nearest centre.</li>
+<li>Move each centre to the average position of its assigned points.</li>
+<li>Repeat until the assignments stabilise.</li>
+</ol>
+
+<p>The clusters produced by K-means are mathematical groupings. They do not automatically have meaningful real-world names. The analyst must interpret them carefully.</p>
+
+<div class="callout warning"><strong>Important:</strong> K-means will produce K clusters because we instructed it to do so. This does not prove that exactly K natural groups truly exist in the population.</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">5.6</span>
+<h2>Model Evaluation and Validation</h2>
+<p>A Machine Learning model should not be judged only on the data used to train it. A model can appear excellent simply because it has memorised training examples. What matters is whether it <strong>generalises</strong> to new, unseen data.</p>
+
+<figure class="figure"><img src="media/topic5/model_evaluation.svg" alt="Training and test split"><figcaption>Figure 4. A simple training/testing workflow.</figcaption></figure>
+
+<h3>Training, validation and test data</h3>
+<p>A simple workflow divides data into separate subsets. <strong>Training data</strong> are used to learn the model. A <strong>validation set</strong> may be used to compare settings or models during development. A <strong>test set</strong> is held back for final evaluation.</p>
+
+<p>In small introductory examples, students often see a train/test split such as 80/20. This percentage is only an illustration. The appropriate strategy depends on dataset size, problem type and later evaluation design.</p>
+
+<h3>Generalisation, overfitting and underfitting</h3>
+<ul>
+<li><strong>Generalisation:</strong> good performance on new data not seen during training.</li>
+<li><strong>Overfitting:</strong> the model learns training details too closely and performs poorly on new data.</li>
+<li><strong>Underfitting:</strong> the model is too simple to capture important patterns even in the training data.</li>
+</ul>
+
+<h3>Evaluation measures</h3>
+<table class="compare-table">
+<thead><tr><th>Task</th><th>Simple evaluation idea</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Classification</td><td>How many predictions are correct?</td><td>Accuracy</td></tr>
+<tr><td>Regression</td><td>How far are predictions from true numerical values?</td><td>Mean Absolute Error (MAE)</td></tr>
+<tr><td>Clustering</td><td>Are observations within a cluster more similar than observations in different clusters?</td><td>Visual or quantitative cluster assessment</td></tr>
+</tbody>
+</table>
+
+<p>Accuracy alone may be misleading when classes are highly imbalanced. More detailed classification metrics such as precision, recall and F1-score are studied in later Machine Learning work.</p>
+
+<h3>Why validation matters</h3>
+<p>Validation protects against overly optimistic conclusions. A model that performs well on unseen data is more convincing than one evaluated only on the examples from which it learned.</p>
+
+<div class="callout"><strong>Main lesson:</strong> Machine Learning is not just training an algorithm. It is a complete process of defining the problem, preparing data, learning a model, evaluating unseen-data performance and interpreting whether the result is useful.</div>
+</section>
+
+<section class="note-section">
+<span class="section-number">5.7</span>
+<h2>Topic 5 Checklist</h2>
+<ul>
+<li>Can you distinguish supervised and unsupervised learning?</li>
+<li>Can you distinguish regression, classification and clustering tasks?</li>
+<li>Can you explain linear regression as a supervised learning algorithm?</li>
+<li>Can you follow the path through a simple decision tree?</li>
+<li>Can you explain the purpose of K-means clustering?</li>
+<li>Can you explain why training and testing should use separate data?</li>
+<li>Can you describe overfitting, underfitting and generalisation?</li>
+</ul>
+</section>
+</div></body></html>

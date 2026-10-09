@@ -1,0 +1,31 @@
+DT 111 — Assignment 7
+Responsible AI Case Review
+
+Purpose
+Analyse an AI or Data Science scenario from both technical and ethical perspectives.
+
+Dataset
+datasets/topic7_responsible_ai_cases.csv
+
+Task
+1. Choose one case from the supplied scenario file.
+2. Describe the intended purpose of the system and identify at least three affected stakeholders.
+3. Identify the main ethical risks. Consider privacy, bias, fairness, transparency, accountability, human oversight and wider societal effects where relevant.
+4. Identify what additional evidence you would need before deciding whether the system should be deployed.
+5. Propose at least five practical safeguards or design changes.
+6. Explain how the system should be monitored after deployment and what should trigger review, correction or suspension.
+7. Conclude whether the system should be:
+   - deployed as described;
+   - deployed only after changes; or
+   - not deployed.
+   Justify your position.
+
+Expected submission
+A concise 3–5 page case review. Support conclusions with clear reasoning rather than merely listing ethical keywords.
+
+Submission
+Upload to the DT 111 Google Drive assignment folder configured in:
+LECTURER_EDIT/course_settings.js
+
+Recommended filename
+DT111_A7_RegistrationNumber.pdf

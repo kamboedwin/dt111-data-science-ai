@@ -1,0 +1,29 @@
+DT 111 — Assignment 5
+Machine Learning Problem Design and Evaluation
+
+Purpose
+Apply the main Topic 5 Machine Learning concepts without requiring advanced programming.
+
+Dataset
+datasets/topic5_machine_learning_student_data.csv
+
+Task
+1. Identify which columns could serve as features and which could serve as a target for:
+   a) a regression problem;
+   b) a classification problem.
+2. Explain why predicting final_score is a regression task while predicting pass_label is a classification task.
+3. Create a scatter plot of study_hours_week against final_score and describe the relationship.
+4. Use the Topic 5 decision-tree explorer and test at least three combinations of attendance and assignment score. Record the resulting prediction and path followed.
+5. Use the K-means explorer with K = 2, 3 and 4. Explain how changing K changes the grouping and why the algorithm cannot automatically tell you which clusters are meaningful in the real world.
+6. Explain why a train/test split is used and define overfitting in your own words.
+7. Write a short conclusion describing which parts of a Machine Learning project still require human judgement.
+
+Expected submission
+A concise 3–5 page report with one chart, short tables/screenshots if useful, and written interpretation.
+
+Submission
+Upload to the DT 111 Google Drive assignment folder configured in:
+LECTURER_EDIT/course_settings.js
+
+Recommended filename
+DT111_A5_RegistrationNumber.pdf
