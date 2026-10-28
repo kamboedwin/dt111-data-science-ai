@@ -16,7 +16,7 @@ VERSION 0.3 CONTENT
 - Quick Checks with immediate feedback
 - 15 Review Questions with suggested answers
 - Topic 1 automatic 10-question quiz
-- Assignment 1 with Google Drive submission button
+- Assignment 1 with online assignment-submission form button
 - Further Reading links
 - Searchable glossary
 - Local progress tracking
@@ -28,7 +28,7 @@ LECTURER_EDIT
 Then read:
 LECTURER_EDIT/README_EDITING.txt
 
-The main files for routine corrections are kept there so that you can update notes, review questions, presentation text, graphics, due dates and the Google Drive submission URL without rebuilding the package.
+The main files for routine corrections are kept there so that you can update notes, review questions, presentation text, graphics, due dates and the assignment submission form URL without rebuilding the package.
 
 OFFLINE OPERATION
 The core learning material works offline. Internet is only required for external reading links and assignment upload.
