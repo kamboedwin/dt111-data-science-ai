@@ -4,7 +4,7 @@ Change values between the quotation marks and save the file.
 */
 window.DT111_SETTINGS = {
   version: "1.0",
-  assignmentSubmissionUrl: "https://drive.google.com/drive/folders/1Lt_4xgl9Y_Wc-DX7j1i7rMxWYbq12Zn8?usp=sharing",
+  assignmentSubmissionUrl: "https://forms.gle/dPQ6LJMzWzwyntaw8",
   assignment1DueDate: "To be announced by the lecturer",
   assignment2DueDate: "To be announced by the lecturer",
   assignment3DueDate: "To be announced by the lecturer",
