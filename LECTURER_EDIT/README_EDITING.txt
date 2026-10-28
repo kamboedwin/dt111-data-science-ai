@@ -7,7 +7,7 @@ You do NOT need to rebuild the whole application for normal content corrections.
 1. COURSE SETTINGS
 File: course_settings.js
 Use it to change:
-- Assignment Google Drive submission link
+- Assignment submission form link
 - Assignment 1 due date
 - Lecturer name/email if needed later
 - Version label information
@@ -84,7 +84,7 @@ If a change breaks a page, restore the previous file from the backup.
 The main teaching package works offline.
 Internet is only required for:
 - optional external Further Reading links;
-- uploading assignments to Google Drive.
+- submitting assignments through the online form.
 
 10. PRESENTATION MODE
 Version 0.3 automatically fits slides to the available projector/laptop window and allows internal scrolling if a slide ever contains more content than can fit on screen. The editable presentation is in topic1_slides.js.
