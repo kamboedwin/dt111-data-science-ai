@@ -41,7 +41,7 @@ The published site will normally be available at:
 
 - Core course content works without a server.
 - Student progress is stored in the browser using local storage.
-- External readings and the Google Drive assignment-submission link require internet access.
+- External readings and the online assignment-submission form require internet access.
 - The lecturer-editable source files are in `LECTURER_EDIT/`.
 
 ## Version
