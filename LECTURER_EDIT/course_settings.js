@@ -1,9 +1,8 @@
 /*
-DT 111 — Lecturer-editable course settings
-Change values between the quotation marks and save the file.
+DT 111 — Course settings
 */
 window.DT111_SETTINGS = {
-  version: "1.0",
+  version: "1.1",
   assignmentSubmissionUrl: "https://forms.gle/dPQ6LJMzWzwyntaw8",
   assignment1DueDate: "To be announced by the lecturer",
   assignment2DueDate: "To be announced by the lecturer",
@@ -16,3 +15,15 @@ window.DT111_SETTINGS = {
   lecturerName: "",
   lecturerEmail: ""
 };
+
+/* Load the student teaching enhancement layer for the online edition. */
+(function(){
+  function loadOnce(src){
+    if(document.querySelector(`script[src="${src}"]`)) return;
+    const s=document.createElement("script");
+    s.src=src;
+    document.head.appendChild(s);
+  }
+  loadOnce("assets/teaching-enhancements.js");
+  loadOnce("assets/teaching-polish.js");
+})();
