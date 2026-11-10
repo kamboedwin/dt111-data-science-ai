@@ -6,7 +6,7 @@
 <title>DT 111 Lecture Slides</title>
 <style>
 :root{--navy:#12335b;--blue:#2d6cdf;--teal:#0f8b8d;--ink:#1f2937;--muted:#667085;--line:#d9e3f0;--bg:#f4f7fb;--white:#fff}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Arial,sans-serif;line-height:1.55}.top{background:linear-gradient(135deg,#0e2949,#173f70);color:#fff}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.top-inner{padding:34px 0 30px}.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#b9d4ff}.top h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;margin:.45rem 0 .7rem}.top p{max-width:850px;margin:0;color:#d9e8fb}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:10px;padding:11px 16px;font-weight:750;border:1px solid transparent;cursor:pointer}.btn.primary{background:#fff;color:var(--navy)}.btn.soft{border-color:#7898bd;color:#fff;background:rgba(255,255,255,.08)}.viewer-card{margin:26px auto 34px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 14px 40px rgba(18,51,91,.08);overflow:hidden}.viewer-head{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:17px 20px;border-bottom:1px solid var(--line);background:#fbfdff}.viewer-head strong{color:var(--navy)}.viewer-head a{color:var(--blue);font-weight:750;text-decoration:none}.pdf-frame{width:100%;height:min(78vh,820px);min-height:560px;border:0;background:#e9eef5}.fallback{padding:16px 20px;border-top:1px solid var(--line);color:var(--muted)}.download-row{display:flex;gap:10px;flex-wrap:wrap;padding:18px 20px;background:#fbfdff;border-top:1px solid var(--line)}.download-row .btn.primary{background:var(--blue);color:#fff}.download-row .btn.soft{background:#fff;color:var(--navy);border-color:var(--line)}.topic-nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 auto 44px}.topic-nav a{color:var(--navy);font-weight:750;text-decoration:none;padding:10px 0}.notice{margin-top:18px;padding:12px 14px;border-left:4px solid var(--teal);background:rgba(255,255,255,.08);border-radius:0 10px 10px 0;color:#e6f7f7;max-width:900px}@media(max-width:720px){.viewer-head{align-items:flex-start;flex-direction:column}.pdf-frame{min-height:480px;height:68vh}.wrap{width:min(100% - 20px,1180px)}.top-inner{padding-top:25px}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Arial,sans-serif;line-height:1.55}.top{background:linear-gradient(135deg,#0e2949,#173f70);color:#fff}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.top-inner{padding:34px 0 30px}.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#b9d4ff}.top h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;margin:.45rem 0 .7rem}.top p{max-width:850px;margin:0;color:#d9e8fb}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:10px;padding:11px 16px;font-weight:750;border:1px solid transparent;cursor:pointer}.btn.primary{background:#fff;color:var(--navy)}.btn.soft{border-color:#7898bd;color:#fff;background:rgba(255,255,255,.08)}.viewer-card{margin:26px auto 34px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 14px 40px rgba(18,51,91,.08);overflow:hidden}.viewer-head{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:17px 20px;border-bottom:1px solid var(--line);background:#fbfdff}.viewer-head strong{color:var(--navy)}.viewer-head a{color:var(--blue);font-weight:750;text-decoration:none}.pdf-frame{width:100%;height:min(78vh,820px);min-height:560px;border:0;background:#e9eef5}.fallback{padding:16px 20px;border-top:1px solid var(--line);color:var(--muted)}.download-row{display:flex;gap:10px;flex-wrap:wrap;padding:18px 20px;background:#fbfdff;border-top:1px solid var(--line)}.download-row .btn.primary{background:var(--blue);color:#fff}.download-row .btn.soft{background:#fff;color:var(--navy);border-color:var(--line)}.topic-nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 auto 44px}.topic-nav a{color:var(--navy);font-weight:750;text-decoration:none;padding:10px 0}@media(max-width:720px){.viewer-head{align-items:flex-start;flex-direction:column}.pdf-frame{min-height:480px;height:68vh}.wrap{width:min(100% - 20px,1180px)}.top-inner{padding-top:25px}}
 </style>
 </head>
 <body>
@@ -18,7 +18,6 @@
     <a class="btn primary" href="../index.html">← Back to DT 111</a>
     <a class="btn soft" id="openPdf" target="_blank" rel="noopener">Open PDF in a new tab ↗</a>
   </div>
-  <div class="notice">The PDF below is the same fixed-layout presentation used for teaching. It can be viewed online or downloaded for revision.</div>
 </div></header>
 <main class="wrap">
   <section class="viewer-card">
@@ -34,14 +33,14 @@
 </main>
 <script>
 const topics={
-  1:{title:"Introduction to Data Science and Artificial Intelligence",pages:17,subtitle:"Foundations, relationships, workflow, history, applications and limitations"},
-  2:{title:"Data Collection and Preprocessing",pages:19,subtitle:"Sources, sampling, data types, quality, cleaning and preparation"},
-  3:{title:"Exploratory Data Analysis",pages:23,subtitle:"Descriptive statistics, visualisation, patterns and cautious interpretation"},
-  4:{title:"Statistical Methods",pages:21,subtitle:"Probability, inference, hypothesis testing and simple regression"},
-  5:{title:"Introduction to Machine Learning",pages:23,subtitle:"Supervised and unsupervised learning, model training and evaluation"},
-  6:{title:"Artificial Intelligence Basics",pages:20,subtitle:"Search, reasoning, neural networks and the AI toolbox"},
-  7:{title:"Ethics and Societal Impact of AI",pages:18,subtitle:"Privacy, bias, fairness, transparency, safety, governance and accountability"},
-  8:{title:"Contemporary Issues in AI",pages:24,subtitle:"Generative AI, synthetic media, agents, accessibility, work, governance and responsible use"}
+  1:{title:"Introduction to Data Science and Artificial Intelligence",subtitle:"Foundations, relationships, workflow, history, applications and limitations"},
+  2:{title:"Data Collection and Preprocessing",subtitle:"Sources, sampling, data types, quality, cleaning and preparation"},
+  3:{title:"Exploratory Data Analysis",subtitle:"Descriptive statistics, visualisation, patterns and cautious interpretation"},
+  4:{title:"Statistical Methods",subtitle:"Probability, inference, hypothesis testing and simple regression"},
+  5:{title:"Introduction to Machine Learning",subtitle:"Supervised and unsupervised learning, model training and evaluation"},
+  6:{title:"Artificial Intelligence Basics",subtitle:"Search, reasoning, neural networks and the AI toolbox"},
+  7:{title:"Ethics and Societal Impact of AI",subtitle:"Privacy, bias, fairness, transparency, safety, governance and accountability"},
+  8:{title:"Contemporary Issues in AI",subtitle:"Generative AI, synthetic media, agents, accessibility, work, governance and responsible use"}
 };
 const params=new URLSearchParams(location.search);let topic=Number(params.get("topic")||1);if(!topics[topic])topic=1;
 const meta=topics[topic];const n=String(topic).padStart(2,"0");
@@ -50,7 +49,7 @@ document.title=`DT 111 Topic ${topic} · ${meta.title}`;
 document.getElementById("eyebrow").textContent=`DT 111 · Topic ${topic} · Lecture slides`;
 document.getElementById("title").textContent=meta.title;
 document.getElementById("subtitle").textContent=meta.subtitle;
-document.getElementById("deckInfo").textContent=`Topic ${topic} lecture presentation · ${meta.pages} pages`;
+document.getElementById("deckInfo").textContent=`Topic ${topic} lecture presentation`;
 document.getElementById("pdfFrame").src=pdf;
 ["openPdf","openPdf2","downloadPdf"].forEach(id=>document.getElementById(id).href=pdf);
 document.getElementById("downloadPptx").href=pptx;
