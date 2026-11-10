@@ -88,7 +88,7 @@ foundational concepts, richer presentation flow and visible note extensions.
     insertAfter(5,"Supervised vs unsupervised learning",[
       {title:"One dataset, different Machine Learning tasks",body:`<div class="slide-grid"><div class="slide-box"><h2>Regression</h2><p>Predict <strong>Final score</strong>.</p><p>Target is numerical.</p></div><div class="slide-box"><h2>Classification</h2><p>Predict <strong>Pass/Fail</strong>.</p><p>Target is categorical.</p></div><div class="slide-box"><h2>Clustering</h2><p>Discover groups of students.</p><p>No known target label.</p></div></div><div class="question-strip">The same columns do not automatically define the problem. The question determines the learning task.</div>`}
     ]);
-    insertAfter(5,"Three task types to remember",[
+    insertAfter(5,"Three common Machine Learning tasks",[
       {title:"What happens during training?",body:`<div class="concept-ribbon"><span>Training examples</span><b>→</b><span>Model makes predictions</span><b>→</b><span>Measure error</span><b>→</b><span>Adjust model</span><b>→</b><span>Repeat</span></div><p>Different algorithms adjust themselves differently, but the general purpose is the same: learn a pattern that performs well on new data.</p><div class="question-strip">Training performance is not the final goal. <strong>Generalisation</strong> is.</div>`}
     ]);
     insertAfter(5,"Why decision trees are intuitive",[
