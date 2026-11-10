@@ -18,12 +18,26 @@ window.DT111_SETTINGS = {
 
 /* Load the student teaching enhancement layer for the online edition. */
 (function(){
-  function loadOnce(src){
-    if(document.querySelector(`script[src="${src}"]`)) return;
-    const s=document.createElement("script");
-    s.src=src;
-    document.head.appendChild(s);
+  if(!document.querySelector('link[href="assets/teaching-enhancements.css"]')){
+    const css=document.createElement("link");
+    css.rel="stylesheet";
+    css.href="assets/teaching-enhancements.css";
+    document.head.appendChild(css);
   }
-  loadOnce("assets/teaching-enhancements.js");
-  loadOnce("assets/teaching-polish.js");
+
+  function loadPolish(){
+    if(document.querySelector('script[src="assets/teaching-polish.js"]')) return;
+    const p=document.createElement("script");
+    p.src="assets/teaching-polish.js";
+    document.head.appendChild(p);
+  }
+
+  if(document.querySelector('script[src="assets/teaching-enhancements.js"]')){
+    loadPolish();
+    return;
+  }
+  const s=document.createElement("script");
+  s.src="assets/teaching-enhancements.js";
+  s.onload=loadPolish;
+  document.head.appendChild(s);
 })();
