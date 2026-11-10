@@ -49,7 +49,7 @@ window.DT111_TOPIC1_SLIDES = [
   {
     title: "From a problem to a decision",
     body: `<img class="slide-figure" src="LECTURER_EDIT/media/topic1/workflow_problem_data_action.svg" alt="Problem, data, insight or model, action workflow">
-           <p class="slide-note"><strong>Teaching point:</strong> a model is only useful when it helps answer a meaningful problem.</p>`
+           <p class="slide-note"><strong>Key idea:</strong> a model is useful when it helps answer a meaningful problem.</p>`
   },
   {
     title: "A simple Data Science workflow",
@@ -80,7 +80,7 @@ window.DT111_TOPIC1_SLIDES = [
   {
     title: "Applications across sectors",
     body: `<img class="slide-figure" src="LECTURER_EDIT/media/topic1/applications_overview.svg" alt="Applications of Data Science and AI">
-           <p class="slide-caption">Ask students to add one Tanzanian example for any two sectors.</p>`
+           <p class="slide-caption">Tanzanian examples include applications in agriculture, health, finance, education, transport and public services.</p>`
   },
   {
     title: "Local example: crop disease support",
@@ -90,7 +90,7 @@ window.DT111_TOPIC1_SLIDES = [
              <div class="fbox"><span>🏷️</span><strong>Prediction</strong></div>
              <div class="fbox"><span>👩🏾‍🌾</span><strong>Decision support</strong></div>
            </div>
-           <p class="discussion-prompt"><strong>Class question:</strong> Where can errors enter this pipeline? What information should accompany the prediction?</p>`
+           <p class="discussion-prompt"><strong>Interpretation:</strong> errors can enter during data capture, model prediction or use of the output; confidence and relevant context should accompany important predictions.</p>`
   },
   {
     title: "Benefits, limitations and human judgement",
