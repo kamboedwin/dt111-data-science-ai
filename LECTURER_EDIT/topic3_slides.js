@@ -27,3 +27,11 @@ window.DT111_TOPIC3_SLIDES = [
 {title:"From pattern to insight",body:`<p><strong>Pattern:</strong> students with higher attendance tend to have higher final scores.</p><p><strong>Insight:</strong> attendance may be useful for identifying students who need support, but other explanations should be investigated before making policy decisions.</p><div class="concept-ribbon"><span>Pattern</span><b>→</b><span>Context</span><b>→</b><span>Cautious interpretation</span><b>→</b><span>Next question</span></div>`},
 {title:"Topic 3 takeaway",body:`<p class="big-line">Inspect → Summarise → Visualise → Compare → Question → Interpret carefully.</p><div class="slide-two-col"><div class="visual-card"><h2>Numbers</h2><p>Centre, spread, counts, quartiles and correlation.</p></div><div class="visual-card"><h2>Pictures</h2><p>Bar charts, histograms, line charts, scatter plots and box plots.</p></div></div><p class="slide-note">EDA is disciplined curiosity, not just chart making.</p>`}
 ];
+
+/* Load the course-wide teaching enhancement layer. */
+(function(){
+  if(document.querySelector('script[src="assets/teaching-enhancements.js"]')) return;
+  const s=document.createElement("script");
+  s.src="assets/teaching-enhancements.js";
+  document.head.appendChild(s);
+})();
