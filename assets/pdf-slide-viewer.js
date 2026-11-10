@@ -1,10 +1,8 @@
-/* DT 111 PDF lecture-slide integration. Replaces browser-rendered Presentation Mode with fixed-layout PDF decks. */
+/* DT 111 PDF lecture-slide integration. Replaces browser-rendered Presentation Mode with downloadable PDF decks. */
 (function(){
   "use strict";
   if(window.__DT111_PDF_SLIDES__) return;
   window.__DT111_PDF_SLIDES__=true;
-
-  const pageCounts={1:17,2:19,3:23,4:21,5:23,6:20,7:18,8:24};
 
   function installStyles(){
     if(document.getElementById("dt111-pdf-slide-styles")) return;
@@ -13,8 +11,7 @@
     style.textContent=`
       .dt111-slide-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
       .dt111-slide-actions .btn{white-space:nowrap}
-      .dt111-slide-note{font-size:.86rem;color:#667085;margin-top:.35rem;text-align:right}
-      @media(max-width:820px){.dt111-slide-actions{justify-content:flex-start;width:100%}.dt111-slide-note{text-align:left}}
+      @media(max-width:820px){.dt111-slide-actions{justify-content:flex-start;width:100%}}
     `;
     document.head.appendChild(style);
   }
@@ -38,18 +35,6 @@
 
     const footer=document.querySelector(".course-footer small");
     if(footer) footer.textContent="Online Edition · Student learning site with notes, downloadable lecture slides, practicals, quizzes and assignments.";
-
-    document.querySelectorAll(".page-head").forEach(head=>{
-      const slideActions=head.querySelector(".dt111-slide-actions");
-      if(!slideActions || head.querySelector(".dt111-slide-note")) return;
-      const note=document.createElement("div");
-      note.className="dt111-slide-note";
-      const view=head.closest(".view");
-      const match=view ? view.id.match(/\d+/) : null;
-      const topic=match ? match[0] : null;
-      if(topic && pageCounts[Number(topic)]) note.textContent=`Fixed-layout lecture presentation · ${pageCounts[Number(topic)]} pages`;
-      slideActions.insertAdjacentElement("afterend",note);
-    });
   }
 
   if(document.readyState==="complete") replacePresentationButtons();
