@@ -85,5 +85,4 @@ function topic1(){
   {title:'Problem',body:'Define the question'},{title:'Data',body:'Collect relevant evidence'},{title:'Prepare',body:'Clean and transform'},{title:'Explore',body:'Summarise and visualise'},{title:'Model / analyse',body:'Find patterns or predict'},{title:'Communicate',body:'Interpret and support action'}
  ]);
  cardsSlide(p,'A model is a simplified representation',[
-  {title:'Equation',body:'A mathematical relationship between variables.'},{title:'Rules',body:'IF-THEN logic that represents explicit knowledge.'},{title:'Tree',body:'A sequence of questions that leads to an output.'},{title:'Neural network',body:'A learned network of weighted transformations.'}
- ],'A useful model does not need to copy reality perfectly; it should be appropriate for the question and decision.');
+  {title:'Equation',body:'A mathematical relationship between variables.'},{title:'Rules',body:'IF-THEN logic that represents explicit knowledge.'},{title:'Tree',body:'A sequence of questions that leads to an output.'},{title:'Neural network',bo

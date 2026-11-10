@@ -57,4 +57,4 @@ function topic2(){
  cardsSlide(p,'Sampling bias can begin before analysis',[
   {title:'Coverage bias',body:'Some parts of the population are missing from the sampling frame.'},{title:'Non-response bias',body:'People who do not respond differ systematically from those who do.'},{title:'Convenience sampling',body:'Easy-to-reach participants may not represent the target population.'}
  ],'A perfectly cleaned biased sample is still a biased sample.');
- compareSlide(p,'Raw data and cleaned data',{title:'Raw data',points:['Original unchanged reference','Supports reproducibility','Useful for audit and rechecking'],accent:
+ compareSlide(p,'Raw data and cleaned data',{title:'Raw data',points:['Original unchanged reference','Supports reproducibility','Useful for audit and rechecking'],accent
