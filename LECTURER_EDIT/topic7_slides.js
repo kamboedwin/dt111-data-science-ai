@@ -5,7 +5,7 @@ LECTURER EDIT FILE
 window.DT111_TOPIC7_SLIDES = [
 {title:"DT 111 · Topic 7",body:`<p class="big-line">Ethical Implications and Societal Impact</p><p>Ethical issues · Privacy · Bias · Fairness · Societal impacts · Responsible AI</p><p class="slide-note">Goal: understand why technical performance is only one part of a responsible Data Science or AI system.</p>`},
 {title:"Ethics begins before modelling",body:`<img class="slide-figure" src="LECTURER_EDIT/media/topic7/ethics_lifecycle.svg" alt="Ethics across the AI lifecycle">`},
-{title:"Questions every project should ask",body:`<ul><li>Who benefits?</li><li>Who may be harmed?</li><li>Are the data appropriate?</li><li>Are some groups treated differently?</li><li>Who is responsible?</li><li>Can important decisions be reviewed?</li></ul>`},
+{title:"Core ethical questions for AI projects",body:`<ul><li>Who benefits?</li><li>Who may be harmed?</li><li>Are the data appropriate?</li><li>Are some groups treated differently?</li><li>Who is responsible?</li><li>Can important decisions be reviewed?</li></ul>`},
 {title:"Privacy and responsible data use",body:`<img class="slide-figure" src="LECTURER_EDIT/media/topic7/privacy_principles.svg" alt="Privacy principles">`},
 {title:"Privacy is not the same as security",body:`<div class="slide-two-col"><div class="slide-box"><h2>Privacy</h2><p>Should these data be collected or used this way?</p></div><div class="slide-box"><h2>Security</h2><p>How are the data protected from unauthorised access or loss?</p></div></div>`},
 {title:"Where can bias enter?",body:`<img class="slide-figure" src="LECTURER_EDIT/media/topic7/bias_sources.svg" alt="Sources of bias">`},
