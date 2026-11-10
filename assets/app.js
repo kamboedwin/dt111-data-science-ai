@@ -1555,10 +1555,20 @@ document.getElementById("resetProgressBtn").addEventListener("click",()=>{
 });
 
 const overlay=document.getElementById("presentationOverlay");
+function slideDensityClass(s){
+  const holder=document.createElement("div");
+  holder.innerHTML=s.body||"";
+  const text=(holder.textContent||"").replace(/\s+/g," ").trim();
+  const structural=((s.body||"").match(/<li\b|<td\b|<tr\b|<table\b|<svg\b|slide-grid|slide-two-col|foundation-flow|metric-grid|confusion|risk-matrix/g)||[]).length;
+  if(text.length<=280 && structural<=5) return " spacious";
+  if(text.length>=900 || structural>=18) return " dense";
+  return " standard";
+}
 function renderSlide(){
   const s=state.slides[state.slideIndex];
   const compact = window.innerHeight < 760 ? " compact" : "";
-  document.getElementById("slideStage").innerHTML=`<article class="slide${compact}"><h1>${s.title}</h1><div class="slide-body">${s.body}</div></article>`;
+  const density = slideDensityClass(s);
+  document.getElementById("slideStage").innerHTML=`<article class="slide${compact} ${density}"><h1>${s.title}</h1><div class="slide-body">${s.body}</div></article>`;
   document.getElementById("slideCounter").textContent=`${state.slideIndex+1} / ${state.slides.length}`;
   document.getElementById("prevSlide").disabled=state.slideIndex===0;
   document.getElementById("nextSlide").textContent=state.slideIndex===state.slides.length-1?"Finish":"Next →";
