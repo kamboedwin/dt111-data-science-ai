@@ -1,0 +1,57 @@
+name: Build DT111 lecture slides
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/dt111_slidegen/**'
+      - '.github/workflows/build-dt111-slides.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-slides:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out course repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install slide-generation dependencies
+        run: npm install --no-save pptxgenjs
+
+      - name: Install PDF conversion support
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libreoffice-impress fonts-noto-core
+
+      - name: Reconstruct slide generator
+        run: cat tools/dt111_slidegen/part*.txt > /tmp/generate_dt111_slides.js
+
+      - name: Generate editable PowerPoint decks
+        run: node /tmp/generate_dt111_slides.js
+
+      - name: Export PowerPoint decks to PDF
+        run: |
+          mkdir -p downloads/slides
+          for f in downloads/pptx/*.pptx; do
+            libreoffice --headless --convert-to pdf --outdir downloads/slides "$f"
+          done
+
+      - name: Publish generated lecture files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/pptx downloads/slides
+          if git diff --cached --quiet; then
+            echo "Lecture files are already up to date."
+          else
+            git commit -m "Publish DT111 PDF and PowerPoint lecture slides"
+            git push
+          fi

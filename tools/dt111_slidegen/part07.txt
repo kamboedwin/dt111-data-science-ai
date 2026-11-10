@@ -1,0 +1,58 @@
+reasoning.'},{title:'Tabular prediction',body:'Supervised Machine Learning.'},{title:'Image recognition',body:'Often deep neural networks.'},{title:'Content generation',body:'Generative models.'}
+ ],'The correct method depends on the problem, data, constraints and risks.');
+ compareSlide(p,'AI capability and human judgement',{title:'AI can help',points:['Search large spaces','Recognise patterns','Automate repeated decisions','Generate candidate content'],accent:C.green,fill:C.paleGreen},{title:'Humans remain responsible for',points:['Defining goals and values','Checking outputs and context','Managing risk and accountability','Deciding how systems should be used'],accent:C.orange,fill:C.paleOrange});
+ takeawaySlide(p,'Topic 6 key ideas',['AI contains multiple approaches: search, logic, Machine Learning and neural networks.','BFS, DFS and A* differ mainly in how they choose which state to explore next.','Rules make knowledge explicit; learning methods derive patterns from data.','Deep Learning is a subset of Machine Learning, not a synonym for all AI.','Method choice should follow the problem, not current technology trends.']);
+ return p;
+}
+
+function topic7(){
+ const p=deckBase('Topic 7 - Ethics and Societal Impact of AI');
+ titleSlide(p,7,'Ethics and Societal Impact of AI','Privacy, bias, fairness, transparency, safety, governance and accountability');
+ bulletSlide(p,'Learning outcomes',['Explain why ethical considerations begin before modelling.','Identify privacy and common sources of bias.','Discuss fairness beyond overall accuracy.','Explain transparency, explainability and accountability.','Recognise robustness, security, monitoring and governance as lifecycle responsibilities.']);
+ sectionSlide(p,'Responsible AI begins with the problem','A technically accurate system can still be harmful if the goal, data, deployment context or consequences are poorly considered.');
+ processSlide(p,'Responsible AI across the lifecycle',[
+  {title:'Purpose',body:'Is the problem appropriate for AI?'},{title:'Data',body:'Permission, quality, representation'},{title:'Design',body:'Metrics, safeguards, human roles'},{title:'Test',body:'Performance and group impacts'},{title:'Deploy',body:'Controls and communication'},{title:'Monitor',body:'Drift, incidents and appeals'}
+ ]);
+ cardsSlide(p,'Privacy principles',[
+  {title:'Data minimisation',body:'Collect only data reasonably necessary for the stated purpose.'},{title:'Purpose limitation',body:'Use data for clear legitimate purposes.'},{title:'Security',body:'Protect personal information from unauthorised access or misuse.'},{title:'Retention',body:'Do not keep personal data indefinitely without reason.'}
+ ]);
+ cardsSlide(p,'Where bias can enter',[
+  {title:'Historical bias',body:'Past data may reflect previous inequalities or decisions.'},{title:'Sampling bias',body:'Collected data may not represent the intended population.'},{title:'Measurement bias',body:'Variables may measure some people less accurately than others.'},{title:'Label bias',body:'Targets may contain subjective or inconsistent judgements.'}
+ ]);
+ exampleTableSlide(p,'Case study: scholarship screening',['Applicant','Prior school','Income data','Model decision'],[['A','Urban','Complete','Shortlist'],['B','Rural','Missing','Reject'],['C','Urban','Complete','Shortlist'],['D','Rural','Partial','Reject']],['A pattern of rejections among rural applicants may reflect data availability rather than true suitability.','The model output should trigger investigation, not an automatic claim of fairness.']);
+ compareSlide(p,'Fairness needs more than overall accuracy',{title:'Overall performance',points:['A model can be 90% accurate overall','The same error rate may not apply to every group','Aggregate metrics can hide unequal harms'],accent:C.blue},{title:'Fairness questions',points:['Who receives benefits and harms?','Are error rates very different across groups?','Can people challenge an important decision?'],accent:C.orange});
+ cardsSlide(p,'Transparency and explainability',[
+  {title:'Transparency',body:'Provide appropriate information about how a system is developed, used and limited.'},{title:'Explainability',body:'Provide understandable reasons or important factors behind an output where appropriate.'},{title:'Communication',body:'Users should know when AI is involved and what its limits are.'}
+ ]);
+ cardsSlide(p,'Human oversight and accountability',[
+  {title:'Oversight',body:'Humans can review, intervene or override important automated outcomes.'},{title:'Appeal',body:'Affected people should have a route to challenge significant decisions.'},{title:'Accountability',body:'An organisation or person remains responsible for design, use and consequences.'}
+ ]);
+ cardsSlide(p,'Robustness, safety and security',[
+  {title:'Robustness',body:'System should remain reliable under reasonable changes or noisy inputs.'},{title:'Safety',body:'Prevent or reduce foreseeable harm from failures.'},{title:'Security',body:'Protect against attacks, unauthorised access and manipulation.'}
+ ]);
+ riskMatrixSlide(p,'Risk prioritisation','Risk management considers both how likely a problem is and how severe the consequences could be.');
+ compareSlide(p,'Low-risk and high-risk use',{title:'Lower-stakes example',points:['Recommend learning resources','Easy to ignore or correct','Limited consequence of one error'],accent:C.green,fill:C.paleGreen},{title:'Higher-stakes example',points:['Credit, hiring or medical triage','Errors can affect rights or welfare','Requires stronger testing, oversight and appeal'],accent:C.red,fill:C.paleRed});
+ sectionSlide(p,'Governance makes responsibility operational','Policies, roles, documentation, testing requirements and monitoring turn ethical principles into concrete organisational practice.');
+ cardsSlide(p,'Governance components',[
+  {title:'Policy',body:'Rules for acceptable AI use and prohibited use.'},{title:'Roles',body:'Clear responsibility for data, models, deployment and incident response.'},{title:'Documentation',body:'Record datasets, assumptions, limitations and changes.'},{title:'Monitoring',body:'Track performance, drift, complaints and incidents after deployment.'}
+ ]);
+ cardsSlide(p,'Post-deployment monitoring',[
+  {title:'Data drift',body:'The population or input data may change over time.'},{title:'Performance drift',body:'Accuracy or reliability may decline.'},{title:'Unexpected use',body:'Users may apply the system in ways not anticipated.'},{title:'Incident learning',body:'Failures should lead to correction and process improvement.'}
+ ]);
+ bulletSlide(p,'Core ethical questions for AI projects',['What problem is the system solving, and should AI be used?','Whose data are collected, and with what permission?','Who may be underrepresented or disadvantaged?','What happens when the system is wrong?','Who can review or appeal an important decision?','Who is accountable after deployment?']);
+ takeawaySlide(p,'Topic 7 key ideas',['Ethics is part of system design, not an activity added after deployment.','Privacy, bias and fairness depend on the data and the social context.','Overall accuracy can hide unequal error patterns.','Human oversight, appeal and accountability are essential for important decisions.','Responsible AI includes robustness, safety, security, governance and ongoing monitoring.']);
+ return p;
+}
+
+function topic8(){
+ const p=deckBase('Topic 8 - Contemporary Issues in AI');
+ titleSlide(p,8,'Contemporary Issues in AI','Generative AI, synthetic media, agents, accessibility, work, governance and responsible use');
+ bulletSlide(p,'Learning outcomes',['Explain generative AI and large language models at a beginner level.','Recognise hallucinations, deepfakes and information-integrity risks.','Describe AI agents and the additional risks of tool use and autonomy.','Discuss AI in education, work, accessibility and public life.','Apply responsible-use principles to contemporary AI systems.']);
+ sectionSlide(p,'Contemporary AI: new capabilities and new risks','AI systems can now generate content, work across multiple media and use external tools. These capabilities create both opportunities and new responsibilities.');
+ cardsSlide(p,'Generative AI creates new content',[
+  {title:'Text',body:'Answers, summaries, drafts and dialogue.'},{title:'Images',body:'Generate or edit visual content.'},{title:'Audio',body:'Speech synthesis, transcription and music.'},{title:'Video',body:'Synthetic scenes, avatars and editing.'},{title:'Code',body:'Generate, explain and modify software.'}
+ ]);
+ cardsSlide(p,'Large language models: a simple mental model',[
+  {title:'Tokens',body:'Text is processed as smaller units rather than entire ideas.'},{title:'Context',body:'The prompt and previous conversation influence the next output.'},{title:'Probability',body:'The model predicts plausible continuations from learned patterns.'},{title:'Generation',body:'Repeated prediction produces coherent text, code or other sequences.'}
+ ]);
+ proces

@@ -1,0 +1,60 @@
+:C.blue},{title:'Cleaned / processed data',points:['Contains documented corrections or transformations','Prepared for analysis','Should be traceable back to raw data'],accent:C.teal});
+ bulletSlide(p,'Good preprocessing practice',['Preserve the original raw data.','Document assumptions, replacements and exclusions.','Use domain knowledge to decide whether a value is plausible.','Do not treat every unusual value as an error.','Check whether cleaning choices could introduce bias.']);
+ takeawaySlide(p,'Topic 2 key ideas',['Good analysis begins with relevant and trustworthy data.','Sampling decisions affect representativeness before cleaning begins.','Data quality includes completeness, accuracy, consistency, validity and uniqueness.','Cleaning and preprocessing are related but not identical.','Every important data transformation should be documented and reproducible.']);
+ return p;
+}
+
+function topic3(){
+ const p=deckBase('Topic 3 - Exploratory Data Analysis');
+ titleSlide(p,3,'Exploratory Data Analysis','Descriptive statistics, visualisation, patterns and cautious interpretation');
+ bulletSlide(p,'Learning outcomes',['Explain the purpose and iterative nature of EDA.','Summarise numerical and categorical variables appropriately.','Interpret centre, spread, quartiles and simple correlation.','Choose suitable basic charts for analytical questions.','Identify patterns while avoiding unsupported causal claims.']);
+ exampleTableSlide(p,'A small student dataset',['Student','Attendance (%)','Final score','Region'],[['A','92','82','Iringa'],['B','78','71','Mbeya'],['C','65','60','Iringa'],['D','88','79','Arusha'],['E','52','48','Mbeya']],['Initial inspection considers variable types, possible patterns and questions that deserve further analysis.']);
+ cardsSlide(p,'Exploratory Data Analysis (EDA)',[
+  {title:'Inspect',body:'Understand rows, columns, variable meanings and data quality.'},{title:'Summarise',body:'Use counts, centre and spread to describe the data.'},{title:'Visualise',body:'Use charts to reveal shape, groups, trends and relationships.'},{title:'Interpret',body:'Connect patterns to context and identify new questions.'}
+ ],'EDA is disciplined curiosity, not simply “making charts”.');
+ processSlide(p,'EDA is iterative',[
+  {title:'Question',body:'What do we want to understand?'},{title:'Inspect',body:'Structure and quality'},{title:'Summarise',body:'Counts and descriptive statistics'},{title:'Visualise',body:'Choose suitable charts'},{title:'Interpret',body:'Patterns, anomalies and next questions'}
+ ]);
+ bulletSlide(p,'Core EDA questions',['How many observations and variables are there?','What does each variable represent?','Which variables are numerical or categorical?','What is typical, and how much variation exists?','Are groups different or variables related?','Are any observations unusual or missing?']);
+ exampleTableSlide(p,'Frequency table for a categorical variable',['Region','Count','Percentage'],[['Iringa','2','40%'],['Mbeya','2','40%'],['Arusha','1','20%']],['Counts and percentages are natural first summaries for categorical variables.']);
+ bigNumberSlide(p,'Measures of centre',[
+  {label:'Mean',value:'68',body:'(48+60+71+79+82) / 5',fill:C.paleBlue},{label:'Median',value:'71',body:'Middle ordered value',fill:C.paleTeal},{label:'Mode',value:'None',body:'No value repeats',fill:C.paleOrange}
+ ],'Scores: 48, 60, 71, 79, 82');
+ compareSlide(p,'Effect of an extreme value',{title:'Original values',points:['48, 60, 71, 79, 82','Mean = 68','Median = 71'],accent:C.green,fill:C.paleGreen},{title:'One extreme value',points:['48, 60, 71, 79, 200','Mean = 91.6','Median = 71'],accent:C.red,fill:C.paleRed},'The median is more resistant to an extreme value than the mean.');
+ cardsSlide(p,'Centre is not enough',[
+  {title:'Centre',body:'What value is typical?'},{title:'Spread',body:'How variable are the observations?'},{title:'Shape',body:'How are values distributed?'},{title:'Outliers',body:'Are any values unusually far from the rest?'}
+ ]);
+ cardsSlide(p,'Measures of spread',[
+  {title:'Range',body:'Maximum - minimum. Here: 82 - 48 = 34.'},{title:'Interquartile range (IQR)',body:'Q3 - Q1: spread of the middle 50%.'},{title:'Standard deviation',body:'Describes how far values typically lie from the mean.'}
+ ],'At this level, interpretation is more important than memorising every formula.');
+ boxplotSlide(p,'Five-number summary and box plot','Minimum, Q1, median, Q3 and maximum provide a compact description of a numerical distribution.');
+ histogramSlide(p,'Distribution shape',[2,4,7,9,7,4,2],['40s','50s','60s','70s','80s','90s','100s'],'A roughly symmetric distribution has similar left and right tails.');
+ cardsSlide(p,'Skewed distributions',[
+  {title:'Right-skewed',body:'Most values are lower, with a long tail toward high values. The mean is often pulled upward.'},{title:'Left-skewed',body:'Most values are higher, with a long tail toward low values. The mean is often pulled downward.'},{title:'Why it matters',body:'Distribution shape helps explain why mean and median may differ.'}
+ ]);
+ compareSlide(p,'Bar chart and histogram',{title:'Bar chart',points:['Categorical variable','Bars represent separate categories','Gaps between categories are natural','Example: students by region'],accent:C.blue},{title:'Histogram',points:['Numerical variable','Bars represent adjacent intervals','Bars normally touch','Example: distribution of final scores'],accent:C.teal});
+ lineChartSlide(p,'Line chart for ordered or time data',[[0.05,.2],[.22,.35],[.4,.3],[.58,.58],[.75,.68],[.93,.86]],'A line chart is useful when observations have a meaningful order, especially time.');
+ scatterSlide(p,'Scatter plot for two numerical variables',[[.08,.12],[.18,.22],[.28,.33],[.38,.42],[.5,.48],[.62,.65],[.72,.7],[.84,.84],[.92,.9]],'Each point represents paired values, such as attendance and final score.');
+ bigNumberSlide(p,'Correlation coefficient',[
+  {label:'Strong negative',value:'-1',body:'As one rises, the other tends to fall',fill:C.paleRed,color:C.red},{label:'No linear relationship',value:'0',body:'No consistent straight-line pattern',fill:C.light,color:C.gray},{label:'Strong positive',value:'+1',body:'Both tend to rise together',fill:C.paleGreen,color:C.green}
+ ],'Correlation summarises the direction and strength of a linear association.');
+ cardsSlide(p,'Patterns commonly examined in EDA',[
+  {title:'Distribution',body:'Where values concentrate and how they spread.'},{title:'Relationship',body:'How two variables vary together.'},{title:'Group difference',body:'How categories compare.'},{title:'Trend',body:'How values change over an ordered dimension.'},{title:'Anomaly',body:'A value that differs noticeably from the general pattern.'}
+ ]);
+ compareSlide(p,'Association is not causation',{title:'Observation',points:['Higher attendance tends to occur with higher scores','This is evidence of a positive association'],accent:C.green,fill:C.paleGreen},{title:'Unsupported conclusion',points:['“Attendance alone causes every score to increase”','Other variables may influence both attendance and performance'],accent:C.red,fill:C.paleRed});
+ cardsSlide(p,'A chart should answer a question',[
+  {title:'Weak',body:'“I made a chart because a chart is required.”'},{title:'Better',body:'“I used a histogram to see how final scores are distributed.”'},{title:'Strong interpretation',body:'“Scores concentrate around 65-80, with a few low cases worth investigating.”'}
+ ]);
+ processSlide(p,'Mini-EDA: from table to insight',[
+  {title:'Inspect',body:'5 students, 4 variables'},{title:'Summarise',body:'Mean 68, median 71'},{title:'Visualise',body:'Attendance vs score'},{title:'Compare',body:'Groups are small'},{title:'Investigate',body:'Low score of 48'},{title:'Interpret',body:'Association, not cause'}
+ ]);
+ takeawaySlide(p,'Topic 3 key ideas',['EDA combines numerical summaries, visualisation and context.','Centre, spread and shape describe different aspects of a distribution.','Chart choice depends on the variable type and analytical question.','Correlation describes association, not causation.','A good EDA produces evidence-based observations and better questions.']);
+ return p;
+}
+
+function topic4(){
+ const p=deckBase('Topic 4 - Statistical Methods');
+ titleSlide(p,4,'Statistical Methods','Probability, inference, hypothesis testing and simple regression');
+ bulletSlide(p,'Learning outcomes',['Explain population, sample, parameter and statistic.','Use basic probability and conditional probability concepts.','Describe common probability distributions intuitively.','Interpret null/alternative hypotheses, p-values and confidence intervals.','Interpret slope, prediction and residuals in simple regression.']);
+ sectionSlide(p,'Why statistical methods matter','Data from samples contain variation and uncertainty. Statistical methods help us reason beyond the observed sample without pretending to know more than the evidence supports.');
+ compareSlide(p,'Population and sample',{title:'Pop

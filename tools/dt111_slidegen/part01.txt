@@ -1,0 +1,221 @@
+const pptxgen = require('pptxgenjs');
+const fs = require('fs');
+const path = require('path');
+
+const OUT = path.join(process.cwd(),'downloads','pptx');
+fs.mkdirSync(OUT, {recursive:true});
+
+const C = {
+  navy:'12335B', blue:'2D6CDF', blue2:'5B8DEF', teal:'0F8B8D', teal2:'4FB3B5', orange:'F59E0B',
+  red:'D64545', green:'2A9D6F', ink:'1F2937', gray:'5B677A', light:'F6F9FC', line:'D9E3F0',
+  white:'FFFFFF', paleBlue:'EAF2FF', paleTeal:'E8F7F7', paleOrange:'FFF4DB', paleRed:'FDEDED', paleGreen:'EAF7F0'
+};
+const FONT='Noto Sans';
+const W=13.333, H=7.5;
+
+function deckBase(title){
+  const pptx = new pptxgen();
+  pptx.layout='LAYOUT_WIDE';
+  pptx.author='Edwin John Kambo';
+  pptx.subject='DT 111 Introduction to Data Science and AI';
+  pptx.title=title;
+  pptx.company='Mkwawa University College of Education';
+  pptx.lang='en-GB';
+  pptx.theme={headFontFace:FONT,bodyFontFace:FONT,lang:'en-GB'};
+  pptx.defineSlideMaster({
+    title:'CONTENT',
+    background:{color:C.white},
+    objects:[
+      {rect:{x:0,y:0,w:W,h:0.12,fill:{color:C.blue},line:{color:C.blue}}},
+      {text:{text:'DT 111 · Introduction to Data Science and AI',options:{x:0.55,y:7.16,w:6.4,h:0.18,fontFace:FONT,fontSize:9,color:'6B778C',margin:0}}},
+      {text:{text:'MUCE · University of Dar es Salaam',options:{x:8.0,y:7.16,w:4.75,h:0.18,fontFace:FONT,fontSize:9,color:'6B778C',align:'right',margin:0}}}
+    ],
+    slideNumber:{x:12.72,y:7.14,w:0.25,h:0.18,color:'6B778C',fontFace:FONT,fontSize:9,align:'right'}
+  });
+  return pptx;
+}
+function addText(slide,text,x,y,w,h,size=24,color=C.ink,opts={}){
+  slide.addText(text,{x,y,w,h,fontFace:FONT,fontSize:size,color,bold:!!opts.bold,align:opts.align||'left',valign:opts.valign||'top',margin:opts.margin??0,breakLine:false,fit:'shrink',bullet:opts.bullet,italic:!!opts.italic,paraSpaceAfterPt:opts.paraSpaceAfterPt||0});
+}
+function addTitle(slide,title,subtitle){
+  addText(slide,title,0.62,0.42,12.0,0.68,30,C.navy,{bold:true});
+  if(subtitle) addText(slide,subtitle,0.64,1.14,11.75,0.46,15,C.gray,{});
+}
+function addKicker(slide,text,x=0.65,y=0.32,w=4.0){
+  slide.addShape('roundRect',{x,y,w,h:0.33,rectRadius:0.08,fill:{color:C.paleBlue},line:{color:C.paleBlue}});
+  addText(slide,text.toUpperCase(),x+0.12,y+0.07,w-0.24,0.16,10,C.blue,{bold:true});
+}
+function titleSlide(pptx,topic,title,subtitle){
+  const s=pptx.addSlide();
+  s.background={color:C.navy};
+  s.addShape('rect',{x:0,y:0,w:W,h:H,fill:{color:C.navy},line:{color:C.navy}});
+  s.addShape('arc',{x:9.3,y:-1.4,w:5.0,h:5.0,adjustPoint:0.25,rotate:20,line:{color:C.blue2,transparency:60,width:2},fill:{color:C.navy,transparency:100}});
+  s.addShape('arc',{x:8.8,y:3.4,w:5.5,h:5.5,adjustPoint:0.25,rotate:200,line:{color:C.teal2,transparency:70,width:2},fill:{color:C.navy,transparency:100}});
+  addText(s,`DT 111 · TOPIC ${topic}`,0.72,0.75,5.2,0.35,13,'A7C4F3',{bold:true});
+  addText(s,title,0.72,1.55,10.9,1.75,34,C.white,{bold:true});
+  addText(s,subtitle,0.75,3.55,9.4,1.0,19,'DDE8F7',{});
+  addText(s,'Mkwawa University College of Education',0.75,6.55,7,0.28,12,'AFC5E6',{});
+  addText(s,'BSc Data Science and Artificial Intelligence',0.75,6.88,7,0.28,12,'AFC5E6',{});
+  return s;
+}
+function sectionSlide(pptx,title,subtitle,accent=C.blue){
+  const s=pptx.addSlide('CONTENT');
+  s.addShape('rect',{x:0,y:0.12,w:W,h:6.95,fill:{color:C.light},line:{color:C.light}});
+  s.addShape('roundRect',{x:0.75,y:1.42,w:1.15,h:1.15,rectRadius:0.18,fill:{color:accent},line:{color:accent}});
+  addText(s,'→',1.05,1.64,0.55,0.5,27,C.white,{bold:true,align:'center'});
+  addText(s,title,2.25,1.35,9.8,0.82,31,C.navy,{bold:true});
+  addText(s,subtitle,2.27,2.35,8.8,1.15,18,C.gray,{});
+  return s;
+}
+function bulletSlide(pptx,title,bullets,subtitle,accent=C.blue){
+  const s=pptx.addSlide('CONTENT'); addTitle(s,title,subtitle);
+  let y=1.85;
+  bullets.forEach((b,i)=>{
+    s.addShape('ellipse',{x:0.78,y:y+0.05,w:0.22,h:0.22,fill:{color:accent},line:{color:accent}});
+    addText(s,b,1.16,y,11.25,0.58,21,C.ink,{}); y+=0.76;
+  });
+  return s;
+}
+function cardsSlide(pptx,title,cards,subtitle){
+  const s=pptx.addSlide('CONTENT'); addTitle(s,title,subtitle);
+  const n=cards.length; const cols=n<=3?n:(n===4?2:3); const rows=Math.ceil(n/cols);
+  const gap=0.24; const x0=0.72; const y0=1.78; const totalW=11.9; const totalH=4.95;
+  const cw=(totalW-gap*(cols-1))/cols; const ch=(totalH-gap*(rows-1))/rows;
+  cards.forEach((c,i)=>{
+    const col=i%cols,row=Math.floor(i/cols); const x=x0+col*(cw+gap), y=y0+row*(ch+gap);
+    const fill=c.fill||[C.paleBlue,C.paleTeal,C.paleOrange,C.paleGreen,C.paleRed][i%5];
+    s.addShape('roundRect',{x,y,w:cw,h:ch,rectRadius:0.12,fill:{color:fill},line:{color:C.line,width:1}});
+    if(c.tag){ addText(s,c.tag,x+0.22,y+0.18,cw-0.44,0.22,10,c.color||C.blue,{bold:true}); }
+    addText(s,c.title,x+0.22,y+(c.tag?0.52:0.3),cw-0.44,0.46,19,C.navy,{bold:true});
+    addText(s,c.body,x+0.22,y+(c.tag?1.02:0.85),cw-0.44,ch-(c.tag?1.2:1.05),14.5,C.ink,{});
+  });
+  return s;
+}
+function compareSlide(pptx,title,left,right,subtitle){
+  const s=pptx.addSlide('CONTENT'); addTitle(s,title,subtitle);
+  const boxes=[{x:0.72,c:left,fill:left.fill||C.paleBlue},{x:6.82,c:right,fill:right.fill||C.paleTeal}];
+  boxes.forEach(({x,c,fill})=>{
+    s.addShape('roundRect',{x,y:1.85,w:5.8,h:4.65,rectRadius:0.12,fill:{color:fill},line:{color:C.line,width:1}});
+    addText(s,c.title,x+0.28,2.15,5.25,0.48,23,C.navy,{bold:true});
+    let y=2.95;
+    (c.points||[]).forEach(p=>{s.addShape('ellipse',{x:x+0.30,y:y+0.08,w:0.17,h:0.17,fill:{color:c.accent||C.blue},line:{color:c.accent||C.blue}});addText(s,p,x+0.62,y,4.85,0.58,16.5,C.ink,{});y+=0.72;});
+    if(c.footer) addText(s,c.footer,x+0.3,5.95,5.1,0.38,13,C.gray,{italic:true});
+  });
+  return s;
+}
+function processSlide(pptx,title,steps,subtitle){
+  const s=pptx.addSlide('CONTENT'); addTitle(s,title,subtitle);
+  const n=steps.length; const gap=0.18; const x0=0.72; const y=2.3; const total=11.85; const w=(total-gap*(n-1))/n;
+  steps.forEach((st,i)=>{
+    const x=x0+i*(w+gap); const fill=[C.paleBlue,C.paleTeal,C.paleOrange,C.paleGreen,C.paleRed][i%5];
+    s.addShape('roundRect',{x,y,w,h:2.4,rectRadius:0.12,fill:{color:fill},line:{color:C.line}});
+    s.addShape('ellipse',{x:x+w/2-0.28,y:y-0.35,w:0.56,h:0.56,fill:{color:C.navy},line:{color:C.navy}});
+    addText(s,String(i+1),x+w/2-0.14,y-0.22,0.28,0.24,12,C.white,{bold:true,align:'center'});
+    addText(s,st.title,x+0.16,y+0.46,w-0.32,0.42,16,C.navy,{bold:true,align:'center'});
+    addText(s,st.body,x+0.18,y+1.05,w-0.36,1.0,13.5,C.ink,{align:'center'});
+    if(i<n-1) addText(s,'→',x+w+0.02,y+0.88,gap+0.14,0.4,18,C.gray,{bold:true,align:'center'});
+  });
+  return s;
+}
+function exampleTableSlide(pptx,title,headers,rows,notes=[],subtitle){
+  const s=pptx.addSlide('CONTENT'); addTitle(s,title,subtitle);
+  const x=0.68,y=1.72,w=12.0; const rh=0.48; const ncols=headers.length; const cw=w/ncols;
+  headers.forEach((h,i)=>{s.addShape('rect',{x:x+i*cw,y,w:cw,h:rh,fill:{color:C.navy},line:{color:C.white,width:1}});addText(s,h,x+i*cw+0.08,y+0.12,cw-0.16,0.23,12.5,C.white,{bold:true,align:'center'});});
+  rows.forEach((r,ri)=>r.forEach((v,ci)=>{const yy=y+rh*(ri+1);s.addShape('rect',{x:x+ci*cw,y:yy,w:cw,h:rh,fill:{color:ri%2?C.white:C.light},line:{color:C.line,width:0.7}});addText(s,String(v),x+ci*cw+0.08,yy+0.11,cw-0.16,0.25,12.5,C.ink,{align:'center'});}));
+  let ny=y+rh*(rows.length+1)+0.28;
+  notes.forEach((n,i)=>{s.addShape('roundRect',{x:0.82,y:ny,w:11.7,h:0.48,rectRadius:0.08,fill:{color:i%2?C.paleTeal:C.paleBlue},line:{color:C.line}});addText(s,n,1.02,ny+0.12,11.25,0.24,13.5,C.ink,{});ny+=0.6;});
+  return s;
+}
+function bigNumberSlide(pptx,title,items,subtitle){
+  const s=pptx.addSlide('CONTENT');addTitle(s,title,subtitle);
+  const n=items.length, gap=0.28,x0=0.76,total=11.82,w=(total-gap*(n-1))/n;
+  items.forEach((it,i)=>{const x=x0+i*(w+gap);s.addShape('roundRect',{x,y:2.1,w,h:3.55,rectRadius:0.14,fill:{color:it.fill||[C.paleBlue,C.paleTeal,C.paleOrange][i%3]},line:{color:C.line}});addText(s,it.label,x+0.2,2.45,w-0.4,0.45,17,C.navy,{bold:true,align:'center'});addText(s,it.value,x+0.2,3.2,w-0.4,0.9,32,it.color||C.blue,{bold:true,align:'center'});addText(s,it.body||'',x+0.22,4.35,w-0.44,0.85,14.5,C.gray,{align:'center'});});
+  return s;
+}
+function takeawaySlide(pptx,title,items){
+  const s=pptx.addSlide('CONTENT');
+  s.background={color:C.navy};
+  addText(s,title,0.78,0.7,11.7,0.7,30,C.white,{bold:true});
+  let y=1.75;
+  items.forEach((it,i)=>{s.addShape('roundRect',{x:0.82,y,w:11.55,h:0.68,rectRadius:0.08,fill:{color:i%2?'183F6E':'1A477B'},line:{color:'365C86'}});addText(s,it,1.12,y+0.17,10.9,0.32,17,C.white,{});y+=0.84;});
+  return s;
+}
+function histogramSlide(pptx,title,values,labels,subtitle){
+  const s=pptx.addSlide('CONTENT');addTitle(s,title,subtitle);
+  const x0=1.2,y0=5.75,h=3.5,w=10.6,max=Math.max(...values);
+  s.addShape('line',{x:x0,y:y0,w:w,h:0,line:{color:C.gray,width:1.2}});
+  s.addShape('line',{x:x0,y:y0-h,w:0,h:h,line:{color:C.gray,width:1.2}});
+  const bw=w/values.length*0.68; const gap=w/values.length;
+  values.forEach((v,i)=>{const bh=(v/max)*(h-0.25); const x=x0+i*gap+0.14; s.addShape('rect',{x,y:y0-bh,w:bw,h:bh,fill:{color:C.blue2},line:{color:C.blue}});addText(s,labels[i],x-0.08,y0+0.12,bw+0.16,0.28,11,C.gray,{align:'center'});});
+  return s;
+}
+function scatterSlide(pptx,title,pts,subtitle,trend=true){
+  const s=pptx.addSlide('CONTENT');addTitle(s,title,subtitle);
+  const x0=1.25,y0=5.85,w=10.4,h=3.7;
+  s.addShape('line',{x:x0,y:y0,w:w,h:0,line:{color:C.gray,width:1.2}}); s.addShape('line',{x:x0,y:y0-h,w:0,h:h,line:{color:C.gray,width:1.2}});
+  pts.forEach(p=>{const x=x0+p[0]*w,y=y0-p[1]*h;s.addShape('ellipse',{x:x-0.08,y:y-0.08,w:0.16,h:0.16,fill:{color:C.teal},line:{color:C.navy,width:0.6}});});
+  if(trend) s.addShape('line',{x:x0+0.4,y:y0-0.4,w:w-0.9,h:-(h-0.75),line:{color:C.orange,width:2,dash:'dash'}});
+  addText(s,'x',x0+w-0.1,y0+0.18,0.3,0.25,12,C.gray,{bold:true}); addText(s,'y',x0-0.35,y0-h-0.1,0.3,0.25,12,C.gray,{bold:true});
+  return s;
+}
+function boxplotSlide(pptx,title,subtitle){
+  const s=pptx.addSlide('CONTENT'); addTitle(s,title,subtitle);
+  const y=3.85; s.addShape('line',{x:1.3,y,w:10.6,h:0,line:{color:C.navy,width:2}});
+  s.addShape('line',{x:2.0,y:y-0.45,w:0,h:0.9,line:{color:C.navy,width:2}}); s.addShape('line',{x:11.0,y:y-0.45,w:0,h:0.9,line:{color:C.navy,width:2}});
+  s.addShape('rect',{x:4.2,y:y-0.75,w:4.2,h:1.5,fill:{color:C.paleBlue},line:{color:C.blue,width:2}}); s.addShape('line',{x:6.3,y:y-0.75,w:0,h:1.5,line:{color:C.red,width:3}});
+  [['Min',2.0],['Q1',4.2],['Median',6.3],['Q3',8.4],['Max',11.0]].forEach(([lab,x])=>addText(s,lab,x-0.45,2.55,0.9,0.35,14,C.navy,{bold:true,align:'center'}));
+  addText(s,'The box contains the middle 50% of values. The median marks the centre of that middle half.',1.5,5.25,10.2,0.7,18,C.ink,{align:'center'});
+  return s;
+}
+function confusionSlide(pptx,title,subtitle){
+  const s=pptx.addSlide('CONTENT'); addTitle(s,title,subtitle);
+  const x=3.0,y=2.0,cw=2.3,ch=1.05;
+  addText(s,'Predicted',6.15,1.72,2.4,0.35,15,C.gray,{bold:true,align:'center'}); addText(s,'Actual',1.45,3.45,1.0,0.35,15,C.gray,{bold:true,align:'center'});
+  const headers=[['',C.light],['Positive',C.paleBlue],['Negative',C.paleBlue]];
+  headers.forEach((h,i)=>{s.addShape('rect',{x:x+i*cw,y,w:cw,h:ch,fill:{color:h[1]},line:{color:C.line}});addText(s,h[0],x+i*cw,y+0.34,cw,0.25,14,C.navy,{bold:true,align:'center'});});
+  const rows=[['Positive','True Positive','False Negative'],['Negative','False Positive','True Negative']];
+  rows.forEach((r,ri)=>r.forEach((v,ci)=>{const fill=ci===0?C.paleBlue:((ri===0&&ci===1)||(ri===1&&ci===2)?C.paleGreen:C.paleRed);s.addShape('rect',{x:x+ci*cw,y:y+(ri+1)*ch,w:cw,h:ch,fill:{color:fill},line:{color:C.line}});addText(s,v,x+ci*cw+0.08,y+(ri+1)*ch+0.3,cw-0.16,0.4,13.5,C.ink,{bold:ci===0,align:'center'});}));
+  addText(s,'Accuracy counts all correct predictions. Precision and recall focus on different kinds of positive prediction errors.',2.2,5.65,8.9,0.72,17,C.ink,{align:'center'});
+  return s;
+}
+function riskMatrixSlide(pptx,title,subtitle){
+  const s=pptx.addSlide('CONTENT'); addTitle(s,title,subtitle);
+  addText(s,'Impact →',9.3,1.82,1.6,0.3,14,C.gray,{bold:true}); addText(s,'Likelihood ↓',1.08,2.05,1.4,0.3,14,C.gray,{bold:true});
+  const x0=2.55,y0=2.15,cw=2.65,ch=1.25;
+  ['Low','Medium','High'].forEach((h,i)=>addText(s,h,x0+i*cw,y0-0.38,cw,0.3,14,C.navy,{bold:true,align:'center'}));
+  const fills=[[C.paleGreen,C.paleGreen,C.paleOrange],[C.paleGreen,C.paleOrange,C.paleRed],[C.paleOrange,C.paleRed,C.paleRed]];
+  const labs=['Low','Medium','High'];
+  for(let r=0;r<3;r++){
+    addText(s,labs[r],1.45,y0+r*ch+0.42,0.9,0.28,14,C.navy,{bold:true,align:'right'});
+    for(let c=0;c<3;c++){
+      s.addShape('rect',{x:x0+c*cw,y:y0+r*ch,w:cw,h:ch,fill:{color:fills[r][c]},line:{color:C.white,width:2}});
+      const txt=(r+c<=1?'Lower priority':(r+c===2?'Review / mitigate':'High priority'));
+      addText(s,txt,x0+c*cw+0.1,y0+r*ch+0.43,cw-0.2,0.32,13,C.ink,{bold:true,align:'center'});
+    }
+  }
+  return s;
+}
+function lineChartSlide(pptx,title,pts,subtitle){
+  const s=pptx.addSlide('CONTENT'); addTitle(s,title,subtitle);
+  const x0=1.25,y0=5.8,w=10.5,h=3.5; s.addShape('line',{x:x0,y:y0,w:w,h:0,line:{color:C.gray,width:1.2}}); s.addShape('line',{x:x0,y:y0-h,w:0,h:h,line:{color:C.gray,width:1.2}});
+  for(let i=0;i<pts.length-1;i++){const [a,b]=[pts[i],pts[i+1]];s.addShape('line',{x:x0+a[0]*w,y:y0-a[1]*h,w:(b[0]-a[0])*w,h:-(b[1]-a[1])*h,line:{color:C.blue,width:3}});}
+  pts.forEach(p=>s.addShape('ellipse',{x:x0+p[0]*w-0.07,y:y0-p[1]*h-0.07,w:0.14,h:0.14,fill:{color:C.orange},line:{color:C.navy,width:0.6}}));
+  return s;
+}
+function networkSlide(pptx,title,nodes,edges,subtitle,highlight=[]){
+  const s=pptx.addSlide('CONTENT'); addTitle(s,title,subtitle);
+  const ox=1.0,oy=1.65,sw=11.2,sh=4.8;
+  edges.forEach(([a,b])=>{const A=nodes[a],B=nodes[b];s.addShape('line',{x:ox+A.x*sw,y:oy+A.y*sh,w:(B.x-A.x)*sw,h:(B.y-A.y)*sh,line:{color:highlight.some(e=>e[0]===a&&e[1]===b)||highlight.some(e=>e[0]===b&&e[1]===a)?C.orange:C.line,width:highlight.some(e=>e.includes(a)&&e.includes(b))?4:2}});});
+  Object.entries(nodes).forEach(([k,p])=>{s.addShape('ellipse',{x:ox+p.x*sw-0.25,y:oy+p.y*sh-0.25,w:0.5,h:0.5,fill:{color:C.paleBlue},line:{color:C.blue,width:1.5}});addText(s,k,ox+p.x*sw-0.2,oy+p.y*sh-0.11,0.4,0.22,12,C.navy,{bold:true,align:'center'});});
+  return s;
+}
+
+function topic1(){
+ const p=deckBase('Topic 1 - Introduction to Data Science and AI');
+ titleSlide(p,1,'Introduction to Data Science and Artificial Intelligence','Foundations, relationships, workflow, history, applications and limitations');
+ bulletSlide(p,'Learning outcomes',['Explain Data Science and Artificial Intelligence in clear terms.','Distinguish Data Science, AI and Machine Learning.','Describe a simple Data Science workflow from problem to decision.','Recognise major milestones and real-world applications.','Discuss benefits, limitations and responsible use.']);
+ cardsSlide(p,'Data Science combines several disciplines',[
+  {title:'Data',body:'Recorded observations, measurements, text, images or signals.'},{title:'Statistics',body:'Tools for summarising uncertainty, variation and relationships.'},{title:'Computing',body:'Storage, programming, algorithms and scalable processing.'},{title:'Domain knowledge',body:'Context needed to ask meaningful questions and interpret results.'}
+ ],'Data Science is not simply “using Python” or “making charts”.');
+ processSlide(p,'From raw data to a useful decision',[
+ 

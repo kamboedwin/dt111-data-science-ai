@@ -1,0 +1,56 @@
+sSlide(p,'Example: language-model generation',[
+  {title:'Prompt',body:'“Explain EDA to a beginner”'},{title:'Context',body:'Course language and earlier text'},{title:'Token prediction',body:'Select likely next units'},{title:'Response',body:'Generate a structured explanation'},{title:'Verification',body:'Check facts and suitability'}
+ ]);
+ compareSlide(p,'Fluency and factual reliability',{title:'What the model can do well',points:['Produce fluent explanations','Reformat and summarise text','Generate examples and drafts','Combine information in useful ways'],accent:C.green,fill:C.paleGreen},{title:'Why verification is still needed',points:['Can invent unsupported facts','Can misstate citations','May reproduce bias','May sound confident when wrong'],accent:C.red,fill:C.paleRed});
+ cardsSlide(p,'Hallucination',[
+  {title:'Meaning',body:'A generated statement that is unsupported, fabricated or incorrect while appearing plausible.'},{title:'Why it happens',body:'The model is generating likely content, not consulting a perfect database of truth.'},{title:'Response',body:'Verify important claims against reliable sources, especially in high-stakes contexts.'}
+ ]);
+ cardsSlide(p,'Synthetic media and deepfakes',[
+  {title:'Opportunity',body:'Creative production, localisation, accessibility and simulation.'},{title:'Risk',body:'Impersonation, fraud, misinformation and reputational harm.'},{title:'Digital literacy',body:'Consider source, provenance, context and independent verification.'}
+ ]);
+ cardsSlide(p,'Generative AI in education',[
+  {title:'Useful support',body:'Explanation, brainstorming, practice questions, feedback and language assistance.'},{title:'Academic integrity',body:'Learners should follow institutional rules and represent their own work honestly.'},{title:'Learning risk',body:'Over-reliance can reduce independent thinking and skill development.'},{title:'Privacy',body:'Sensitive student or research data should not be shared carelessly.'}
+ ]);
+ sectionSlide(p,'AI agents','An AI agent can pursue a goal through multiple steps, potentially using external tools such as search, files, calendars, code or databases.');
+ processSlide(p,'A simple agent loop',[
+  {title:'Goal',body:'Define desired outcome'},{title:'Plan',body:'Choose a sequence of actions'},{title:'Use tool',body:'Search, calculate or update'},{title:'Observe',body:'Read result or environment'},{title:'Continue / stop',body:'Adapt until complete'}
+ ]);
+ compareSlide(p,'Why tool-using AI needs stronger controls',{title:'Capability',points:['Can perform multi-step tasks','Can interact with external systems','Can automate routine workflows'],accent:C.green,fill:C.paleGreen},{title:'Additional risk',points:['Wrong actions can have real consequences','Permissions and access matter','Security and human confirmation may be needed'],accent:C.red,fill:C.paleRed});
+ cardsSlide(p,'AI and the changing workplace',[
+  {title:'Automate tasks',body:'Some routine activities can be completed with less manual effort.'},{title:'Augment people',body:'AI can support drafting, analysis, search and decision preparation.'},{title:'Create new tasks',body:'Prompt design, verification, governance and AI-assisted workflows.'},{title:'Skills adapt',body:'Domain knowledge, critical thinking and digital judgement become more important.'}
+ ]);
+ sectionSlide(p,'AI for accessibility and inclusion','AI can remove barriers when systems are designed with users rather than merely for them.');
+ cardsSlide(p,'Assistive AI examples',[
+  {title:'Speech-to-text',body:'Convert spoken language into readable text.'},{title:'Text-to-speech',body:'Read text aloud through synthesised speech.'},{title:'Visual assistance',body:'Describe images or recognise objects.'},{title:'Alternative interaction',body:'Voice, text, touch or other accessible control modes.'}
+ ]);
+ cardsSlide(p,'Personalised learning',[
+  {title:'Potential',body:'Adapt pace, difficulty, feedback or format to learner needs.'},{title:'Risk',body:'Poor data or rigid predictions can label learners unfairly.'},{title:'Good practice',body:'Keep teachers and learners in control and allow adjustment or override.'}
+ ]);
+ cardsSlide(p,'Mobility and accessibility',[
+  {title:'Route planning',body:'Include step-free access, surface conditions and accessible entrances.'},{title:'Navigation assistance',body:'Provide multimodal directions through text, audio or visual cues.'},{title:'Co-design',body:'People with lived experience should help define requirements and test the system.'}
+ ]);
+ compareSlide(p,'AI for emotional well-being',{title:'Appropriate low-risk support',points:['General information','Journaling or reflection prompts','Resource signposting','Escalation to human support'],accent:C.green,fill:C.paleGreen},{title:'Unsafe overreach',points:['Autonomous diagnosis','Replacing emergency or professional care','Overconfident medical advice','No escalation pathway'],accent:C.red,fill:C.paleRed});
+ sectionSlide(p,'Governance and regulation','Contemporary AI requires organisational policies, technical standards, human-rights safeguards and legal accountability.');
+ cardsSlide(p,'Contemporary governance questions',[
+  {title:'Transparency',body:'Can users understand when and why AI is used?'},{title:'Accountability',body:'Who is responsible for harmful or incorrect outcomes?'},{title:'Intellectual property',body:'How are copyrighted inputs and outputs handled?'},{title:'Information integrity',body:'How are deepfakes and misleading generated content addressed?'}
+ ]);
+ cardsSlide(p,'Environmental and cybersecurity concerns',[
+  {title:'Computational cost',body:'Large models can require substantial energy, hardware and data-centre resources.'},{title:'Cybersecurity misuse',body:'AI can assist phishing, social engineering or code generation for malicious purposes.'},{title:'Security defence',body:'AI can also support detection, analysis and response when used responsibly.'}
+ ]);
+ processSlide(p,'Responsible use of contemporary AI',[
+  {title:'Define purpose',body:'What problem is being solved?'},{title:'Choose data carefully',body:'Protect privacy and representation'},{title:'Verify outputs',body:'Check facts and uncertainty'},{title:'Control actions',body:'Use permissions and confirmation'},{title:'Monitor impact',body:'Learn from errors and feedback'}
+ ]);
+ takeawaySlide(p,'Topic 8 key ideas',['Generative AI can create useful content, but fluent output is not automatically factual.','Synthetic media increases the importance of verification and information integrity.','AI agents can act through tools, increasing the need for permissions, security and oversight.','AI can support accessibility and learning when users retain control and systems are co-designed.','Contemporary AI affects work, governance, security, the environment and society - responsible use must evolve with capability.']);
+ return p;
+}
+
+const topics=[topic1,topic2,topic3,topic4,topic5,topic6,topic7,topic8];
+(async()=>{
+  for(let i=0;i<topics.length;i++){
+    const pptx=topics[i]();
+    const num=i+1;
+    const file=path.join(OUT,`DT111_Topic_${String(num).padStart(2,'0')}_Slides.pptx`);
+    await pptx.writeFile({fileName:file});
+    console.log(`WROTE ${file}`);
+  }
+})();

@@ -1,0 +1,60 @@
+ulation',points:['Full group of interest','Example: all first-year students at MUCE','Characteristics are described by parameters'],accent:C.blue},{title:'Sample',points:['Observed subset of the population','Used to learn about the population','Characteristics are described by statistics'],accent:C.teal});
+ cardsSlide(p,'Parameter and statistic',[
+  {title:'Parameter',body:'A numerical characteristic of a population, usually unknown.'},{title:'Statistic',body:'A numerical summary calculated from a sample.'},{title:'Inference',body:'Using sample evidence to estimate or test claims about the population.'}
+ ]);
+ bigNumberSlide(p,'Example: probability and complements',[
+  {label:'Absent',value:'10 / 40',body:'P(absent) = 0.25',fill:C.paleOrange,color:C.orange},{label:'Present',value:'30 / 40',body:'P(present) = 0.75',fill:C.paleGreen,color:C.green},{label:'Complement',value:'1 - 0.25',body:'P(present) = 1 - P(absent)',fill:C.paleBlue,color:C.blue}
+ ],'A class has 40 students and 10 are absent.');
+ cardsSlide(p,'Core probability ideas',[
+  {title:'Outcome',body:'One possible result.'},{title:'Event',body:'An outcome or set of outcomes of interest.'},{title:'Probability',body:'A number from 0 to 1 describing how likely an event is.'},{title:'Random variable',body:'A numerical representation of uncertain outcomes.'}
+ ]);
+ compareSlide(p,'Discrete and continuous random variables',{title:'Discrete',points:['Takes countable values','Example: number of absent students','Often represented by counts'],accent:C.blue},{title:'Continuous',points:['Can take values on a continuum','Example: temperature or weight','Often represented by measurements'],accent:C.teal});
+ cardsSlide(p,'Three useful distribution ideas',[
+  {title:'Bernoulli',body:'One trial with two outcomes, such as pass/fail.'},{title:'Binomial',body:'Number of successes in a fixed number of similar Bernoulli trials.'},{title:'Normal',body:'Continuous bell-shaped model used in many measurement contexts.'}
+ ]);
+ sectionSlide(p,'Hypothesis testing','A structured way to ask whether observed sample evidence is unusually inconsistent with a default population claim.');
+ processSlide(p,'Example: hypothesis testing',[
+  {title:'Question',body:'Did a new teaching method change average score?'},{title:'H0',body:'No population mean difference'},{title:'H1',body:'A population mean difference exists'},{title:'Sample',body:'Observed means differ'},{title:'Test',body:'Is that difference unusually large under H0?'}
+ ]);
+ compareSlide(p,'Null and alternative hypotheses',{title:'Null hypothesis (H0)',points:['Default claim','Often “no difference” or “no effect”','Provides a reference model for the test'],accent:C.blue},{title:'Alternative hypothesis (H1)',points:['Competing claim','Often “a difference/effect exists”','Supported when evidence against H0 is sufficiently strong'],accent:C.orange});
+ cardsSlide(p,'What a p-value expresses',[
+  {title:'Definition',body:'How unusual the observed result, or something more extreme, would be if the null hypothesis were true.'},{title:'Small p-value',body:'The observed data are less compatible with the null model.'},{title:'Important limit',body:'A p-value is not the probability that H0 is true and does not measure practical importance.'}
+ ]);
+ compareSlide(p,'Statistical significance and practical importance',{title:'Statistical significance',points:['Evidence against a null model','Influenced by sample size and variability','Does not describe effect size by itself'],accent:C.blue},{title:'Practical importance',points:['Is the difference large enough to matter?','Depends on context and consequences','Should be considered with effect size and uncertainty'],accent:C.teal});
+ bigNumberSlide(p,'Confidence intervals add uncertainty information',[
+  {label:'Estimated improvement',value:'5 marks',body:'Point estimate',fill:C.paleBlue},{label:'95% confidence interval',value:'2 to 8',body:'Plausible range under the method assumptions',fill:C.paleTeal}
+ ],'An interval communicates both the estimated effect and its uncertainty.');
+ sectionSlide(p,'Simple linear regression','Regression describes how an outcome changes with a predictor and can be used for numerical prediction.');
+ bigNumberSlide(p,'A simple regression equation',[
+  {label:'Equation',value:'Score = 35 + 4 x Hours',body:'A linear model',fill:C.paleBlue},{label:'Slope',value:'+4',body:'Expected score change for one extra study hour',fill:C.paleGreen,color:C.green},{label:'5 study hours',value:'55',body:'Predicted score = 35 + 4(5)',fill:C.paleOrange,color:C.orange}
+ ]);
+ scatterSlide(p,'Regression line and observed data',[[.08,.15],[.16,.2],[.24,.27],[.33,.35],[.42,.38],[.52,.56],[.63,.6],[.72,.75],[.82,.77],[.92,.9]],'The fitted line summarises the average linear relationship.');
+ cardsSlide(p,'Residuals and model fit',[
+  {title:'Residual',body:'Observed value - predicted value. It shows the prediction error for one observation.'},{title:'R2',body:'Describes how much variation in the outcome is explained by the fitted linear relationship.'},{title:'Caution',body:'Good fit does not prove causation or guarantee reliable predictions outside the observed range.'}
+ ]);
+ compareSlide(p,'Association and causation',{title:'Regression can show',points:['Direction of a relationship','Estimated change in outcome','Predictions under model assumptions'],accent:C.green,fill:C.paleGreen},{title:'Regression cannot prove alone',points:['That the predictor causes the outcome','That unmeasured variables are irrelevant','That the relationship holds in every population'],accent:C.red,fill:C.paleRed});
+ takeawaySlide(p,'Topic 4 key ideas',['Statistics helps reason from samples while acknowledging uncertainty.','Probability models uncertain events; distributions describe patterns of possible values.','Hypothesis tests compare evidence with a default claim; p-values are not probabilities of hypotheses.','Confidence intervals communicate effect size and uncertainty.','Regression describes association and prediction, not automatic causation.']);
+ return p;
+}
+
+function topic5(){
+ const p=deckBase('Topic 5 - Introduction to Machine Learning');
+ titleSlide(p,5,'Introduction to Machine Learning','Supervised and unsupervised learning, model training and evaluation');
+ bulletSlide(p,'Learning outcomes',['Explain where Machine Learning fits within AI.','Distinguish features, targets and common ML task types.','Describe training, validation, testing and generalisation.','Explain decision trees and K-means at an introductory level.','Interpret accuracy, precision, recall and simple regression error.']);
+ compareSlide(p,'Programming with explicit rules and learning from examples',{title:'Traditional rule-based program',points:['Developer writes the rules','Data + rules → output','Works well when rules are explicit and stable'],accent:C.blue},{title:'Machine Learning',points:['Algorithm learns patterns from examples','Training data → model','Useful when rules are difficult to specify directly'],accent:C.teal});
+ cardsSlide(p,'Features and target',[
+  {title:'Features',body:'Input variables used by the model, such as attendance, coursework and study hours.'},{title:'Target',body:'The outcome the model should predict, such as final score or pass/fail.'},{title:'Example row',body:'Attendance 92%, coursework 78, study hours 8 → final score 82.'}
+ ]);
+ cardsSlide(p,'Supervised and unsupervised learning',[
+  {title:'Supervised learning',body:'Training examples include known targets. Used for regression and classification.'},{title:'Unsupervised learning',body:'No target labels are supplied. The algorithm searches for structure such as clusters.'}
+ ]);
+ cardsSlide(p,'Three common Machine Learning tasks',[
+  {title:'Regression',body:'Predict a number. Example: final score.'},{title:'Classification',body:'Predict a category. Example: Pass/Fail.'},{title:'Clustering',body:'Discover groups without predefined labels. Example: study profiles.'}
+ ]);
+ exampleTableSlide(p,'One dataset, different ML tasks',['Attendance','Coursework','Study hours','Final score','Pass label'],[['92','78','8','82','Pass'],['55','45','3','48','Fail'],['80','72','6','76','Pass'],['61','58','4','59','Pass']],['Regression target: final score.','Classification target: pass label.','Clustering can use the feature columns without a target.']);
+ processSlide(p,'What happens during training',[
+  {title:'Examples',body:'Input features and targets'},{title:'Model',body:'Makes initial predictions'},{title:'Error',body:'Compare predictions with truth'},{title:'Update',body:'Adjust parameters or structure'},{title:'Repeat',body:'Reduce useful error patterns'}
+ ]);
+ processSlide(p,'Train, validation and test data',[
+  {title:'Training set',body:'Used to learn the model'},{title:'Validation set',body:'Used to tune choices and compare versions'},{title:'Test set',body:'Held back for final evaluation on unseen data'}
+ ],'Keeping evaluation data separate provides a more honest estimate of general

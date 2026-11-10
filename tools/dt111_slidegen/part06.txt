@@ -1,0 +1,63 @@
+isation.');
+ sectionSlide(p,'Decision trees','A decision tree predicts by following a sequence of feature-based questions.');
+ processSlide(p,'Example: a simple decision tree',[
+  {title:'Attendance >= 70%?',body:'No → Fail risk'},{title:'Coursework >= 60?',body:'Yes → continue'},{title:'Study hours >= 4?',body:'Yes → Pass'}
+ ],'Real trees learn split rules from data; this is a simplified teaching example.');
+ cardsSlide(p,'Why decision trees are intuitive',[
+  {title:'Readable logic',body:'The path can often be explained as a sequence of conditions.'},{title:'Mixed variables',body:'Can work with several types of predictors after appropriate preparation.'},{title:'Limitation',body:'A deep tree can memorise training details and overfit.'}
+ ]);
+ sectionSlide(p,'K-means clustering','K-means groups observations by repeatedly assigning them to nearby centres and updating those centres.');
+ processSlide(p,'K-means in four steps',[
+  {title:'Choose K',body:'Number of clusters'},{title:'Initial centres',body:'Start with K centres'},{title:'Assign',body:'Place each point with nearest centre'},{title:'Update',body:'Move centres to cluster means'},{title:'Repeat',body:'Continue until stable'}
+ ]);
+ scatterSlide(p,'Example clustering pattern',[[.1,.15],[.15,.25],[.23,.18],[.28,.3],[.65,.68],[.72,.8],[.78,.7],[.84,.84],[.55,.25],[.62,.32],[.7,.22]],'Clusters can reveal structure, but people must decide whether the groups are meaningful in the real context.',false);
+ cardsSlide(p,'Generalisation, underfitting and overfitting',[
+  {title:'Underfitting',body:'Model is too simple to capture important structure.'},{title:'Useful fit',body:'Captures stable patterns that also work on new data.'},{title:'Overfitting',body:'Learns training details too closely and performs poorly on unseen data.'}
+ ]);
+ lineChartSlide(p,'Training and validation performance',[[.05,.25],[.2,.42],[.35,.56],[.5,.67],[.65,.75],[.8,.8],[.95,.84]],'Training performance may keep improving even after validation performance stops improving.');
+ sectionSlide(p,'Evaluation depends on the task','A model is not “good” in the abstract. The evaluation metric should match the prediction problem and the consequences of errors.');
+ confusionSlide(p,'Confusion matrix for classification','Classification errors are not all the same; the matrix separates true and false positive/negative outcomes.');
+ compareSlide(p,'Precision and recall',{title:'Precision',points:['Of predicted positives, how many were truly positive?','Important when false positives are costly'],accent:C.blue},{title:'Recall',points:['Of true positives, how many did we find?','Important when missing a positive case is costly'],accent:C.teal});
+ cardsSlide(p,'Regression evaluation',[
+  {title:'MAE',body:'Average absolute difference between predicted and true values. Easy to interpret in the original units.'},{title:'Residuals',body:'Individual prediction errors can reveal systematic problems.'},{title:'Context',body:'An acceptable error depends on the application and decision consequences.'}
+ ]);
+ compareSlide(p,'Model performance is not the whole project',{title:'Technical questions',points:['Does the model generalise?','Are metrics appropriate?','Is performance stable?'],accent:C.blue},{title:'Human questions',points:['Is the target meaningful?','Are the data representative?','Are errors acceptable and fair?','How will outputs be used?'],accent:C.teal});
+ takeawaySlide(p,'Topic 5 key ideas',['Machine Learning learns patterns from data rather than relying only on explicitly written rules.','Features are inputs; targets are outcomes to be predicted.','Train, validation and test data serve different purposes.','Overfitting is strong training performance with weak generalisation.','Evaluation metrics must match the task and the consequences of errors.']);
+ return p;
+}
+
+function topic6(){
+ const p=deckBase('Topic 6 - Artificial Intelligence Basics');
+ titleSlide(p,6,'Artificial Intelligence Basics','Search, reasoning, neural networks and the AI toolbox');
+ bulletSlide(p,'Learning outcomes',['Explain AI as a broad field rather than one algorithm.','Distinguish AI, Machine Learning, Deep Learning and Generative AI.','Describe search problems using states, actions and goals.','Compare BFS, DFS and heuristic search conceptually.','Explain rule-based reasoning and a simple artificial neuron.']);
+ cardsSlide(p,'AI is a toolbox',[
+  {title:'Search and planning',body:'Explore possible states to reach a goal.'},{title:'Logic and reasoning',body:'Apply explicit facts and rules to derive conclusions.'},{title:'Machine Learning',body:'Learn patterns from examples.'},{title:'Neural networks',body:'Learn complex representations from data.'},{title:'Generative AI',body:'Generate text, images, audio, code and other content.'}
+ ]);
+ cardsSlide(p,'AI, ML, Deep Learning and Generative AI',[
+  {title:'Artificial Intelligence',body:'Broadest field: systems performing tasks associated with intelligent behaviour.'},{title:'Machine Learning',body:'AI approach based on learning from data.'},{title:'Deep Learning',body:'Machine Learning using multi-layer neural networks.'},{title:'Generative AI',body:'Models designed to create new content; many modern systems use deep learning.'}
+ ]);
+ sectionSlide(p,'Search as problem solving','Many AI problems can be represented as a starting state, possible actions and a goal state.');
+ networkSlide(p,'A small state space',{A:{x:.1,y:.5},B:{x:.32,y:.2},C:{x:.32,y:.78},D:{x:.56,y:.15},E:{x:.56,y:.48},F:{x:.56,y:.82},G:{x:.86,y:.48}},[['A','B'],['A','C'],['B','D'],['B','E'],['C','E'],['C','F'],['D','G'],['E','G'],['F','G']],'Start at A and search for a path to G. Different algorithms explore the same graph in different orders.');
+ compareSlide(p,'Breadth-First Search and Depth-First Search',{title:'BFS',points:['Explores level by level','Uses a queue','Finds a fewest-edge path in an unweighted graph','Can require substantial memory'],accent:C.blue},{title:'DFS',points:['Explores one branch deeply first','Uses a stack or recursion','Memory can be smaller','May reach a long or unhelpful branch first'],accent:C.teal});
+ cardsSlide(p,'A* search adds a heuristic',[
+  {title:'Path cost g(n)',body:'Cost already spent to reach the current state.'},{title:'Heuristic h(n)',body:'Estimate of remaining cost to the goal.'},{title:'A* priority',body:'f(n) = g(n) + h(n). Promising states are explored first.'}
+ ]);
+ compareSlide(p,'A heuristic is an estimate',{title:'Useful heuristic',points:['Provides guidance toward the goal','Cheap enough to compute','Reflects meaningful problem structure'],accent:C.green,fill:C.paleGreen},{title:'Poor heuristic',points:['Gives little useful guidance','Can waste search effort','May behave almost like uninformed search'],accent:C.red,fill:C.paleRed});
+ sectionSlide(p,'Logic and reasoning','Symbolic AI represents knowledge explicitly as facts, rules and inference procedures.');
+ processSlide(p,'Example: rule-based reasoning',[
+  {title:'Fact',body:'Soil is dry'},{title:'Fact',body:'Rain is not expected'},{title:'Rule',body:'IF dry AND no rain → irrigation needed'},{title:'Inference',body:'Irrigation is needed'}
+ ]);
+ cardsSlide(p,'Strengths and limits of symbolic rules',[
+  {title:'Strength',body:'Reasoning can be transparent and easy to inspect.'},{title:'Strength',body:'Domain knowledge can be encoded explicitly.'},{title:'Limit',body:'Rules may become difficult to maintain at scale.'},{title:'Limit',body:'Hard to write complete rules for perception or natural language.'}
+ ]);
+ sectionSlide(p,'Neural networks','Neural networks learn weighted combinations of inputs and can model complex non-linear relationships.');
+ processSlide(p,'A simple artificial neuron',[
+  {title:'Inputs',body:'x1, x2, x3'},{title:'Weights',body:'Each input has influence'},{title:'Sum + bias',body:'Combine weighted inputs'},{title:'Activation',body:'Transform the combined signal'},{title:'Output',body:'Pass information forward'}
+ ]);
+ cardsSlide(p,'Neural-network layers',[
+  {title:'Input layer',body:'Receives features or encoded information.'},{title:'Hidden layers',body:'Transform representations through learned weights.'},{title:'Output layer',body:'Produces a prediction, score or representation.'}
+ ]);
+ compareSlide(p,'Traditional ML and deep learning',{title:'Traditional ML',points:['Often relies on designed features','Can work very well on structured/tabular data','Usually smaller models'],accent:C.blue},{title:'Deep learning',points:['Learns complex representations automatically','Especially effective for images, speech and language','Often requires more data and computation'],accent:C.teal});
+ sectionSlide(p,'From neural networks to generative AI','Large neural models can learn patterns in text, images, audio and code and use those patterns to generate new content.');
+ cardsSlide(p,'Choosing an AI method',[
+  {title:'Route planning',body:'Search / planning algorithms.'},{title:'Expert rules',body:'Logic and symbolic 

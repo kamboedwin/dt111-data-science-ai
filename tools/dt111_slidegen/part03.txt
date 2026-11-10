@@ -1,0 +1,60 @@
+dy:'A learned function built from connected weighted units.'}
+ ],'A model is useful when it is appropriate for the question and sufficiently reliable.');
+ sectionSlide(p,'History and evolution','Modern Data Science and AI emerged from decades of statistics, computing, algorithms and increasing access to data.');
+ processSlide(p,'A short evolution timeline',[
+  {title:'1950s',body:'Early AI and symbolic reasoning'},{title:'1980s',body:'Expert systems and knowledge bases'},{title:'1990s-2000s',body:'Data mining and statistical learning'},{title:'2010s',body:'Deep learning grows with data and GPUs'},{title:'2020s',body:'Generative and multimodal AI'}
+ ]);
+ cardsSlide(p,'Why AI accelerated',[
+  {title:'More data',body:'Digital services, sensors, images, text and online activity generate large datasets.'},{title:'More computing power',body:'GPUs, cloud computing and specialised hardware make larger models practical.'},{title:'Improved algorithms',body:'Advances in optimisation, neural networks and software frameworks improve capability.'}
+ ]);
+ cardsSlide(p,'Applications across sectors',[
+  {title:'Agriculture',body:'Crop monitoring, disease recognition, yield forecasting.'},{title:'Health',body:'Medical imaging, triage support, disease-risk analysis.'},{title:'Finance',body:'Fraud detection, credit-risk support, forecasting.'},{title:'Education',body:'Learning analytics, personalised support, automated assistance.'},{title:'Transport',body:'Route planning, traffic analysis, driver-assistance systems.'},{title:'Public services',body:'Planning, resource allocation and citizen-support systems.'}
+ ]);
+ processSlide(p,'Example: crop-disease decision support',[
+  {title:'Image',body:'Farmer captures leaf photo'},{title:'Model',body:'Image features are analysed'},{title:'Prediction',body:'Likely disease / stage'},{title:'Context',body:'Confidence and agronomic knowledge'},{title:'Decision',body:'Advice or referral'}
+ ],'Errors can enter at data capture, prediction or use of the output.');
+ compareSlide(p,'Benefits and limitations',{title:'Potential benefits',points:['Speed and automation','Pattern discovery in large datasets','Consistent support for repeated tasks','New tools for science and services'],accent:C.green,fill:C.paleGreen},{title:'Important limitations',points:['Data can be incomplete or biased','Models can make errors','Correlation does not guarantee cause','Privacy and fairness require attention'],accent:C.red,fill:C.paleRed});
+ cardsSlide(p,'Not every problem needs AI',[
+  {title:'Average five marks',body:'A simple arithmetic algorithm is enough.'},{title:'Store student records',body:'A database solves the main problem.'},{title:'Recognise disease from images',body:'Machine Learning may be appropriate.'}
+ ],'Choose technology from the problem, not from popularity.');
+ takeawaySlide(p,'Topic 1 key ideas',['Data Science connects data, methods, domain knowledge and decisions.','AI is broader than Machine Learning; Machine Learning is one major AI approach.','A good workflow begins with the problem and ends with interpretation and action.','Models are simplified representations, not perfect copies of reality.','Useful AI requires evidence, evaluation and responsible human judgement.']);
+ return p;
+}
+
+function topic2(){
+ const p=deckBase('Topic 2 - Data Collection and Preprocessing');
+ titleSlide(p,2,'Data Collection and Preprocessing','Sources, sampling, data types, quality, cleaning and preparation');
+ bulletSlide(p,'Learning outcomes',['Identify common data sources and collection methods.','Distinguish populations, samples and common variable types.','Assess data quality and sampling bias.','Clean missing, inconsistent, duplicate and invalid data.','Explain encoding, scaling and other preprocessing steps.']);
+ sectionSlide(p,'The problem determines the data','The question being investigated determines which evidence is relevant, how it should be collected and whether it can be trusted.');
+ cardsSlide(p,'Where data can come from',[
+  {title:'Primary data',body:'Collected specifically for the current purpose: surveys, interviews, experiments, sensors.'},{title:'Secondary data',body:'Already exists: census data, administrative records, published datasets, reports.'},{title:'Internal data',body:'Generated within an organisation: transactions, student records, logs.'},{title:'External data',body:'Obtained from outside sources: weather, market, demographic or public data.'}
+ ]);
+ compareSlide(p,'Population, sample and census',{title:'Population',points:['Entire group of interest','Example: all DT 111 students','Often too large or costly to measure fully'],accent:C.blue},{title:'Sample',points:['Subset observed to learn about the population','Should represent the population well','Poor selection can create sampling bias'],accent:C.teal});
+ cardsSlide(p,'Common variable types',[
+  {title:'Nominal',body:'Categories without natural order. Example: region.'},{title:'Ordinal',body:'Categories with order. Example: satisfaction level.'},{title:'Discrete',body:'Countable numerical values. Example: number of absences.'},{title:'Continuous',body:'Measurements on a continuum. Example: temperature or weight.'}
+ ]);
+ cardsSlide(p,'Common forms of data',[
+  {title:'Structured',body:'Rows and columns with a defined schema.'},{title:'Semi-structured',body:'Contains organisation or tags, but not a fixed table structure.'},{title:'Unstructured',body:'Images, free text, audio, video and other flexible formats.'}
+ ],'The form of the data affects storage, cleaning and analysis choices.');
+ cardsSlide(p,'Five data-quality dimensions',[
+  {title:'Completeness',body:'Are required values present?'},{title:'Accuracy',body:'Do values reflect reality?'},{title:'Consistency',body:'Do formats and meanings agree?'},{title:'Validity',body:'Do values follow allowed rules and ranges?'},{title:'Uniqueness',body:'Are unintended duplicates absent?'}
+ ]);
+ exampleTableSlide(p,'Example: a small messy dataset',['ID','Region','Age','Score'],[['DS014','iringa','21','78'],['DS015','Iringa','230','65'],['DS016','Mbeya','20','—'],['DS016','Mbeya','20','—']],['“iringa” and “Iringa” should be standardised.','Age 230 violates a plausible range and needs investigation.','The missing score should not be replaced blindly.','The repeated DS016 record may be a duplicate.']);
+ processSlide(p,'A practical cleaning cycle',[
+  {title:'Profile',body:'Inspect types, ranges and missingness'},{title:'Detect',body:'Find errors and inconsistencies'},{title:'Decide',body:'Choose an appropriate action'},{title:'Apply',body:'Clean without overwriting raw data'},{title:'Document',body:'Record what changed and why'}
+ ]);
+ compareSlide(p,'Missing values and outliers',{title:'Missing values',points:['May be unknown, unavailable or not applicable','Possible actions: retain, investigate, remove or impute','The correct action depends on context'],accent:C.blue},{title:'Outliers',points:['Unusually distant observations','Can be errors or genuine extreme cases','Investigate before removing'],accent:C.orange,fill:C.paleOrange});
+ cardsSlide(p,'Duplicates and inconsistent formats',[
+  {title:'Duplicates',body:'Repeated records may bias counts and summaries.'},{title:'Categories',body:'“Dar es Salaam”, “dar es salaam” and “DSM” may represent one category.'},{title:'Units',body:'Centimetres and metres must not be mixed without conversion.'},{title:'Dates',body:'Consistent date formats reduce ambiguity.'}
+ ]);
+ sectionSlide(p,'Preprocessing goes beyond cleaning','Cleaning fixes data-quality problems. Preprocessing also transforms data into a form suitable for analysis or modelling.');
+ cardsSlide(p,'Common preprocessing operations',[
+  {title:'Encoding',body:'Represent categories in a computational form.'},{title:'Scaling',body:'Transform numerical variables so magnitudes are comparable.'},{title:'Transformation',body:'Apply mathematical changes such as logs or ratios.'},{title:'Feature selection',body:'Choose variables relevant to the task.'}
+ ]);
+ bigNumberSlide(p,'Why scaling can matter',[
+  {label:'Age',value:'18-30',body:'Small numeric range',fill:C.paleBlue},{label:'Annual income',value:'0-60M',body:'Much larger numeric range',fill:C.paleOrange},{label:'After scaling',value:'0-1',body:'Comparable numeric magnitude',fill:C.paleTeal}
+ ],'Some algorithms are sensitive to the relative magnitude of numerical features.');
+ cardsSlide(p,'Sampling bias can begin before analysis',[
+  {title:'Coverage bias',body:'Some parts of the population are missing from the sampling frame.'},{title:'Non-response bias',body:'People who do not respond differ systematically from those who do.'},{title:'Convenience sampling',body:'Easy-to-reach participants may not represent the target population.'}
+ ],'A perfectly cleaned biased sample is still a biased sample.');
+ compareSlide(p,'Raw data and cleaned data',{title:'Raw data',points:['Original unchanged reference','Supports reproducibility','Useful for audit and rechecking'],accent:
