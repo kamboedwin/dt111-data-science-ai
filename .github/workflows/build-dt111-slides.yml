@@ -32,10 +32,10 @@ jobs:
           sudo apt-get install -y libreoffice-impress fonts-noto-core
 
       - name: Reconstruct slide generator
-        run: cat tools/dt111_slidegen/part*.txt > /tmp/generate_dt111_slides.js
+        run: cat tools/dt111_slidegen/part*.txt > generate_dt111_slides.js
 
       - name: Generate editable PowerPoint decks
-        run: node /tmp/generate_dt111_slides.js
+        run: node generate_dt111_slides.js
 
       - name: Export PowerPoint decks to PDF
         run: |
