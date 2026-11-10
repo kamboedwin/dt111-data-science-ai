@@ -34,10 +34,16 @@ window.DT111_SETTINGS = {
 
   if(document.querySelector('script[src="assets/teaching-enhancements.js"]')){
     loadPolish();
-    return;
+  } else {
+    const s=document.createElement("script");
+    s.src="assets/teaching-enhancements.js";
+    s.onload=loadPolish;
+    document.head.appendChild(s);
   }
-  const s=document.createElement("script");
-  s.src="assets/teaching-enhancements.js";
-  s.onload=loadPolish;
-  document.head.appendChild(s);
+
+  if(!document.querySelector('script[src="assets/pdf-slide-viewer.js"]')){
+    const pdf=document.createElement("script");
+    pdf.src="assets/pdf-slide-viewer.js";
+    document.head.appendChild(pdf);
+  }
 })();
